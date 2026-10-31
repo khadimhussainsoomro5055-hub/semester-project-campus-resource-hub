@@ -190,4 +190,20 @@ This approach keeps the database organized while allowing the system to manage u
 
 ---
 
-**Campus Resource Hub – Making Academic Resource Sharing Easier.**
+## Week 1 Development Target
+
+The first week focuses on developing the initial frontend pages using HTML5 and CSS3.
+
+**Pages to Develop:**
+- Sign-in Page
+- Sign-up Page
+- Forgot Password Page
+- Student Dashboard
+
+**Requirements:**
+- Separate CSS file for each page.
+- Consistent design across all pages.
+- Responsive layouts.
+- HTML navigation between pages.
+
+**Note:** No JavaScript or backend functionality will be implemented during this phase.
