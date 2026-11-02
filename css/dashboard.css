@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif; 
     background-color: #F5F8FD;
     color: #102653;
 }
@@ -22,31 +22,19 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.sidebar-logo {
+.logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 0 8px 22px;
-    border-bottom: 1px solid #E1E9F5;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-.logo-icon {
-    font-size: 42px;
-    color: #102653;
+.logo-icon { 
+    font-size: 24px;
 }
-
-.sidebar-logo h2 {
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: 800;
-    color: #102653;
+.logo h2 { 
+    font-size: 18px; line-height: 1.2; color: #07194f;
 }
-
-.sidebar-logo h2 span {
-    color: #102653;
-}
-
 
 /* Sidebar Menu */
 
@@ -171,7 +159,7 @@ body {
     border: none;
     outline: none;
     background: transparent;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     color: #102653;
 }
@@ -188,7 +176,7 @@ body {
     border-left: none;
     background-color: #FFFFFF;
     color: #102653;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
 }
 
@@ -200,7 +188,7 @@ body {
     border-radius: 8px;
     background-color: #0866E9;
     color: #FFFFFF;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 800;
     cursor: pointer;
