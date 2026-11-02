@@ -207,3 +207,24 @@ The first week focuses on developing the initial frontend pages using HTML5 and 
 - HTML navigation between pages.
 
 **Note:** No JavaScript or backend functionality will be implemented during this phase.
+
+
+## Week 2 Development Target
+
+The second week focuses on developing the main resource-sharing features of Campus Resource Hub.
+
+**Tasks:**
+
+1. Upload Resource.
+2. My Uploads.
+3. Browse Resources.
+4. Physical Books.
+5. If timely we have added these we can move to other pages designs as well
+
+**Requirements:**
+- Separate CSS file for each page.
+- Consistent design across all pages.
+- Responsive layouts.
+- HTML navigation between pages.
+
+**Note:** No JavaScript or backend functionality will be implemented during this phase.
