@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Resource Hub | Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">◆</div>
+            <h2>Campus<br><span>Resource Hub</span></h2>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item active">
+                <span class="menu-icon">
+                    <i data-lucide="layout-dashboard"></i>
+                </span>
+                Dashboard
+            </a>
+
+            <a href="browse-resources.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="library-big"></i>
+                </span>
+                Browse Resources
+            </a>
+
+            <a href="upload-resource.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="cloud-upload"></i>
+                </span>
+                Upload Resource
+            </a>
+
+            <a href="my-uploads.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="folder"></i>
+                </span>
+                My Uploads
+            </a>
+
+            <a href="physical-books.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="book"></i>
+                </span>
+                Physical Books
+            </a>
+
+            <a href="my-requests.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="clipboard-list"></i>
+                </span>
+                My Requests
+            </a>
+
+            <a href="report-resource.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="flag"></i>
+                </span>
+                Report Content
+            </a>
+
+        </nav>
+
+
+        <!-- Bottom Navigation -->
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="settings"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="help.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="circle-question-mark"></i>
+                </span>
+                Help & Support
+            </a>
+
+        </div>
+
+
+        <!-- University Information -->
+        <div class="university-info">
+
+            <div class="university-icon">🏛</div>
+
+            <h3>Sukkur IBA University</h3>
+
+            <p>Knowledge • Sharing • Community</p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="search-area">
+
+                <div class="search-box">
+                    <span>
+                        <i data-lucide="search"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Search for books, notes, past papers, assignments..."
+                    >
+                </div>
+
+                <select class="search-category">
+                    <option>All</option>
+                    <option>Books</option>
+                    <option>Notes</option>
+                    <option>Past Papers</option>
+                    <option>Assignments</option>
+                </select>
+
+                <button class="search-button">Search</button>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-button">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">K</div>
+
+                    <div>
+                        <h4>Khadim Hussain</h4>
+                        <p>BS Software Engineering</p>
+                        <p>V</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+
+
+            <!-- Welcome Banner -->
+            <section class="welcome-banner">
+
+                <div class="welcome-text">
+
+                    <p>Welcome Back,</p>
+
+                    <h1>Khadim Hussain</h1>
+
+                    <h3>
+                        Find, share and access academic resources<br>
+                        with your campus community.
+                    </h3>
+
+                </div>
+
+                <div class="welcome-decoration">
+                    <span>🎓</span>
+                </div>
+
+            </section>
+
+
+            <!-- Dashboard Main Grid -->
+            <div class="dashboard-grid">
+
+
+                <!-- Left Dashboard Column -->
+                <div class="dashboard-left">
+
+                    <!-- Recent Resources -->
+                    <section class="content-card recent-resources">
+
+                        <div class="section-heading">
+
+                            <h2>
+                                <span class="heading-icon">
+                                    <i data-lucide="list-clock"></i>
+                                </span>
+                                Recent Resources
+                            </h2>
+
+                            <a href="browse-resources.html">View All →</a>
+
+                        </div>
+
+
+                        <div class="resource-list">
+
+
+                            <!-- Resource 1 -->
+                            <div class="resource-item">
+
+                                <div class="file-icon file-pdf">PDF</div>
+
+                                <div class="resource-details">
+
+                                    <h3>Data Structures and Algorithms – Lecture Notes</h3>
+
+                                    <div class="resource-tags">
+                                        <span>Computer Science</span>
+                                        <span>Semester 3</span>
+                                        <span>Notes</span>
+                                    </div>
+
+                                    <p class="uploaded-by">
+                                        <i data-lucide="user"></i>
+                                        Uploaded by Ayesha Khan</p>
+
+                                </div>
+
+                                <div class="resource-meta">
+                                    <p>2 days ago</p>
+                                    <span>↓ 45</span>
+                                </div>
+
+                                <a href="#" class="download-button">Download</a>
+
+                            </div>
+
+
+                            <!-- Resource 2 -->
+                            <div class="resource-item">
+
+                                <div class="file-icon file-ppt">PPT</div>
+
+                                <div class="resource-details">
+
+                                    <h3>Web Engineering – Slides</h3>
+
+                                    <div class="resource-tags">
+                                        <span>Software Engineering</span>
+                                        <span>Semester 5</span>
+                                        <span>Slides</span>
+                                    </div>
+
+                                    <p class="uploaded-by">♙ Uploaded by Fatima Ali</p>
+
+                                </div>
+
+                                <div class="resource-meta">
+                                    <p>3 days ago</p>
+                                    <span>↓ 78</span>
+                                </div>
+
+                                <a href="#" class="download-button">Download</a>
+
+                            </div>
+
+
+                            <!-- Resource 3 -->
+                            <div class="resource-item">
+
+                                <div class="file-icon file-green">PDF</div>
+
+                                <div class="resource-details">
+
+                                    <h3>Operating Systems – Past Papers</h3>
+
+                                    <div class="resource-tags">
+                                        <span>Software Engineering</span>
+                                        <span>Semester 4</span>
+                                        <span>Past Papers</span>
+                                    </div>
+
+                                    <p class="uploaded-by">♙ Uploaded by Ali Raza</p>
+
+                                </div>
+
+                                <div class="resource-meta">
+                                    <p>5 days ago</p>
+                                    <span>↓ 32</span>
+                                </div>
+
+                                <a href="#" class="download-button">Download</a>
+
+                            </div>
+
+
+                            <!-- Resource 4 -->
+                            <div class="resource-item">
+
+                                <div class="file-icon file-purple">DOC</div>
+
+                                <div class="resource-details">
+
+                                    <h3>Database System – Assignments</h3>
+
+                                    <div class="resource-tags">
+                                        <span>Computer Science</span>
+                                        <span>Semester 3</span>
+                                        <span>Assignments</span>
+                                    </div>
+
+                                    <p class="uploaded-by">♙ Uploaded by Sara Memon</p>
+
+                                </div>
+
+                                <div class="resource-meta">
+                                    <p>1 week ago</p>
+                                    <span>↓ 120</span>
+                                </div>
+
+                                <a href="#" class="download-button">Download</a>
+
+                            </div>
+
+
+                            <!-- Resource 5 -->
+                            <div class="resource-item">
+
+                                <div class="file-icon file-pdf">PDF</div>
+
+                                <div class="resource-details">
+
+                                    <h3>Discrete Mathematics – Notes</h3>
+
+                                    <div class="resource-tags">
+                                        <span>Computer Science</span>
+                                        <span>Semester 2</span>
+                                        <span>Notes</span>
+                                    </div>
+
+                                    <p class="uploaded-by">♙ Uploaded by Usman Qureshi</p>
+
+                                </div>
+
+                                <div class="resource-meta">
+                                    <p>1 week ago</p>
+                                    <span>↓ 67</span>
+                                </div>
+
+                                <a href="#" class="download-button">Download</a>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- Right Dashboard Column -->
+                <div class="dashboard-right">
+
+                    <!-- Announcements -->
+                    <section class="content-card announcements">
+
+                        <div class="section-heading">
+
+                            <h2>
+                                <span class="heading-icon">
+                                    <i data-lucide="flag"></i>
+                                </span>
+                                Announcements
+                            </h2>
+
+                            <a href="#">View All →</a>
+
+                        </div>
+
+
+                        <div class="announcement-item">
+                            <span class="announcement-dot dot-blue"></span>
+
+                            <div>
+                                <p>Midterm past papers added for CS & SE</p>
+                                <small>Oct 20, 2026</small>
+                            </div>
+                        </div>
+
+
+                        <div class="announcement-item">
+                            <span class="announcement-dot dot-green"></span>
+
+                            <div>
+                                <p>New physical books section is now live!</p>
+                                <small>Oct 18, 2026</small>
+                            </div>
+                        </div>
+
+
+                        <div class="announcement-item">
+                            <span class="announcement-dot dot-orange"></span>
+
+                            <div>
+                                <p>Please upload only relevant academic content</p>
+                                <small>Oct 15, 2026</small>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                    <!-- Recent Activity -->
+                    <section class="content-card recent-activity">
+
+                        <div class="section-heading">
+
+                            <h2>
+                                <span class="heading-icon">
+                                    <i data-lucide="clock"></i>
+                                </span>
+                                My Recent Activity
+                            </h2>
+
+                            <a href="#">View All →</a>
+
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon activity-blue">↓</span>
+                            <p>You downloaded OS – Lecture Slides</p>
+                            <small>2 days ago</small>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon activity-green">♧</span>
+                            <p>You uploaded DSA – Assignment 2</p>
+                            <small>4 days ago</small>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon activity-green">✓</span>
+                            <p>Your resource DB Notes was approved</p>
+                            <small>5 days ago</small>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon activity-purple">▤</span>
+                            <p>You requested Engineering Mathematics Book</p>
+                            <small>1 week ago</small>
+                        </div>
+
+
+                        <div class="activity-item">
+                            <span class="activity-icon activity-red">⚑</span>
+                            <p>You reported a resource</p>
+                            <small>1 week ago</small>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+</body>
+</html>
