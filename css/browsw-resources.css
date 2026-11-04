@@ -1,0 +1,1142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F8FD;
+    color: #102653;
+}
+
+button,
+input,
+select {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   2. DASHBOARD LAYOUT
+========================================= */
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* =========================================
+   3. SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 260px;
+    min-width: 260px;
+    min-height: 100vh;
+    padding: 20px 16px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #E1E9F5;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Logo */
+
+.sidebar-logo {
+    margin-bottom: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0866E9;
+}
+
+.logo-icon svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2;
+}
+
+.logo h2 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #07194F;
+}
+
+
+/* Sidebar Navigation */
+
+.sidebar-menu {
+    padding-top: 12px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 13px 15px;
+    margin-bottom: 5px;
+
+    border-radius: 9px;
+
+    color: #102653;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.menu-icon {
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+}
+
+.menu-item:hover {
+    background-color: #F0F5FD;
+    color: #0866E9;
+}
+
+.menu-item.active {
+    background-color: #E4F0FF;
+    color: #0866E9;
+    font-weight: 800;
+}
+
+
+/* Bottom Sidebar Navigation */
+
+.sidebar-bottom {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #E1E9F5;
+}
+
+
+/* University Information */
+
+.university-info {
+    margin-top: auto;
+    padding-top: 35px;
+    text-align: center;
+}
+
+.university-icon {
+    font-size: 75px;
+    color: #A5B6D0;
+    margin-bottom: 8px;
+}
+
+.university-info h3 {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.university-info p {
+    font-size: 11px;
+    color: #64799F;
+    margin-top: 7px;
+}
+
+
+/* =========================================
+   4. TOPBAR
+========================================= */
+
+.topbar {
+    min-height: 74px;
+    padding: 12px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E1E9F5;
+}
+
+
+/* Topbar Search */
+
+.search-area {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 780px;
+}
+
+.search-box {
+    height: 45px;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 15px;
+
+    background-color: #F5F8FD;
+    border: 1px solid #DCE6F5;
+    border-radius: 8px 0 0 8px;
+}
+
+.search-box span {
+    display: flex;
+    align-items: center;
+    color: #102653;
+}
+
+.search-box svg {
+    width: 21px;
+    height: 21px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 13px;
+    color: #102653;
+}
+
+.search-box input::placeholder {
+    color: #7485A4;
+}
+
+.search-category {
+    height: 45px;
+    width: 125px;
+    padding: 0 10px;
+
+    border: 1px solid #DCE6F5;
+    border-left: none;
+
+    background-color: #FFFFFF;
+    color: #102653;
+
+    font-size: 12px;
+}
+
+
+/* Search Button */
+
+.search-button {
+    height: 45px;
+    padding: 0 25px;
+    margin-left: 9px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #0866E9;
+    color: #FFFFFF;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-button:hover {
+    background-color: #0756C5;
+}
+
+
+/* =========================================
+   5. TOPBAR PROFILE
+========================================= */
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* Notification */
+
+.notification-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    font-size: 25px;
+    color: #102653;
+    cursor: pointer;
+}
+
+.notification-button svg {
+    width: 23px;
+    height: 23px;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+
+    width: 17px;
+    height: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F04444;
+    color: #FFFFFF;
+
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* Profile */
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-left: 16px;
+    border-left: 1px solid #E1E9F5;
+}
+
+.profile-avatar {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #DCEAFF;
+    color: #0866E9;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.profile-info h4 {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.profile-info p {
+    font-size: 11px;
+    color: #64799F;
+    margin-top: 3px;
+}
+
+.profile-arrow {
+    width: 17px;
+    height: 17px;
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   6. BROWSE RESOURCES PAGE
+========================================= */
+
+.browse-page {
+    padding: 16px 34px;
+}
+
+
+/* Page Heading */
+
+.browse-page .page-heading h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #07194F;
+    margin-bottom: 5px;
+}
+
+.browse-page .page-heading p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #24345F;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   7. SEARCH AND FILTERS
+========================================= */
+
+.browse-filters {
+    margin-top: 20px;
+    padding: 12px;
+
+    background: #FFFFFF;
+    border: 1px solid #E0E8F6;
+    border-radius: 9px;
+}
+
+
+/* Browse Search */
+
+.browse-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    height: 40px;
+    padding: 0 10px;
+
+    border-bottom: 1px solid #EDF1F7;
+}
+
+.browse-search span {
+    display: flex;
+    align-items: center;
+    color: #07194F;
+}
+
+.browse-search svg {
+    width: 21px;
+    height: 21px;
+}
+
+.browse-search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 13px;
+    color: #102653;
+    background: transparent;
+}
+
+.browse-search input::placeholder {
+    color: #7485A4;
+}
+
+
+/* Filter Row */
+
+.filter-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+
+    gap: 18px;
+    align-items: end;
+
+    margin-top: 15px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-item label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #07194F;
+}
+
+.filter-item select {
+    width: 100%;
+    height: 41px;
+    padding: 0 10px;
+
+    border: 1px solid #DCE5F5;
+    border-radius: 6px;
+
+    background: #FFFFFF;
+    color: #07194F;
+
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-item select:focus {
+    border-color: #0866E9;
+}
+
+
+/* Grid and List View Buttons */
+
+.view-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.view-buttons button {
+    height: 41px;
+    width: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #E0E8F6;
+    border-radius: 6px;
+
+    background: #FFFFFF;
+    color: #07194F;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.view-buttons svg {
+    width: 20px;
+    height: 20px;
+}
+
+.view-buttons button:hover {
+    background: #F0F5FD;
+}
+
+.view-buttons .grid-view {
+    background: #0866E9;
+    color: #FFFFFF;
+    border-color: #0866E9;
+}
+
+
+/* =========================================
+   8. RESULTS COUNT
+========================================= */
+
+.browse-results {
+    margin: 17px 0;
+
+    color: #07194F;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   9. RESOURCES GRID
+========================================= */
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+/* Resource Card */
+
+.resource-card {
+    min-width: 0;
+
+    background: #FFFFFF;
+    border: 1px solid #E0E8F6;
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(16, 38, 83, 0.09);
+}
+
+
+/* =========================================
+   10. RESOURCE COVERS
+========================================= */
+
+.resource-cover {
+    height: 155px;
+
+    position: relative;
+    padding: 18px 13px;
+
+    overflow: hidden;
+
+    color: #FFFFFF;
+}
+
+.resource-cover h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+
+    position: relative;
+    z-index: 1;
+}
+
+.resource-cover p {
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+
+/* Cover Decorative Symbols */
+
+.cover-design {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+
+    font-size: 65px;
+    opacity: 0.7;
+}
+
+
+/* Cover Backgrounds */
+
+.cover-one {
+    background: linear-gradient(130deg, #06183F, #00549B);
+}
+
+.cover-two {
+    background: linear-gradient(130deg, #EAF1F8, #9CBDD8);
+    color: #07194F;
+}
+
+.cover-three {
+    background: linear-gradient(130deg, #071A36, #D65B1B);
+}
+
+.cover-four {
+    background: linear-gradient(130deg, #16436A, #8DB7D2);
+}
+
+.cover-five {
+    background: linear-gradient(130deg, #06183F, #0875C5);
+}
+
+.cover-six {
+    background: linear-gradient(130deg, #06183F, #0079B8);
+}
+
+.cover-seven {
+    background: linear-gradient(130deg, #211014, #812525);
+}
+
+.cover-eight {
+    background: linear-gradient(130deg, #FFFFFF, #A9CDE5);
+    color: #07194F;
+}
+
+
+/* =========================================
+   11. BOOKMARK
+========================================= */
+
+.bookmark {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+
+    width: 32px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF;
+    color: #07194F;
+
+    border-radius: 6px;
+
+    z-index: 2;
+    cursor: pointer;
+}
+
+.bookmark svg {
+    width: 17px;
+    height: 17px;
+}
+
+.bookmark:hover {
+    color: #0866E9;
+}
+
+
+/* =========================================
+   12. FILE LABELS
+========================================= */
+
+.file-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 6px 11px;
+
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 800;
+
+    border-radius: 5px 5px 0 0;
+}
+
+.pdf {
+    background: #F04444;
+}
+
+.ppt {
+    background: #0875F5;
+}
+
+.doc {
+    background: #009B79;
+}
+
+
+/* =========================================
+   13. RESOURCE INFORMATION
+========================================= */
+
+.resource-info {
+    padding: 12px;
+}
+
+.resource-info h3 {
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 800;
+
+    color: #07194F;
+
+    min-height: 39px;
+    margin-bottom: 8px;
+}
+
+
+/* Resource Tags */
+
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    min-height: 27px;
+}
+
+.resource-tags span {
+    padding: 5px 9px;
+
+    background: #F1F5FC;
+    border-radius: 15px;
+
+    color: #40527C;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* Resource Metadata */
+
+.resource-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 7px;
+    margin-top: 12px;
+
+    color: #40527C;
+    font-size: 10px;
+}
+
+.resource-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.resource-meta svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+}
+
+
+/* Download Information */
+
+.download-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 12px;
+    padding-top: 9px;
+
+    border-top: 1px solid #EDF1F8;
+
+    color: #40527C;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.download-info svg {
+    width: 15px;
+    height: 15px;
+    color: #0866E9;
+}
+
+
+/* =========================================
+   14. PAGINATION
+========================================= */
+
+.browse-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 7px;
+    margin: 25px 0;
+}
+
+.browse-pagination a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #FFFFFF;
+    border: 1px solid #E0E8F6;
+    border-radius: 6px;
+
+    text-decoration: none;
+    color: #07194F;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.browse-pagination a:hover {
+    background: #E4F0FF;
+    color: #0866E9;
+    border-color: #0866E9;
+}
+
+.browse-pagination a svg {
+    width: 17px;
+    height: 17px;
+}
+
+.browse-pagination .selected {
+    background: #0866E9;
+    color: #FFFFFF;
+    border-color: #0866E9;
+}
+
+
+/* =========================================
+   15. RESPONSIVE - 1200px
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 225px;
+        min-width: 225px;
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .filter-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .view-buttons {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   16. RESPONSIVE - 850px
+========================================= */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 190px;
+        min-width: 190px;
+        padding: 15px 10px;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .menu-item {
+        gap: 9px;
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .search-area {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .topbar-right {
+        margin-left: auto;
+    }
+
+    .browse-page {
+        padding: 16px 20px;
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   17. RESPONSIVE - 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+    }
+
+    .sidebar-logo {
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-menu,
+    .sidebar-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .sidebar-bottom {
+        margin-top: 8px;
+        padding-top: 8px;
+    }
+
+    .menu-item {
+        margin: 0;
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .menu-icon {
+        width: 20px;
+    }
+
+    .menu-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .university-info {
+        display: none;
+    }
+
+
+    /* Topbar */
+
+    .topbar {
+        padding: 12px;
+    }
+
+    .search-area {
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .search-box {
+        min-width: 100%;
+        border-radius: 8px;
+    }
+
+    .search-category {
+        flex: 1;
+        width: auto;
+        border: 1px solid #DCE6F5;
+        border-radius: 8px;
+    }
+
+    .search-button {
+        margin: 0;
+        padding: 0 18px;
+    }
+
+    .topbar-right {
+        gap: 12px;
+    }
+
+
+    /* Browse Page */
+
+    .browse-page {
+        padding: 15px 12px;
+    }
+
+    .browse-page .page-heading h1 {
+        font-size: 26px;
+    }
+
+    .browse-page .page-heading p {
+        font-size: 12px;
+    }
+
+    .browse-filters {
+        padding: 10px;
+    }
+
+    .filter-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .view-buttons {
+        grid-column: auto;
+    }
+
+
+    /* Resources */
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .resource-cover {
+        height: 160px;
+    }
+
+    .resource-info h3 {
+        min-height: auto;
+    }
+
+    .resource-meta {
+        justify-content: flex-start;
+    }
+
+    .browse-pagination {
+        gap: 5px;
+    }
+
+    .browse-pagination a {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+
+/* =========================================
+   18. RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .profile-info {
+        gap: 7px;
+        padding-left: 9px;
+    }
+
+    .profile-info h4 {
+        font-size: 11px;
+    }
+
+    .profile-info p {
+        font-size: 9px;
+    }
+
+    .profile-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .browse-page .page-heading h1 {
+        font-size: 23px;
+    }
+
+    .browse-pagination a {
+        width: 29px;
+        height: 29px;
+        font-size: 11px;
+    }
+
+}
