@@ -32,9 +32,17 @@ body {
 }
 
 .brand-mark {
-    font-size: 58px;
-    color: #102653;
-    margin-bottom: 5px;
+    width: 100%; /* Yahan 120% ki jagah 100% karein */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.brand-mark img {
+    width: 120px; 
+    height: auto;
+    object-fit: contain;
 }
 
 .register-header h1 {

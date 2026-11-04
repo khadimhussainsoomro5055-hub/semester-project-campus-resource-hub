@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +13,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/register.css">
+    
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -23,8 +25,10 @@
     <!-- Logo and Website Name -->
     <header class="register-header">
 
-        <div class="brand-mark">◆</div>
-
+        <!-- Replaced ◆ with Graduation Cap Icon -->
+       <div class="brand-mark">
+    <img src="images/register-page-logo.png" alt="IBA Logo">
+</div>
         <h1>Campus <span>Resource Hub</span></h1>
 
         <h3>Sukkur IBA University</h3>
@@ -52,7 +56,8 @@
                 <label for="fullname">Full Name</label>
 
                 <div class="input-box">
-                    <span class="input-icon">♙</span>
+                    <!-- Replaced ♙ -->
+                    <span class="input-icon"><i data-lucide="user" style="width: 18px; height: 18px;"></i></span>
 
                     <input
                         type="text"
@@ -74,7 +79,8 @@
                     <label for="email">University Email (IBA)</label>
 
                     <div class="input-box">
-                        <span class="input-icon">✉</span>
+                        <!-- Replaced ✉ -->
+                        <span class="input-icon"><i data-lucide="mail" style="width: 18px; height: 18px;"></i></span>
 
                         <input
                             type="email"
@@ -96,7 +102,8 @@
                     <label for="confirm-email">Confirm University Email</label>
 
                     <div class="input-box">
-                        <span class="input-icon">✉</span>
+                        <!-- Replaced ✉ -->
+                        <span class="input-icon"><i data-lucide="mail" style="width: 18px; height: 18px;"></i></span>
 
                         <input
                             type="email"
@@ -120,7 +127,8 @@
                     <label for="password">Password</label>
 
                     <div class="input-box">
-                        <span class="input-icon">▣</span>
+                        <!-- Replaced ▣ -->
+                        <span class="input-icon"><i data-lucide="lock" style="width: 18px; height: 18px;"></i></span>
 
                         <input
                             type="password"
@@ -139,7 +147,8 @@
                     <label for="confirm-password">Confirm Password</label>
 
                     <div class="input-box">
-                        <span class="input-icon">▣</span>
+                        <!-- Replaced ▣ -->
+                        <span class="input-icon"><i data-lucide="lock" style="width: 18px; height: 18px;"></i></span>
 
                         <input
                             type="password"
@@ -163,7 +172,8 @@
                     <label for="department">Department</label>
 
                     <div class="input-box">
-                        <span class="input-icon">▤</span>
+                        <!-- Replaced ▤ -->
+                        <span class="input-icon"><i data-lucide="building" style="width: 18px; height: 18px;"></i></span>
 
                         <select id="department" name="department" required>
                             <option value="" selected disabled>Select your department</option>
@@ -185,7 +195,8 @@
                     <label for="program">Academic Program</label>
 
                     <div class="input-box">
-                        <span class="input-icon">▤</span>
+                        <!-- Replaced ▤ -->
+                        <span class="input-icon"><i data-lucide="book-open" style="width: 18px; height: 18px;"></i></span>
 
                         <select id="program" name="program" required>
                             <option value="" selected disabled>Select your program</option>
@@ -211,7 +222,8 @@
                     <label for="semester">Semester</label>
 
                     <div class="input-box">
-                        <span class="input-icon">▦</span>
+                        <!-- Replaced ▦ -->
+                        <span class="input-icon"><i data-lucide="calendar" style="width: 18px; height: 18px;"></i></span>
 
                         <select id="semester" name="semester" required>
                             <option value="" selected disabled>Select your semester</option>
@@ -235,7 +247,8 @@
                     <label for="phone">Phone Number <span class="optional">(Optional)</span></label>
 
                     <div class="input-box">
-                        <span class="input-icon">☎</span>
+                        <!-- Replaced ☎ -->
+                        <span class="input-icon"><i data-lucide="phone" style="width: 18px; height: 18px;"></i></span>
 
                         <input
                             type="tel"
@@ -267,7 +280,7 @@
 
             <!-- Create Account Button -->
             <button type="submit" class="register-button">
-                Create Account <span>→</span>
+                Create Account <i data-lucide="arrow-right" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i>
             </button>
 
         </form>
@@ -289,5 +302,10 @@
 
 </div>
 
+<!-- Initialize Lucide Icons -->
+<script>
+    lucide.createIcons();
+</script>
+
 </body>
-</html>
+</html>an
