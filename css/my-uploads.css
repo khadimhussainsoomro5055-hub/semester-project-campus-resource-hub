@@ -33,8 +33,12 @@ body {
     margin-bottom: 30px;
 }
 
-.logo-icon { font-size: 24px; }
-.logo h2 { font-size: 18px; line-height: 1.2; color: #07194f; }
+.logo-icon { 
+    font-size: 24px;
+}
+.logo h2 { 
+    font-size: 18px; line-height: 1.2; color: #07194f;
+}
 
 .sidebar-menu a, .sidebar-bottom a {
     display: flex;
