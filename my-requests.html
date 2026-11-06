@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Requests | Campus Resource Hub</title>
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/my-requests.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo">
+                <span class="logo-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </span>
+                <h2>Campus<br>Resource Hub</h2>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="layout-dashboard"></i></span>
+                Dashboard
+            </a>
+
+            <a href="browse-resources.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="library-big"></i></span>
+                Browse Resources
+            </a>
+
+            <a href="upload-resource.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="cloud-upload"></i></span>
+                Upload Resource
+            </a>
+
+            <a href="my-uploads.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="folder"></i></span>
+                My Uploads
+            </a>
+
+            <a href="physical-books.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="book"></i></span>
+                Physical Books
+            </a>
+
+            <a href="my-requests.html" class="menu-item active">
+                <span class="menu-icon"><i data-lucide="clipboard-list"></i></span>
+                My Requests
+            </a>
+
+            <a href="report-resource.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="flag"></i></span>
+                Report Content
+            </a>
+
+        </nav>
+
+
+        <!-- Bottom Navigation -->
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="settings"></i></span>
+                Settings
+            </a>
+
+            <a href="help.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="circle-question-mark"></i></span>
+                Help & Support
+            </a>
+
+        </div>
+
+
+        <!-- University Information -->
+        <div class="university-info">
+            <div class="university-icon">🏛</div>
+            <h3>Sukkur IBA University</h3>
+            <p>Knowledge • Sharing • Community</p>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="search-area">
+
+                <div class="search-box">
+                    <span><i data-lucide="search"></i></span>
+                    <input type="text" placeholder="Search for books, notes, past papers, assignments...">
+                </div>
+
+                <select class="search-category">
+                    <option>All</option>
+                    <option>Books</option>
+                    <option>Notes</option>
+                    <option>Past Papers</option>
+                    <option>Assignments</option>
+                </select>
+
+                <button class="search-button">Search</button>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-button">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">K</div>
+
+                    <div>
+                        <h4>Khadim Hussain</h4>
+                        <p>BS Software Engineering</p>
+                    </div>
+
+                    <span class="profile-arrow">⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- My Requests Content -->
+        <div class="dashboard-content requests-content">
+
+            <!-- Page Heading -->
+            <section class="requests-heading">
+                <h1>My Requests</h1>
+                <p>Track the status of your book borrowing requests and manage your interactions with book owners.</p>
+            </section>
+
+
+            <!-- Request Filters -->
+            <section class="request-filter-row">
+
+                <div class="request-tabs">
+
+                    <a href="#" class="request-tab active-tab">
+                        All Requests (8)
+                    </a>
+
+                    <a href="#" class="request-tab">
+                        <i data-lucide="clock"></i>
+                        Pending (2)
+                    </a>
+
+                    <a href="#" class="request-tab">
+                        <i data-lucide="check-circle"></i>
+                        Approved (2)
+                    </a>
+
+                    <a href="#" class="request-tab">
+                        <i data-lucide="x-circle"></i>
+                        Rejected (1)
+                    </a>
+
+                    <a href="#" class="request-tab">
+                        <i data-lucide="corner-up-left"></i>
+                        Completed (2)
+                    </a>
+
+                </div>
+
+
+                <div class="request-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search your requests...">
+                </div>
+
+            </section>
+
+
+            <!-- Requests List -->
+            <section class="requests-list">
+
+
+                <!-- Request 1: Pending -->
+                <div class="request-card">
+
+                    <div class="request-book">
+                        <div class="request-cover cover-one">
+                            <h3>OPERATING<br>SYSTEMS</h3>
+                            <span>⚙</span>
+                        </div>
+
+                        <div class="request-book-info">
+                            <h3>Operating System Concepts</h3>
+
+                            <p><i data-lucide="library"></i> Computer Science</p>
+                            <p><i data-lucide="layers"></i> Semester 4</p>
+                            <p><i data-lucide="file-text"></i> Physical Book</p>
+                        </div>
+                    </div>
+
+
+                    <div class="request-owner">
+                        <div class="owner-name">
+                            <div class="owner-avatar">U</div>
+                            <h4>Usman Bhatti</h4>
+                        </div>
+
+                        <p><i data-lucide="map-pin"></i> On-campus (CS Block)</p>
+                        <p><i data-lucide="calendar-days"></i> Oct 15, 2026</p>
+                    </div>
+
+
+                    <div class="request-status">
+                        <span class="status-badge pending-status">
+                            <i data-lucide="clock"></i>
+                            Pending
+                        </span>
+
+                        <p>Your request is sent. Waiting for the owner's response.</p>
+                    </div>
+
+
+                    <div class="request-actions">
+                        <a href="#" class="details-button">View Details</a>
+                        <a href="#" class="cancel-button">
+                            <i data-lucide="trash-2"></i>
+                            Cancel Request
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- Request 2: Approved -->
+                <div class="request-card">
+
+                    <div class="request-book">
+                        <div class="request-cover cover-two">
+                            <h3>Linear<br>Algebra</h3>
+                            <span>◇</span>
+                        </div>
+
+                        <div class="request-book-info">
+                            <h3>Linear Algebra</h3>
+
+                            <p><i data-lucide="library"></i> Mathematics</p>
+                            <p><i data-lucide="layers"></i> Semester 1</p>
+                            <p><i data-lucide="file-text"></i> Physical Book</p>
+                        </div>
+                    </div>
+
+
+                    <div class="request-owner">
+                        <div class="owner-name">
+                            <div class="owner-avatar">F</div>
+                            <h4>Fatima Ali</h4>
+                        </div>
+
+                        <p><i data-lucide="map-pin"></i> On-campus (Hostel B)</p>
+                        <p><i data-lucide="calendar-days"></i> Oct 8, 2026</p>
+                    </div>
+
+
+                    <div class="request-status">
+                        <span class="status-badge approved-status">
+                            <i data-lucide="check-circle"></i>
+                            Approved
+                        </span>
+
+                        <p>Your request is approved. Contact the owner to arrange pickup.</p>
+                    </div>
+
+
+                    <div class="request-actions">
+                        <a href="#" class="details-button">View Details</a>
+                        <a href="#" class="received-button">
+                            <i data-lucide="book-open"></i>
+                            Mark as Received
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- Request 3: Rejected -->
+                <div class="request-card">
+
+                    <div class="request-book">
+                        <div class="request-cover cover-three">
+                            <h3>Database<br>System Concepts</h3>
+                            <span>◇</span>
+                        </div>
+
+                        <div class="request-book-info">
+                            <h3>Database System Concepts</h3>
+
+                            <p><i data-lucide="library"></i> Computer Science</p>
+                            <p><i data-lucide="layers"></i> Semester 3</p>
+                            <p><i data-lucide="file-text"></i> Physical Book</p>
+                        </div>
+                    </div>
+
+
+                    <div class="request-owner">
+                        <div class="owner-name">
+                            <div class="owner-avatar">H</div>
+                            <h4>Hira Memon</h4>
+                        </div>
+
+                        <p><i data-lucide="map-pin"></i> On-campus (CS Block)</p>
+                        <p><i data-lucide="calendar-days"></i> Oct 1, 2026</p>
+                    </div>
+
+
+                    <div class="request-status">
+                        <span class="status-badge rejected-status">
+                            <i data-lucide="x-circle"></i>
+                            Rejected
+                        </span>
+
+                        <p>Your request was rejected by the owner.</p>
+                    </div>
+
+
+                    <div class="request-actions">
+                        <a href="#" class="details-button">View Details</a>
+                    </div>
+
+                </div>
+
+
+                <!-- Request 4: Returned -->
+                <div class="request-card">
+
+                    <div class="request-book">
+                        <div class="request-cover cover-four">
+                            <h3>Physics</h3>
+                            <span>☄</span>
+                        </div>
+
+                        <div class="request-book-info">
+                            <h3>University Physics</h3>
+
+                            <p><i data-lucide="layers"></i> Physics</p>
+                            <p><i data-lucide="layers"></i> Semester 2</p>
+                            <p><i data-lucide="file-text"></i> Physical Book</p>
+                        </div>
+                    </div>
+
+
+                    <div class="request-owner">
+                        <div class="owner-name">
+                            <div class="owner-avatar">I</div>
+                            <h4>Imran Ali</h4>
+                        </div>
+
+                        <p><i data-lucide="map-pin"></i> On-campus (Science Block)</p>
+                        <p><i data-lucide="calendar-days"></i> Sep 25, 2026</p>
+                    </div>
+
+
+                    <div class="request-status">
+                        <span class="status-badge returned-status">
+                            <i data-lucide="corner-up-left"></i>
+                            Returned
+                        </span>
+
+                        <p>You have returned this book. Thank you!</p>
+                    </div>
+
+
+                    <div class="request-actions">
+                        <a href="#" class="details-button">View Details</a>
+                    </div>
+
+                </div>
+
+
+                <!-- Request 5: Completed -->
+                <div class="request-card">
+
+                    <div class="request-book">
+                        <div class="request-cover cover-five">
+                            <h3>Organic<br>Chemistry</h3>
+                            <span>⚛</span>
+                        </div>
+
+                        <div class="request-book-info">
+                            <h3>Organic Chemistry</h3>
+
+                            <p><i data-lucide="layers"></i> Chemistry</p>
+                            <p><i data-lucide="layers"></i> Semester 4</p>
+                            <p><i data-lucide="file-text"></i> Physical Book</p>
+                        </div>
+                    </div>
+
+
+                    <div class="request-owner">
+                        <div class="owner-name">
+                            <div class="owner-avatar">S</div>
+                            <h4>Sara Memon</h4>
+                        </div>
+
+                        <p><i data-lucide="map-pin"></i> On-campus (Hostel A)</p>
+                        <p><i data-lucide="calendar-days"></i> Sep 10, 2026</p>
+                    </div>
+
+
+                    <div class="request-status">
+                        <span class="status-badge completed-status">
+                            <i data-lucide="check-circle"></i>
+                            Completed
+                        </span>
+
+                        <p>You have received and returned this book.</p>
+                    </div>
+
+
+                    <div class="request-actions">
+                        <a href="#" class="details-button">View Details</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Pagination -->
+            <div class="requests-pagination">
+                <a href="#"><i data-lucide="chevron-left"></i></a>
+                <a href="#" class="current">1</a>
+                <a href="#">2</a>
+                <a href="#"><i data-lucide="chevron-right"></i></a>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
