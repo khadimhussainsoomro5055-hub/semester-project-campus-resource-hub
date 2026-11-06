@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +6,17 @@
 
     <title>Help & Support | Campus Resource Hub</title>
 
-    <!-- Montserrat Font -->
+    <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS Files -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/help.css">
+    
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -23,78 +25,54 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-
         <div class="sidebar-logo">
             <div class="logo">
-                <span class="logo-icon">🎓</span>
+                <span class="logo-icon"><i data-lucide="graduation-cap" style="width: 28px; height: 28px; color: #0866f5;"></i></span>
                 <h2>Campus<br>Resource Hub</h2>
             </div>
         </div>
 
         <!-- Main Navigation -->
         <nav class="sidebar-menu">
-
             <a href="index.html" class="menu-item">
-                <span class="menu-icon">⌂</span>
-                Dashboard
+                <span class="menu-icon"><i data-lucide="layout-dashboard"></i></span> Dashboard
             </a>
-
             <a href="browse-resources.html" class="menu-item">
-                <span class="menu-icon">▣</span>
-                Browse Resources
+                <span class="menu-icon"><i data-lucide="library-big"></i></span> Browse Resources
             </a>
-
             <a href="upload-resource.html" class="menu-item">
-                <span class="menu-icon">☁</span>
-                Upload Resource
+                <span class="menu-icon"><i data-lucide="cloud-upload"></i></span> Upload Resource
             </a>
-
             <a href="my-uploads.html" class="menu-item">
-                <span class="menu-icon">▤</span>
-                My Uploads
+                <span class="menu-icon"><i data-lucide="folder"></i></span> My Uploads
             </a>
-
             <a href="physical-books.html" class="menu-item">
-                <span class="menu-icon">▣</span>
-                Physical Books
+                <span class="menu-icon"><i data-lucide="book"></i></span> Physical Books
             </a>
-
             <a href="my-requests.html" class="menu-item">
-                <span class="menu-icon">▤</span>
-                My Requests
+                <span class="menu-icon"><i data-lucide="clipboard-list"></i></span> My Requests
             </a>
-
             <a href="report-resource.html" class="menu-item">
-                <span class="menu-icon">⚑</span>
-                Report Content
+                <span class="menu-icon"><i data-lucide="flag"></i></span> Report Content
             </a>
-
         </nav>
-
 
         <!-- Bottom Navigation -->
         <div class="sidebar-bottom">
-
             <a href="settings.html" class="menu-item">
-                <span class="menu-icon">⚙</span>
-                Settings
+                <span class="menu-icon"><i data-lucide="settings"></i></span> Settings
             </a>
-
             <a href="help.html" class="menu-item active">
-                <span class="menu-icon">ⓘ</span>
-                Help & Support
+                <span class="menu-icon"><i data-lucide="circle-help"></i></span> Help & Support
             </a>
-
         </div>
 
-
-        <!-- University Information -->
+        <!-- University Info (Building Icon is kept as it was) -->
         <div class="university-info">
             <div class="university-icon">🏛</div>
             <h3>Sukkur IBA University</h3>
             <p>Knowledge • Sharing • Community</p>
         </div>
-
     </aside>
 
 
@@ -103,49 +81,35 @@
 
         <!-- Topbar -->
         <header class="topbar">
-
             <div class="search-area">
-
                 <div class="search-box">
-                    <span>⌕</span>
-                    <input type="text" placeholder="Search for books, notes, past papers, assignments...">
+                    <span><i data-lucide="search" style="width: 18px; height: 18px;"></i></span>
+                    <input type="text" placeholder="Search for books, notes, past papers...">
                 </div>
-
                 <select class="search-category">
                     <option>All Categories</option>
                     <option>Books</option>
                     <option>Notes</option>
                     <option>Past Papers</option>
-                    <option>Assignments</option>
                 </select>
-
                 <button class="search-button">Search</button>
-
             </div>
 
-
             <div class="topbar-right">
-
                 <button class="notification-button">
-                    ♧
+                    <i data-lucide="bell" style="width: 22px; height: 22px;"></i>
                     <span class="notification-count">3</span>
                 </button>
 
                 <div class="profile-info">
-
                     <div class="profile-avatar">AR</div>
-
                     <div>
                         <h4>Ali Raza</h4>
                         <p>Student</p>
                     </div>
-
-                    <span class="profile-arrow">⌄</span>
-
+                    <span class="profile-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                 </div>
-
             </div>
-
         </header>
 
 
@@ -163,50 +127,35 @@
             <section class="support-shortcuts">
 
                 <a href="#faqs" class="support-shortcut">
-
-                    <div class="shortcut-icon faq-icon">▣</div>
-
+                    <div class="shortcut-icon faq-icon"><i data-lucide="book-open" style="width: 32px; height: 32px;"></i></div>
                     <div>
                         <h3>FAQs</h3>
                         <p>Find answers to common questions.</p>
                     </div>
-
                 </a>
 
-
                 <a href="#contact-support" class="support-shortcut">
-
-                    <div class="shortcut-icon contact-icon">✉</div>
-
+                    <div class="shortcut-icon contact-icon"><i data-lucide="mail" style="width: 32px; height: 32px;"></i></div>
                     <div>
                         <h3>Contact Support</h3>
                         <p>Send us a message for further assistance.</p>
                     </div>
-
                 </a>
 
-
                 <a href="#other-support" class="support-shortcut">
-
-                    <div class="shortcut-icon report-icon">♢</div>
-
+                    <div class="shortcut-icon report-icon"><i data-lucide="shield-alert" style="width: 32px; height: 32px;"></i></div>
                     <div>
                         <h3>Report an Issue</h3>
                         <p>Report bugs or inappropriate content.</p>
                     </div>
-
                 </a>
 
-
                 <a href="#guidelines" class="support-shortcut">
-
-                    <div class="shortcut-icon guidelines-icon">☼</div>
-
+                    <div class="shortcut-icon guidelines-icon"><i data-lucide="lightbulb" style="width: 32px; height: 32px;"></i></div>
                     <div>
                         <h3>Guidelines</h3>
                         <p>Learn how to use the platform effectively.</p>
                     </div>
-
                 </a>
 
             </section>
@@ -215,176 +164,119 @@
             <!-- Help Main Layout -->
             <div class="help-layout">
 
-
                 <!-- Frequently Asked Questions -->
                 <section class="help-card faq-card" id="faqs">
-
                     <div class="faq-heading">
-
                         <div>
                             <h2>Frequently Asked Questions</h2>
                             <p>Find answers to common questions about using Campus Resource Hub.</p>
                         </div>
-
                         <div class="faq-search">
-                            <span>⌕</span>
+                            <span><i data-lucide="search" style="width: 18px; height: 18px;"></i></span>
                             <input type="text" placeholder="Search questions...">
                         </div>
-
                     </div>
 
-
-                    <!-- FAQ 1 -->
                     <div class="faq-list">
-
                         <details class="faq-item" open>
-
                             <summary>
                                 <span>1. &nbsp; How can I upload a resource?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 Go to the "Upload Resource" page, select the category, add a title and description, choose your file, and submit. The resource will be reviewed by the admin before it becomes visible to other students.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 2 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>2. &nbsp; How long does it take for my uploaded resource to be approved?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 Your uploaded resource will remain pending until an administrator reviews it. You can check its approval status from the My Uploads page.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 3 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>3. &nbsp; What types of files are allowed?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 You can upload supported academic files such as PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, ZIP, JPG, JPEG, and PNG files, subject to the platform's upload size limit.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 4 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>4. &nbsp; Can I request a physical book from another student?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 Yes. Open the Physical Books page, find the book you need, and select Request to Borrow. The owner can approve or reject your request.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 5 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>5. &nbsp; How can I track the status of my requests?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 Visit the My Requests page to see whether your borrowing request is pending, approved, rejected, or completed.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 6 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>6. &nbsp; What should I do if I find inappropriate content?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 Use the Report Content option to report inappropriate, irrelevant, duplicate, or incorrect resources. The administrator will review your report.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 7 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>7. &nbsp; Can I edit or delete my uploaded resource?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 You can manage your uploaded resources from the My Uploads page. Available editing and deletion options depend on the resource's status and platform permissions.
                             </div>
-
                         </details>
 
-
-                        <!-- FAQ 8 -->
                         <details class="faq-item">
-
                             <summary>
                                 <span>8. &nbsp; Who can see my email address?</span>
-                                <span class="faq-arrow">⌄</span>
+                                <span class="faq-arrow"><i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i></span>
                             </summary>
-
                             <div class="faq-answer">
                                 Your university email is used for your account. You can review your profile visibility and email privacy preferences from the Settings page.
                             </div>
-
                         </details>
-
                     </div>
-
                 </section>
 
 
                 <!-- Right Column -->
                 <div class="help-right">
 
-
                     <!-- Contact Support -->
                     <section class="help-card contact-card" id="contact-support">
-
                         <div class="help-card-heading">
-
-                            <div class="help-icon contact-heading-icon">✉</div>
-
+                            <div class="help-icon contact-heading-icon"><i data-lucide="mail" style="width: 24px; height: 24px;"></i></div>
                             <div>
                                 <h2>Contact Support</h2>
                                 <p>Have a question or need help? Send us a message.</p>
                             </div>
-
                         </div>
 
-
                         <form>
-
                             <div class="help-form-group">
-
                                 <label for="subject">Subject</label>
-
                                 <select id="subject">
                                     <option>General Inquiry</option>
                                     <option>Account Problem</option>
@@ -393,98 +285,66 @@
                                     <option>Technical Issue</option>
                                     <option>Other</option>
                                 </select>
-
                             </div>
-
 
                             <div class="help-form-group">
-
                                 <label for="message">Message</label>
-
                                 <textarea id="message" maxlength="500" rows="4" placeholder="Type your message here..."></textarea>
-
                                 <div class="message-count">0/500</div>
-
                             </div>
 
-
                             <button type="button" class="send-message-button">
-                                ➤ &nbsp; Send Message
+                                <i data-lucide="send" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 5px;"></i> Send Message
                             </button>
-
                         </form>
-
                     </section>
 
 
                     <!-- Other Support Options -->
                     <section class="help-card other-support-card" id="other-support">
-
                         <div class="help-card-heading">
-
-                            <div class="help-icon other-heading-icon">♧</div>
-
+                            <div class="help-icon other-heading-icon"><i data-lucide="life-buoy" style="width: 24px; height: 24px;"></i></div>
                             <div>
                                 <h2>Other Support Options</h2>
                                 <p>You can also get help through the following.</p>
                             </div>
-
                         </div>
-
 
                         <div class="other-support-list">
 
                             <a href="report-resource.html" class="other-support-item">
-
-                                <div class="other-option-icon issue-icon">⚑</div>
-
+                                <div class="other-option-icon issue-icon"><i data-lucide="flag" style="width: 22px; height: 22px;"></i></div>
                                 <div>
                                     <h4>Report an Issue</h4>
                                     <p>Report bugs, inappropriate content, or other problems.</p>
                                 </div>
-
-                                <span>›</span>
-
+                                <span><i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i></span>
                             </a>
 
-
                             <a href="#guidelines" class="other-support-item">
-
-                                <div class="other-option-icon guide-icon">▤</div>
-
+                                <div class="other-option-icon guide-icon"><i data-lucide="book" style="width: 22px; height: 22px;"></i></div>
                                 <div>
                                     <h4>Platform Guidelines</h4>
                                     <p>Read the rules and guidelines for using the platform.</p>
                                 </div>
-
-                                <span>›</span>
-
+                                <span><i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i></span>
                             </a>
 
-
                             <a href="mailto:support@iba.edu.pk" class="other-support-item">
-
-                                <div class="other-option-icon email-icon">✉</div>
-
+                                <div class="other-option-icon email-icon"><i data-lucide="mail" style="width: 22px; height: 22px;"></i></div>
                                 <div>
                                     <h4>Email Support</h4>
                                     <p>support@iba.edu.pk</p>
                                 </div>
-
-                                <span>›</span>
-
+                                <span><i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i></span>
                             </a>
-
                         </div>
-
                     </section>
 
 
                     <!-- Guidelines -->
                     <section class="help-card guidelines-card" id="guidelines">
-
                         <h2>Platform Guidelines</h2>
-
                         <ul>
                             <li>Use your official university email address.</li>
                             <li>Upload relevant academic resources only.</li>
@@ -492,18 +352,18 @@
                             <li>Respect other students and their shared resources.</li>
                             <li>Report inappropriate or incorrect content.</li>
                         </ul>
-
                     </section>
 
                 </div>
-
             </div>
-
         </div>
-
     </main>
-
 </div>
+
+<!-- Initialize Lucide Icons -->
+<script>
+    lucide.createIcons();
+</script>
 
 </body>
 </html>
