@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Content | Campus Resource Hub</title>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/report-resource.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo">
+                <span class="logo-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </span>
+                <h2>Campus<br>Resource Hub</h2>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="sidebar-menu">
+
+            <a href="index.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="layout-dashboard"></i></span>
+                Dashboard
+            </a>
+
+            <a href="browse-resources.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="library-big"></i></span>
+                Browse Resources
+            </a>
+
+            <a href="upload-resource.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="cloud-upload"></i></span>
+                Upload Resource
+            </a>
+
+            <a href="my-uploads.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="folder"></i></span>
+                My Uploads
+            </a>
+
+            <a href="physical-books.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="book"></i></span>
+                Physical Books
+            </a>
+
+            <a href="my-requests.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="clipboard-list"></i></span>
+                My Requests
+            </a>
+
+            <a href="report-resource.html" class="menu-item active">
+                <span class="menu-icon"><i data-lucide="flag"></i></span>
+                Report Content
+            </a>
+
+        </nav>
+
+
+        <!-- Bottom Navigation -->
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="settings"></i></span>
+                Settings
+            </a>
+
+            <a href="help.html" class="menu-item">
+                <span class="menu-icon"><i data-lucide="circle-question-mark"></i></span>
+                Help & Support
+            </a>
+
+        </div>
+
+
+        <!-- University Information -->
+        <div class="university-info">
+            <div class="university-icon">🏛</div>
+            <h3>Sukkur IBA University</h3>
+            <p>Knowledge • Sharing • Community</p>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <div class="search-area">
+
+                <div class="search-box">
+                    <span><i data-lucide="search"></i></span>
+                    <input type="text" placeholder="Search for books, notes, past papers, assignments...">
+                </div>
+
+                <select class="search-category">
+                    <option>All</option>
+                    <option>Books</option>
+                    <option>Notes</option>
+                    <option>Past Papers</option>
+                    <option>Assignments</option>
+                </select>
+
+                <button class="search-button">Search</button>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification-button">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">K</div>
+
+                    <div>
+                        <h4>Khadim Hussain</h4>
+                        <p>BS Software Engineering</p>
+                    </div>
+
+                    <span class="profile-arrow">⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content detail-content">
+<div class="page-head"><div><div class="eyebrow"><i data-lucide="shield-check"></i> Community safety</div><h1>Report Content</h1><p>Help us keep Campus Resource Hub accurate, useful, and safe for everyone.</p></div><a class="outline-btn" href="help.html"><i data-lucide="circle-help"></i> Help & Support</a></div>
+<div class="report-layout"><section class="panel"><div class="panel-title"><span class="step">01</span><div><h2>Submit a content report</h2><p>Tell us which resource needs attention. Reports are reviewed by the administrator.</p></div></div>
+<form action="#" method="get"><div class="field"><label for="content-type">Content type <span>*</span></label><select id="content-type" name="content-type" required><option value="">Select content type</option><option>Academic Resource</option><option>Physical Book Listing</option></select></div>
+<div class="field"><label for="resource-title">Resource / Book title <span>*</span></label><input id="resource-title" name="resource-title" placeholder="e.g. Data Structures and Algorithms" required></div>
+<div class="field"><label for="resource-link">Resource link or ID (optional)</label><input id="resource-link" name="resource-link" placeholder="Paste the resource URL or ID"></div>
+<div class="field"><label for="reason">Reason for reporting <span>*</span></label><select id="reason" name="reason" required><option value="">Choose a reason</option><option>Incorrect or misleading information</option><option>Duplicate resource</option><option>Irrelevant content</option><option>Inappropriate content</option><option>Copyright concern</option><option>Other</option></select></div>
+<div class="field"><label for="description">Describe the issue <span>*</span></label><textarea id="description" name="description" rows="5" placeholder="Explain what is wrong with this content..." required></textarea><small>Provide enough detail for the admin to review your report.</small></div>
+<div class="form-actions"><a href="browse-resources.html" class="outline-btn">Cancel</a><button type="button" class="primary-btn" title="Submission will be enabled when JavaScript and backend are implemented"><i data-lucide="send"></i> Submit Report</button></div><p class="demo-note">Frontend preview only — reporting will be enabled during the functionality phase.</p></form></section>
+<aside class="side-stack"><div class="panel info-panel"><div class="info-icon"><i data-lucide="shield-alert"></i></div><h3>What can you report?</h3><ul><li><i data-lucide="check"></i> Incorrect or outdated study material</li><li><i data-lucide="check"></i> Duplicate uploads</li><li><i data-lucide="check"></i> Irrelevant or inappropriate files</li><li><i data-lucide="check"></i> Misleading physical book listings</li></ul></div><div class="panel muted-panel"><h3><i data-lucide="info"></i> What happens next?</h3><p>Once submitted, your report will be sent to the administrator for review. The admin can investigate and resolve the issue.</p></div></aside></div>
+        </div>
+    </main>
+</div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>
