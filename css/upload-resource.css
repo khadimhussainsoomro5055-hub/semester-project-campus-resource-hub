@@ -1,35 +1,67 @@
+
+/* ===============================
+   GLOBAL STYLES
+================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
 body {
-   font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
     background-color: #F5F8FD;
     color: #102653;
 }
 
+button,
+input,
+select,
+textarea {
+    font-family: 'Inter', sans-serif;
+}
 
-/* Main Layout */
+/* ===============================
+   MAIN FIXED LAYOUT
+================================ */
 
 .dashboard-layout {
     display: flex;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
 }
 
-
-/* Sidebar */
+/* ===============================
+   FIXED SIDEBAR
+================================ */
 
 .sidebar {
     width: 250px;
     min-width: 250px;
+    height: 100%;
     padding: 20px 15px;
     background-color: white;
     border-right: 1px solid #E1E9F5;
+
     display: flex;
     flex-direction: column;
+
+    flex-shrink: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
+
+/* Logo */
 
 .logo {
     padding: 5px 10px 25px;
@@ -42,6 +74,8 @@ body {
     line-height: 1.3;
 }
 
+/* Sidebar Menu */
+
 .sidebar-menu {
     padding-top: 15px;
 }
@@ -50,19 +84,22 @@ body {
     display: flex;
     align-items: center;
     gap: 13px;
+
     padding: 13px 12px;
     margin-bottom: 5px;
+
     border-radius: 8px;
     color: #102653;
     text-decoration: none;
+
     font-size: 13px;
     font-weight: 600;
 }
 
-.menu-item span {
-    width: 25px;
-    text-align: center;
-    font-size: 21px;
+.menu-item svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .menu-item:hover {
@@ -76,7 +113,6 @@ body {
     font-weight: 700;
 }
 
-
 /* Bottom Sidebar */
 
 .sidebar-bottom {
@@ -84,7 +120,6 @@ body {
     padding-top: 15px;
     border-top: 1px solid #E1E9F5;
 }
-
 
 /* University Information */
 
@@ -95,8 +130,13 @@ body {
 }
 
 .university-icon {
-    font-size: 75px;
     margin-bottom: 8px;
+}
+
+.university-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .university-info h3 {
@@ -110,33 +150,59 @@ body {
     margin-top: 7px;
 }
 
-
-/* Main Content */
+/* ===============================
+   MAIN CONTENT CONTAINER
+================================ */
 
 .main-content {
     flex: 1;
     min-width: 0;
+    min-height: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
 }
 
-
-/* Topbar */
+/* ===============================
+   FIXED TOP NAVBAR
+================================ */
 
 .topbar {
+    width: 100%;
     min-height: 75px;
     padding: 12px 23px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
     background-color: white;
     border-bottom: 1px solid #E1E9F5;
+
+    flex-shrink: 0;
+    z-index: 10;
 }
+
+/* Search Area */
 
 .search-area {
     display: flex;
     align-items: center;
     flex: 1;
     max-width: 800px;
+    min-width: 0;
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    color: #6B7A99;
+    margin-right: 8px;
+    flex-shrink: 0;
 }
 
 .search-area input {
@@ -144,10 +210,11 @@ body {
     flex: 1;
     min-width: 0;
     padding: 0 13px;
+
     border: 1px solid #DCE6F5;
     border-radius: 8px 0 0 8px;
     outline: none;
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 11px;
 }
 
@@ -155,10 +222,11 @@ body {
     height: 43px;
     width: 130px;
     padding: 0 8px;
+
     border: 1px solid #DCE6F5;
     border-left: none;
     background-color: white;
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 11px;
 }
 
@@ -166,16 +234,17 @@ body {
     height: 43px;
     padding: 0 23px;
     margin-left: 8px;
+
     border: none;
     border-radius: 7px;
+
     background-color: #0866E9;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
 }
-
 
 /* Profile */
 
@@ -183,22 +252,32 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .notification {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
     margin-right: 8px;
+}
+
+.notification svg {
+    width: 20px;
+    height: 20px;
 }
 
 .profile-avatar {
     width: 42px;
     height: 42px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 50%;
     background-color: #DCEAFF;
     color: #0866E9;
+
     font-size: 18px;
     font-weight: 800;
 }
@@ -213,12 +292,23 @@ body {
     font-size: 10px;
 }
 
-
-/* Page Content */
+/* ===============================
+   SCROLLABLE PAGE CONTENT
+================================ */
 
 .page-content {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+
     padding: 18px 22px 25px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
 }
+
+/* Page Heading */
 
 .page-heading {
     margin-bottom: 20px;
@@ -237,8 +327,9 @@ body {
     color: #52698C;
 }
 
-
-/* Upload Layout */
+/* ===============================
+   UPLOAD LAYOUT
+================================ */
 
 .upload-layout {
     display: grid;
@@ -247,13 +338,15 @@ body {
     align-items: start;
 }
 
-
-/* Form Cards */
+/* ===============================
+   FORM CARDS
+================================ */
 
 .form-card,
 .side-card {
     padding: 20px;
     margin-bottom: 15px;
+
     background-color: white;
     border: 1px solid #DCE7F7;
     border-radius: 10px;
@@ -261,13 +354,25 @@ body {
 
 .form-card h2,
 .side-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     margin-bottom: 20px;
     font-size: 15px;
     font-weight: 800;
 }
 
+.form-card h2 svg,
+.side-card h2 svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
 
-/* Form Rows */
+/* ===============================
+   FORM ROWS
+================================ */
 
 .form-row {
     display: flex;
@@ -283,6 +388,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 8px;
+
     font-size: 11px;
     font-weight: 700;
 }
@@ -297,20 +403,22 @@ body {
     font-weight: 500;
 }
 
-
-/* Form Inputs */
+/* ===============================
+   FORM INPUTS
+================================ */
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px;
+
     border: 1px solid #DCE6F5;
     border-radius: 7px;
     outline: none;
+
     background-color: white;
     color: #102653;
-    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
 }
 
@@ -339,20 +447,24 @@ body {
     display: block;
     margin-top: 5px;
     text-align: right;
+
     color: #64799F;
     font-size: 9px;
 }
 
-
-/* Upload Area */
+/* ===============================
+   UPLOAD AREA
+================================ */
 
 .upload-area {
     min-height: 185px;
     padding: 20px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     border: 2px dashed #86B5FF;
     border-radius: 9px;
     background-color: #FAFCFF;
@@ -360,9 +472,13 @@ body {
 }
 
 .upload-icon {
-    font-size: 35px;
     color: #0866E9;
     margin-bottom: 8px;
+}
+
+.upload-icon svg {
+    width: 40px;
+    height: 40px;
 }
 
 .upload-area h3 {
@@ -379,8 +495,10 @@ body {
 .browse-button {
     padding: 9px 18px;
     border-radius: 7px;
+
     background-color: #EAF3FF;
     color: #0866E9;
+
     font-size: 11px;
     font-weight: 700;
     cursor: pointer;
@@ -402,15 +520,18 @@ body {
     font-size: 9px;
 }
 
-
-/* Form Buttons */
+/* ===============================
+   FORM BUTTONS
+================================ */
 
 .form-buttons {
     display: flex;
     justify-content: space-between;
     gap: 12px;
+
     margin-top: 18px;
     padding-top: 15px;
+
     border-top: 1px solid #EDF1F7;
 }
 
@@ -419,7 +540,7 @@ body {
     height: 43px;
     padding: 0 20px;
     border-radius: 7px;
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 11px;
     font-weight: 700;
     cursor: pointer;
@@ -432,9 +553,18 @@ body {
 }
 
 .upload-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     border: none;
     background-color: #0866E9;
     color: white;
+}
+
+.upload-button svg {
+    width: 16px;
+    height: 16px;
 }
 
 .reset-button:hover {
@@ -445,30 +575,36 @@ body {
     background-color: #0756C5;
 }
 
-
-/* Right Side Cards */
+/* ===============================
+   RIGHT SIDE CARDS
+================================ */
 
 .side-card h2 {
     font-size: 13px;
 }
 
-
 /* Cover Preview */
 
 .cover-preview {
     height: 170px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     border-radius: 8px;
     background-color: #F0F4FA;
     color: #91A5C5;
 }
 
 .cover-icon {
-    font-size: 45px;
     margin-bottom: 8px;
+}
+
+.cover-icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .cover-preview p {
@@ -483,8 +619,9 @@ body {
     line-height: 1.6;
 }
 
-
-/* Supported File Types */
+/* ===============================
+   SUPPORTED FILE TYPES
+================================ */
 
 .file-type {
     display: flex;
@@ -500,13 +637,21 @@ body {
 .file-icon {
     width: 28px;
     height: 29px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     border-radius: 5px;
     color: white;
+
     font-size: 10px;
     font-weight: 800;
+}
+
+.file-icon svg {
+    width: 16px;
+    height: 16px;
 }
 
 .pdf {
@@ -539,8 +684,9 @@ body {
     font-weight: 600;
 }
 
-
-/* Upload Guidelines */
+/* ===============================
+   UPLOAD GUIDELINES
+================================ */
 
 .guidelines {
     list-style: none;
@@ -548,15 +694,25 @@ body {
 
 .guidelines li {
     display: flex;
+    align-items: flex-start;
     gap: 8px;
+
     margin-bottom: 13px;
     font-size: 10px;
     line-height: 1.6;
     color: #334C75;
 }
 
+.guidelines li svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    color: #087338;
+}
 
-/* Responsive Design */
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
 
 @media (max-width: 1100px) {
 
@@ -573,7 +729,6 @@ body {
     .side-card {
         margin-bottom: 0;
     }
-
 }
 
 @media (max-width: 800px) {
@@ -593,19 +748,23 @@ body {
 
     .search-area {
         width: 100%;
+        max-width: none;
     }
-
 }
 
 @media (max-width: 600px) {
 
     .dashboard-layout {
-        display: block;
+        flex-direction: column;
     }
 
     .sidebar {
         width: 100%;
-        min-height: auto;
+        min-width: 0;
+        height: auto;
+        max-height: 30dvh;
+        flex-shrink: 0;
+        overflow-y: auto;
     }
 
     .sidebar-menu,
@@ -616,6 +775,12 @@ body {
 
     .university-info {
         display: none;
+    }
+
+    .main-content {
+        flex: 1;
+        min-height: 0;
+        height: auto;
     }
 
     .topbar {
@@ -660,8 +825,11 @@ body {
         display: block;
     }
 
+    .side-card {
+        margin-bottom: 15px;
+    }
+
     .form-buttons {
         flex-wrap: wrap;
     }
-
 }

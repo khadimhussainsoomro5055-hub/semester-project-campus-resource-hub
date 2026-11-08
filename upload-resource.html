@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +15,8 @@
 
     <!-- CSS File -->
     <link rel="stylesheet" href="css/upload-resource.css">
-    
-    <!-- Lucide Icons Script -->
+
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -33,31 +34,31 @@
             <div class="sidebar-menu">
 
                 <a href="index.html" class="menu-item">
-                    <i data-lucide="home" style="width: 18px; height: 18px;"></i> Dashboard
+                    <i data-lucide="home"></i> Dashboard
                 </a>
 
                 <a href="browse-resources.html" class="menu-item">
-                    <i data-lucide="library-big" style="width: 18px; height: 18px;"></i> Browse Resources
+                    <i data-lucide="library-big"></i> Browse Resources
                 </a>
 
                 <a href="upload-resource.html" class="menu-item active">
-                    <i data-lucide="cloud-upload" style="width: 18px; height: 18px;"></i> Upload Resource
+                    <i data-lucide="cloud-upload"></i> Upload Resource
                 </a>
 
                 <a href="my-uploads.html" class="menu-item">
-                    <i data-lucide="folder" style="width: 18px; height: 18px;"></i> My Uploads
+                    <i data-lucide="folder"></i> My Uploads
                 </a>
 
                 <a href="physical-books.html" class="menu-item">
-                    <i data-lucide="book-open" style="width: 18px; height: 18px;"></i> Physical Books
+                    <i data-lucide="book-open"></i> Physical Books
                 </a>
 
                 <a href="my-requests.html" class="menu-item">
-                    <i data-lucide="clipboard-list" style="width: 18px; height: 18px;"></i> My Requests
+                    <i data-lucide="clipboard-list"></i> My Requests
                 </a>
 
                 <a href="report-resource.html" class="menu-item">
-                    <i data-lucide="flag" style="width: 18px; height: 18px;"></i> Report Content
+                    <i data-lucide="flag"></i> Report Content
                 </a>
 
             </div>
@@ -65,36 +66,36 @@
             <div class="sidebar-bottom">
 
                 <a href="settings.html" class="menu-item">
-                    <i data-lucide="settings" style="width: 18px; height: 18px;"></i> Settings
+                    <i data-lucide="settings"></i> Settings
                 </a>
 
                 <a href="help.html" class="menu-item">
-                    <i data-lucide="circle-help" style="width: 18px; height: 18px;"></i> Help & Support
+                    <i data-lucide="circle-help"></i> Help & Support
                 </a>
 
             </div>
 
-          <div class="university-info">
-    <div class="university-icon">
-        <img src="images/iba-logo.png" alt="Sukkur IBA Logo" style="width: 80px; height: 80px; object-fit: contain;">
-    </div>
-    <h3>Sukkur IBA University</h3>
-    <p>Knowledge • Sharing • Community</p>
-</div>
+            <div class="university-info">
+                <div class="university-icon">
+                    <img src="images/iba-logo.png" alt="Sukkur IBA Logo">
+                </div>
+                <h3>Sukkur IBA University</h3>
+                <p>Knowledge • Sharing • Community</p>
+            </div>
 
         </aside>
-
 
         <!-- Main Content -->
         <main class="main-content">
 
-            <!-- Topbar -->
+            <!-- Fixed Topbar -->
             <header class="topbar">
 
                 <div class="search-area">
-                    <!-- Search Icon -->
-                    <i data-lucide="search" style="width: 16px; height: 16px; color: #6b7a99; margin-left: 10px;"></i>
-                    <input type="text" placeholder="Search for books, notes, past papers, assignments...">
+                    <i data-lucide="search" class="search-icon"></i>
+
+                    <input type="text"
+                        placeholder="Search for books, notes, past papers, assignments...">
 
                     <select>
                         <option>All Categories</option>
@@ -108,8 +109,9 @@
                 </div>
 
                 <div class="profile">
-                    <!-- Notification Icon -->
-                    <span class="notification"><i data-lucide="bell" style="width: 20px; height: 20px;"></i></span>
+                    <span class="notification">
+                        <i data-lucide="bell"></i>
+                    </span>
 
                     <div class="profile-avatar">K</div>
 
@@ -121,38 +123,41 @@
 
             </header>
 
-
-            <!-- Page Content -->
+            <!-- Scrollable Page Content -->
             <div class="page-content">
 
                 <div class="page-heading">
                     <h1>Upload Resource</h1>
                     <p>
                         Share academic resources with your fellow students.
-                        Your upload will be reviewed by the admin before it becomes available to others.
+                        Your upload will be reviewed by the admin before
+                        it becomes available to others.
                     </p>
                 </div>
 
-
-                <!-- Upload Layout -->
                 <div class="upload-layout">
-
 
                     <!-- Left Side -->
                     <div class="upload-left">
 
-                        <form action="#" method="post" enctype="multipart/form-data">
+                        <form action="#" method="post"
+                            enctype="multipart/form-data">
 
                             <!-- Resource Details -->
                             <div class="form-card">
 
-                                <h2><i data-lucide="file-text" style="width: 20px; height: 20px; vertical-align: middle;"></i> &nbsp; Resource Details</h2>
+                                <h2>
+                                    <i data-lucide="file-text"></i>
+                                    Resource Details
+                                </h2>
 
                                 <div class="form-row">
 
                                     <div class="form-group">
                                         <label>Title <span>*</span></label>
-                                        <input type="text" name="title" placeholder="Enter resource title" required>
+                                        <input type="text" name="title"
+                                            placeholder="Enter resource title"
+                                            required>
                                     </div>
 
                                     <div class="form-group">
@@ -171,7 +176,6 @@
                                     </div>
 
                                 </div>
-
 
                                 <div class="form-row">
 
@@ -217,7 +221,6 @@
 
                                 </div>
 
-
                                 <div class="form-row">
 
                                     <div class="form-group">
@@ -235,40 +238,44 @@
 
                                     <div class="form-group">
                                         <label>Description <small>(Optional)</small></label>
-                                        <textarea name="description" placeholder="Write a short description about this resource..." maxlength="500"></textarea>
-                                        <small class="character-limit">Maximum 500 characters</small>
+                                        <textarea name="description"
+                                            placeholder="Write a short description about this resource..."
+                                            maxlength="500"></textarea>
+                                        <small class="character-limit">
+                                            Maximum 500 characters
+                                        </small>
                                     </div>
 
                                 </div>
 
                             </div>
 
-
                             <!-- Upload File -->
                             <div class="form-card">
 
-                                <h2><i data-lucide="paperclip" style="width: 20px; height: 20px; vertical-align: middle;"></i> &nbsp; Upload File <span>*</span></h2>
+                                <h2>
+                                    <i data-lucide="paperclip"></i>
+                                    Upload File <span>*</span>
+                                </h2>
 
                                 <div class="upload-area">
 
-                                    <!-- Upload Cloud Icon -->
-                                    <div class="upload-icon"><i data-lucide="upload-cloud" style="width: 40px; height: 40px; color: #0866f5;"></i></div>
+                                    <div class="upload-icon">
+                                        <i data-lucide="cloud-upload"></i>
+                                    </div>
 
                                     <h3>Select your resource file</h3>
-
                                     <p>Choose a file from your computer</p>
 
                                     <label for="resourceFile" class="browse-button">
                                         Browse Files
                                     </label>
 
-                                    <input
-                                        type="file"
+                                    <input type="file"
                                         id="resourceFile"
                                         name="resource_file"
                                         accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.jpg,.jpeg,.png"
-                                        required
-                                    >
+                                        required>
 
                                     <small>
                                         Supported formats: PDF, DOC, DOCX, PPT, PPTX,
@@ -279,7 +286,6 @@
 
                                 </div>
 
-
                                 <div class="form-buttons">
 
                                     <button type="reset" class="reset-button">
@@ -287,7 +293,8 @@
                                     </button>
 
                                     <button type="submit" class="upload-button">
-                                        <i data-lucide="upload" style="width: 16px; height: 16px; vertical-align: middle;"></i> &nbsp; Upload Resource
+                                        <i data-lucide="upload"></i>
+                                        Upload Resource
                                     </button>
 
                                 </div>
@@ -298,32 +305,38 @@
 
                     </div>
 
-
                     <!-- Right Side -->
                     <div class="upload-right">
 
-
-                        <!-- Cover Image -->
+                        <!-- Cover Image Preview -->
                         <div class="side-card">
 
-                            <h2><i data-lucide="image" style="width: 20px; height: 20px; vertical-align: middle;"></i> &nbsp; Cover Image Preview</h2>
+                            <h2>
+                                <i data-lucide="image"></i>
+                                Cover Image Preview
+                            </h2>
 
                             <div class="cover-preview">
-                                <div class="cover-icon"><i data-lucide="image" style="width: 32px; height: 32px; color: #a0aec0;"></i></div>
+                                <div class="cover-icon">
+                                    <i data-lucide="image"></i>
+                                </div>
                                 <p>Resource Cover</p>
                             </div>
 
                             <p class="side-description">
-                                This image will be used as the cover for your resource card.
+                                This image will be used as the cover
+                                for your resource card.
                             </p>
 
                         </div>
 
-
                         <!-- Supported File Types -->
                         <div class="side-card">
 
-                            <h2><i data-lucide="files" style="width: 20px; height: 20px; vertical-align: middle;"></i> &nbsp; Supported File Types</h2>
+                            <h2>
+                                <i data-lucide="files"></i>
+                                Supported File Types
+                            </h2>
 
                             <div class="file-type">
                                 <span class="file-icon pdf">PDF</span>
@@ -351,34 +364,51 @@
                             </div>
 
                             <div class="file-type">
-                                <span class="file-icon image"><i data-lucide="image" style="width: 16px; height: 16px;"></i></span>
+                                <span class="file-icon image">
+                                    <i data-lucide="image"></i>
+                                </span>
                                 <p>Images (JPG, JPEG, PNG)</p>
                             </div>
 
-                            <p class="maximum-size">Maximum file size: 20MB</p>
+                            <p class="maximum-size">
+                                Maximum file size: 20MB
+                            </p>
 
                         </div>
-
 
                         <!-- Upload Guidelines -->
                         <div class="side-card">
 
-                            <h2><i data-lucide="info" style="width: 20px; height: 20px; vertical-align: middle;"></i> &nbsp; Upload Guidelines</h2>
+                            <h2>
+                                <i data-lucide="info"></i>
+                                Upload Guidelines
+                            </h2>
 
                             <ul class="guidelines">
-
-                                <li><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px; color: #087338;"></i> Only upload academic content.</li>
-
-                                <li><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px; color: #087338;"></i> Ensure the content is relevant and appropriate.</li>
-
-                                <li><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px; color: #087338;"></i> Do not upload copyrighted material.</li>
-
-                                <li><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px; color: #087338;"></i> Your resource will be reviewed by an admin.</li>
-
-                                <li><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px; color: #087338;"></i> Make sure the file is clear and readable.</li>
-
-                                <li><i data-lucide="check" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px; color: #087338;"></i> Follow the university code of conduct.</li>
-
+                                <li>
+                                    <i data-lucide="check"></i>
+                                    Only upload academic content.
+                                </li>
+                                <li>
+                                    <i data-lucide="check"></i>
+                                    Ensure the content is relevant and appropriate.
+                                </li>
+                                <li>
+                                    <i data-lucide="check"></i>
+                                    Do not upload copyrighted material.
+                                </li>
+                                <li>
+                                    <i data-lucide="check"></i>
+                                    Your resource will be reviewed by an admin.
+                                </li>
+                                <li>
+                                    <i data-lucide="check"></i>
+                                    Make sure the file is clear and readable.
+                                </li>
+                                <li>
+                                    <i data-lucide="check"></i>
+                                    Follow the university code of conduct.
+                                </li>
                             </ul>
 
                         </div>
