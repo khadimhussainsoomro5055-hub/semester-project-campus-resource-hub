@@ -7,12 +7,15 @@
 
     <title>Campus Resource Hub | Dashboard</title>
 
-    <!-- Montserrat Font -->
+    <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- Shared site theme (load first) -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- Dashboard-only styles -->
     <link rel="stylesheet" href="css/dashboard.css">
 </head> 
 
@@ -25,7 +28,7 @@
 
         <div class="sidebar-logo">
             <div class="logo">
-            <span class="logo-icon"><i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i></span>
+            <div id="logo-icon"></div>
             <h2>Campus<br>Resource Hub</h2>
         </div>
 
@@ -107,8 +110,6 @@
         <!-- University Information -->
         <div class="university-info">
 
-            <div class="university-icon">🏛</div>
-
             <h3>Sukkur IBA University</h3>
 
             <p>Knowledge • Sharing • Community</p>
@@ -132,12 +133,13 @@
                     </span>
 
                     <input
-                        type="text"
+                        type="search"
+                        aria-label="Search academic resources"
                         placeholder="Search for books, notes, past papers, assignments..."
                     >
                 </div>
 
-                <select class="search-category">
+                <select class="search-category" aria-label="Filter resource category">
                     <option>All</option>
                     <option>Books</option>
                     <option>Notes</option>
@@ -145,14 +147,14 @@
                     <option>Assignments</option>
                 </select>
 
-                <button class="search-button">Search</button>
+                <button class="search-button" type="button">Search</button>
 
             </div>
 
 
             <div class="topbar-right">
 
-                <button class="notification-button">
+                <button class="notification-button" type="button" aria-label="Notifications">
                     <i data-lucide="bell"></i>
                     <span class="notification-count">3</span>
                 </button>
@@ -164,7 +166,6 @@
                     <div>
                         <h4>Khadim Hussain</h4>
                         <p>BS Software Engineering</p>
-                        <p>V</p>
                     </div>
 
                 </div>
@@ -194,10 +195,6 @@
 
                 </div>
 
-                <div class="welcome-decoration">
-                    <span>🎓</span>
-                </div>
-
             </section>
 
 
@@ -220,7 +217,7 @@
                                 Recent Resources
                             </h2>
 
-                            <a href="browse-resources.html">View All →</a>
+                            <a href="browse-resources.html">View All</a>
 
                         </div>
 
@@ -396,7 +393,7 @@
                                 Announcements
                             </h2>
 
-                            <a href="#">View All →</a>
+                            <a href="#">View All</a>
 
                         </div>
 
@@ -445,7 +442,7 @@
                                 My Recent Activity
                             </h2>
 
-                            <a href="#">View All →</a>
+                            <a href="#">View All</a>
 
                         </div>
 
