@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,326 +6,777 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Uploads - Campus Resource Hub</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS File Link -->
+    <!-- Shared Dashboard Theme -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- My Uploads Page CSS -->
     <link rel="stylesheet" href="css/my-uploads.css">
-    
-    <!-- Lucide Icons Script -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
-    <!-- Sidebar -->
+<div class="dashboard-layout">
+
+    <!-- ================= SIDEBAR ================= -->
     <aside class="sidebar">
-        <div class="logo">
-            <!-- Replaced 🎓 -->
-            <span class="logo-icon"><i data-lucide="graduation-cap" style="width: 24px; height: 24px;"></i></span>
-            <h2>Campus<br>Resource Hub</h2>
+
+        <div class="sidebar-logo">
+            <div class="logo">
+                <div id="logo-icon"></div>
+                <h2>Campus<br>Resource Hub</h2>
+            </div>
         </div>
 
         <nav class="sidebar-menu">
-            <!-- Replaced symbols -->
-            <a href="index.html"><i data-lucide="home" style="width: 18px; height: 18px;"></i> <span>Dashboard</span></a>
-            <a href="browse-resources.html"><i data-lucide="library-big" style="width: 18px; height: 18px;"></i> <span>Browse Resources</span></a>
-            <a href="upload-resource.html"><i data-lucide="cloud-upload" style="width: 18px; height: 18px;"></i> <span>Upload Resource</span></a>
-            <a href="my-uploads.html" class="active"><i data-lucide="folder" style="width: 18px; height: 18px;"></i> <span>My Uploads</span></a>
-            <a href="physical-books.html"><i data-lucide="book-open" style="width: 18px; height: 18px;"></i> <span>Physical Books</span></a>
-            <a href="my-requests.html"><i data-lucide="clipboard-list" style="width: 18px; height: 18px;"></i> <span>My Requests</span></a>
-            <a href="#"><i data-lucide="flag" style="width: 18px; height: 18px;"></i> <span>Report Content</span></a>
+
+            <a href="index.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="layout-dashboard"></i>
+                </span>
+                Dashboard
+            </a>
+
+            <a href="browse-resources.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="library-big"></i>
+                </span>
+                Browse Resources
+            </a>
+
+            <a href="upload-resource.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="cloud-upload"></i>
+                </span>
+                Upload Resource
+            </a>
+
+            <a href="my-uploads.html" class="menu-item active">
+                <span class="menu-icon">
+                    <i data-lucide="folder"></i>
+                </span>
+                My Uploads
+            </a>
+
+            <a href="physical-books.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="book-open"></i>
+                </span>
+                Physical Books
+            </a>
+
+            <a href="my-requests.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="clipboard-list"></i>
+                </span>
+                My Requests
+            </a>
+
+            <a href="report-resource.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="flag"></i>
+                </span>
+                Report Content
+            </a>
+
         </nav>
 
         <div class="sidebar-bottom">
-           
-            <a href="#"><i data-lucide="settings" style="width: 18px; height: 18px;"></i> <span>Settings</span></a>
-            <a href="#"><i data-lucide="circle-help" style="width: 18px; height: 18px;"></i> <span>Help & Support</span></a>
+
+            <a href="profile.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="user-round"></i>
+                </span>
+                Profile
+            </a>
+
+            <a href="settings.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="settings"></i>
+                </span>
+                Settings
+            </a>
+
+            <a href="help.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="circle-help"></i>
+                </span>
+                Help & Support
+            </a>
+
         </div>
 
-        <div class="university">
-            <!-- Replaced 🏛 -->
-            <div class="university-icon"><i data-lucide="building-2" style="width: 32px; height: 32px;"></i></div>
-            <h4>Sukkur IBA University</h4>
+        <div class="university-info">
+            <div class="university-icon">
+                <i data-lucide="building-2"></i>
+            </div>
+            <h3>Sukkur IBA University</h3>
             <p>Knowledge • Sharing • Community</p>
         </div>
+
     </aside>
 
-    <!-- Main Content -->
+    <!-- ================= MAIN CONTENT ================= -->
     <main class="main-content">
-        <!-- Topbar -->
+
+        <!-- TOPBAR -->
         <header class="topbar">
-            <div class="top-search">
-                <!-- Added search icon in input area -->
-                <i data-lucide="search" style="width: 16px; height: 16px; margin-left: 10px; color: #6b7a99;"></i>
-                <input type="text" placeholder="Search for books, notes, past papers...">
-                <select>
+
+            <div class="search-area">
+
+                <div class="search-box">
+                    <span>
+                        <i data-lucide="search"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Search for books, notes, past papers, assignments..."
+                    >
+                </div>
+
+                <select class="search-category">
                     <option>All Categories</option>
                     <option>Books</option>
                     <option>Notes</option>
+                    <option>Assignments</option>
+                    <option>Past Papers</option>
                 </select>
-                <button>Search</button>
+
+                <button type="button" class="search-button">
+                    Search
+                </button>
+
             </div>
 
-            <div class="top-user">
-                <!-- Replaced ♧ -->
-                <div class="notification"><i data-lucide="bell" style="width: 20px; height: 20px;"></i><span>3</span></div>
-                <div class="user-avatar">K</div>
-                <div class="user-info">
-                    <h4>Khadim Hussain</h4>
-                    <p>BS Software Engineering</p>
+            <div class="topbar-right">
+
+                <button type="button" class="notification-button">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">K</div>
+
+                    <div>
+                        <h4>Khadim Hussain</h4>
+                        <p>BS Software Engineering</p>
+                    </div>
+
+                    <i data-lucide="chevron-down" class="profile-arrow"></i>
+
                 </div>
-                <!-- Replaced ⌄ -->
-                <span class="user-arrow"><i data-lucide="chevron-down" style="width: 16px; height: 16px;"></i></span>
+
             </div>
+
         </header>
 
-        <!-- Page Content -->
+        <!-- ================= MY UPLOADS PAGE ================= -->
         <section class="uploads-page">
+
             <div class="page-heading">
                 <h1>My Uploads</h1>
-                <p>Manage the resources you have uploaded. You can view their status and take actions if needed.</p>
+                <p>
+                    Manage the resources you have uploaded.
+                    You can view their status and take actions if needed.
+                </p>
             </div>
 
-            <!-- Filters -->
+            <!-- FILTERS -->
             <div class="uploads-filters">
+
                 <div class="upload-search">
-                    <!-- Replaced ⌕ -->
-                    <i data-lucide="search" style="width: 18px; height: 18px; color: #6b7a99;"></i>
-                    <input type="text" placeholder="Search in your uploads...">
+                    <i data-lucide="search"></i>
+                    <input
+                        type="text"
+                        id="uploadSearch"
+                        placeholder="Search in your uploads..."
+                    >
                 </div>
-                <select>
-                    <option>All Categories</option>
-                    <option>Books</option>
-                    <option>Notes</option>
-                    <option>Slides</option>
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Books">Books</option>
+                    <option value="Notes">Notes</option>
+                    <option value="Slides">Slides</option>
+                    <option value="Past Papers">Past Papers</option>
+                    <option value="Assignments">Assignments</option>
+                    <option value="Lab Manual">Lab Manual</option>
+                    <option value="Images">Images</option>
                 </select>
-                <select>
-                    <option>All Status</option>
-                    <option>Pending</option>
-                    <option>Approved</option>
-                    <option>Rejected</option>
+
+                <select id="statusFilter">
+                    <option value="all">All Status</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
                 </select>
-                <select>
-                    <option>Newest First</option>
-                    <option>Oldest First</option>
+
+                <select id="sortFilter">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
                 </select>
+
             </div>
 
-            <p class="results-text">Showing 8 results</p>
+            <p class="results-text" id="resultsText">
+                Showing 8 results
+            </p>
 
-            <!-- Upload Cards -->
-            <div class="uploads-grid">
-                <!-- Card 1 -->
-                <div class="upload-card">
+            <!-- RESOURCE CARDS -->
+            <div class="uploads-grid" id="uploadsGrid">
+
+                <!-- CARD 1 -->
+                <div class="upload-card"
+                     data-category="Notes"
+                     data-status="Pending"
+                     data-date="2026-10-20">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-one">
                             <span>DATA<br>STRUCTURES<br>AND ALGORITHMS</span>
-                            <!-- Replaced ◇ -->
-                            <div class="cover-design"><i data-lucide="box" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="box"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status pending">Pending</span>
+
                             <h3>Data Structures and Algorithms – Notes</h3>
-                            <!-- Replaced ♧, ♙, ▦ -->
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Computer Science</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 3</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 20, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Computer Science
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 3
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 20, 2026
+                            </p>
+
                             <span class="resource-type">Lecture Notes</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <!-- Replaced ◎, ✎, ♜ -->
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 2 -->
-                <div class="upload-card">
+                <!-- CARD 2 -->
+                <div class="upload-card"
+                     data-category="Slides"
+                     data-status="Approved"
+                     data-date="2026-10-18">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-two">
                             <span>WEB<br>ENGINEERING</span>
-                            <!-- Replaced 💻 -->
-                            <div class="cover-design"><i data-lucide="code" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="code"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status approved">Approved</span>
+
                             <h3>Web Engineering – Slides</h3>
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Software Engineering</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 5</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 18, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Software Engineering
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 5
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 18, 2026
+                            </p>
+
                             <span class="resource-type">Slides</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 3 -->
-                <div class="upload-card">
+                <!-- CARD 3 -->
+                <div class="upload-card"
+                     data-category="Past Papers"
+                     data-status="Rejected"
+                     data-date="2026-10-15">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-three">
                             <span>OPERATING<br>SYSTEMS</span>
-                            <!-- Replaced ⚙ -->
-                            <div class="cover-design"><i data-lucide="settings" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="settings"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status rejected">Rejected</span>
+
                             <h3>Operating Systems – Past Papers</h3>
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Software Engineering</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 4</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 15, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Software Engineering
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 4
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 15, 2026
+                            </p>
+
                             <span class="resource-type">Past Papers</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 4 -->
-                <div class="upload-card">
+                <!-- CARD 4 -->
+                <div class="upload-card"
+                     data-category="Assignments"
+                     data-status="Approved"
+                     data-date="2026-10-12">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-four">
                             <span>DATABASE<br>System Concepts</span>
-                            <!-- Replaced ▤ -->
-                            <div class="cover-design"><i data-lucide="database" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="database"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status approved">Approved</span>
+
                             <h3>Database System – Assignments</h3>
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Computer Science</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 3</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 12, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Computer Science
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 3
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 12, 2026
+                            </p>
+
                             <span class="resource-type">Assignments</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 5 -->
-                <div class="upload-card">
+                <!-- CARD 5 -->
+                <div class="upload-card"
+                     data-category="Notes"
+                     data-status="Pending"
+                     data-date="2026-10-10">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-five">
                             <span>DISCRETE<br>MATHEMATICS</span>
-                            <!-- Replaced ◇ -->
-                            <div class="cover-design"><i data-lucide="sigma" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="sigma"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status pending">Pending</span>
+
                             <h3>Discrete Mathematics – Notes</h3>
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Computer Science</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 2</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 10, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Computer Science
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 2
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 10, 2026
+                            </p>
+
                             <span class="resource-type">Notes</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 6 -->
-                <div class="upload-card">
+                <!-- CARD 6 -->
+                <div class="upload-card"
+                     data-category="Lab Manual"
+                     data-status="Approved"
+                     data-date="2026-10-08">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-six">
                             <span>COMPUTER<br>NETWORKS</span>
-                            <!-- Replaced 🌐 -->
-                            <div class="cover-design"><i data-lucide="globe" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="globe"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status approved">Approved</span>
+
                             <h3>Computer Networks – Lab Manual</h3>
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Computer Science</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 5</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 8, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Computer Science
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 5
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 8, 2026
+                            </p>
+
                             <span class="resource-type">Lab Manual</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 7 -->
-                <div class="upload-card">
+                <!-- CARD 7 -->
+                <div class="upload-card"
+                     data-category="Images"
+                     data-status="Rejected"
+                     data-date="2026-10-05">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-seven">
                             <span>PHYSICS</span>
-                            <!-- Replaced ⚛ -->
-                            <div class="cover-design"><i data-lucide="atom" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="atom"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status rejected">Rejected</span>
+
                             <h3>Physics – Diagrams</h3>
-                            <p><i data-lucide="flask-conical" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> General Science</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 1</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 5, 2026</p>
+
+                            <p>
+                                <i data-lucide="flask-conical"></i>
+                                General Science
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 1
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 5, 2026
+                            </p>
+
                             <span class="resource-type">Images</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
 
-                <!-- Card 8 -->
-                <div class="upload-card">
+                <!-- CARD 8 -->
+                <div class="upload-card"
+                     data-category="Images"
+                     data-status="Approved"
+                     data-date="2026-10-03">
+
                     <div class="upload-card-content">
+
                         <div class="book-cover cover-eight">
                             <span>LINEAR<br>ALGEBRA</span>
-                            <!-- Replaced ◇ -->
-                            <div class="cover-design"><i data-lucide="infinity" style="width: 40px; height: 40px;"></i></div>
+                            <div class="cover-design">
+                                <i data-lucide="infinity"></i>
+                            </div>
                         </div>
+
                         <div class="book-details">
+
                             <span class="status approved">Approved</span>
+
                             <h3>Linear Algebra – Handwritten Notes</h3>
-                            <p><i data-lucide="monitor" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Mathematics</p>
-                            <p><i data-lucide="layers" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Semester 1</p>
-                            <p><i data-lucide="calendar" style="width: 12px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Oct 3, 2026</p>
+
+                            <p>
+                                <i data-lucide="monitor"></i>
+                                Mathematics
+                            </p>
+
+                            <p>
+                                <i data-lucide="layers"></i>
+                                Semester 1
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar"></i>
+                                Oct 3, 2026
+                            </p>
+
                             <span class="resource-type">Images</span>
+
                         </div>
+
                     </div>
+
                     <div class="card-actions">
-                        <a href="#"><i data-lucide="eye" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> View</a>
-                        <a href="#"><i data-lucide="edit-3" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Edit</a>
-                        <a href="#" class="delete"><i data-lucide="trash-2" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i> Delete</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i> View
+                        </a>
+                        <a href="#">
+                            <i data-lucide="pencil"></i> Edit
+                        </a>
+                        <a href="#" class="delete">
+                            <i data-lucide="trash-2"></i> Delete
+                        </a>
                     </div>
+
                 </div>
+
             </div>
 
-            <!-- Pagination -->
+            <!-- PAGINATION -->
             <div class="pagination">
-                <!-- Replaced ‹, › -->
-                <a href="#"><i data-lucide="chevron-left" style="width: 16px; height: 16px;"></i></a>
+                <a href="#" aria-label="Previous page">
+                    <i data-lucide="chevron-left"></i>
+                </a>
+
                 <a href="#" class="current-page">1</a>
                 <a href="#">2</a>
-                <a href="#"><i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i></a>
+
+                <a href="#" aria-label="Next page">
+                    <i data-lucide="chevron-right"></i>
+                </a>
             </div>
+
         </section>
+
     </main>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        lucide.createIcons();
-    </script>
+</div>
+
+<script>
+    lucide.createIcons();
+
+    // Frontend filtering and sorting
+    const uploadSearch = document.getElementById("uploadSearch");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const statusFilter = document.getElementById("statusFilter");
+    const sortFilter = document.getElementById("sortFilter");
+    const uploadsGrid = document.getElementById("uploadsGrid");
+    const resultsText = document.getElementById("resultsText");
+
+    const cards = Array.from(
+        uploadsGrid.querySelectorAll(".upload-card")
+    );
+
+    function updateUploads() {
+        const search = uploadSearch.value.toLowerCase().trim();
+        const category = categoryFilter.value;
+        const status = statusFilter.value;
+        const sort = sortFilter.value;
+
+        const sortedCards = [...cards].sort((a, b) => {
+            const first = new Date(a.dataset.date);
+            const second = new Date(b.dataset.date);
+
+            return sort === "newest"
+                ? second - first
+                : first - second;
+        });
+
+        let count = 0;
+
+        sortedCards.forEach(card => {
+            const title = card.querySelector("h3").textContent.toLowerCase();
+
+            const matchesSearch = title.includes(search);
+            const matchesCategory =
+                category === "all" || card.dataset.category === category;
+            const matchesStatus =
+                status === "all" || card.dataset.status === status;
+
+            const visible =
+                matchesSearch && matchesCategory && matchesStatus;
+
+            card.style.display = visible ? "flex" : "none";
+
+            if (visible) count++;
+
+            uploadsGrid.appendChild(card);
+        });
+
+        resultsText.textContent = `Showing ${count} results`;
+    }
+
+    uploadSearch.addEventListener("input", updateUploads);
+    categoryFilter.addEventListener("change", updateUploads);
+    statusFilter.addEventListener("change", updateUploads);
+    sortFilter.addEventListener("change", updateUploads);
+
+    // Placeholder actions: connect to backend later
+    document.querySelectorAll(".card-actions a").forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            alert("This action will be available after backend integration.");
+        });
+    });
+
+    // Pagination is a placeholder until real pages are connected
+    document.querySelectorAll(".pagination a").forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+        });
+    });
+</script>
 
 </body>
 </html>
