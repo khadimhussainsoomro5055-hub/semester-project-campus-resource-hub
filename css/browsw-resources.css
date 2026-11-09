@@ -1,30 +1,11 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F5F8FD;
-    color: #102653;
-}
-
-button,
-input,
-select {
-    font-family: 'Montserrat', sans-serif;
-}
-
-button {
-    cursor: pointer;
-}
-
-
 /* =========================================
-   2. DASHBOARD LAYOUT
+   CAMPUS RESOURCE HUB
+   BROWSE RESOURCES PAGE CSS
+   Dashboard Global Theme
 ========================================= */
+
+/* PAGE LAYOUT */
 
 .dashboard-layout {
     display: flex;
@@ -32,412 +13,64 @@ button {
 }
 
 .main-content {
-    flex: 1;
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
     min-width: 0;
 }
 
-
 /* =========================================
-   3. SIDEBAR
-========================================= */
-
-.sidebar {
-    width: 260px;
-    min-width: 260px;
-    min-height: 100vh;
-    padding: 20px 16px;
-    background-color: #FFFFFF;
-    border-right: 1px solid #E1E9F5;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Logo */
-
-.sidebar-logo {
-    margin-bottom: 15px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.logo-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0866E9;
-}
-
-.logo-icon svg {
-    width: 26px;
-    height: 26px;
-    stroke-width: 2;
-}
-
-.logo h2 {
-    font-size: 18px;
-    line-height: 1.2;
-    font-weight: 800;
-    color: #07194F;
-}
-
-
-/* Sidebar Navigation */
-
-.sidebar-menu {
-    padding-top: 12px;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    padding: 13px 15px;
-    margin-bottom: 5px;
-
-    border-radius: 9px;
-
-    color: #102653;
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: 0.2s;
-}
-
-.menu-icon {
-    width: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-icon svg {
-    width: 22px;
-    height: 22px;
-    stroke-width: 2;
-}
-
-.menu-item:hover {
-    background-color: #F0F5FD;
-    color: #0866E9;
-}
-
-.menu-item.active {
-    background-color: #E4F0FF;
-    color: #0866E9;
-    font-weight: 800;
-}
-
-
-/* Bottom Sidebar Navigation */
-
-.sidebar-bottom {
-    margin-top: 20px;
-    padding-top: 18px;
-    border-top: 1px solid #E1E9F5;
-}
-
-
-/* University Information */
-
-.university-info {
-    margin-top: auto;
-    padding-top: 35px;
-    text-align: center;
-}
-
-.university-icon {
-    font-size: 75px;
-    color: #A5B6D0;
-    margin-bottom: 8px;
-}
-
-.university-info h3 {
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.university-info p {
-    font-size: 11px;
-    color: #64799F;
-    margin-top: 7px;
-}
-
-
-/* =========================================
-   4. TOPBAR
-========================================= */
-
-.topbar {
-    min-height: 74px;
-    padding: 12px 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #E1E9F5;
-}
-
-
-/* Topbar Search */
-
-.search-area {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 780px;
-}
-
-.search-box {
-    height: 45px;
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    padding: 0 15px;
-
-    background-color: #F5F8FD;
-    border: 1px solid #DCE6F5;
-    border-radius: 8px 0 0 8px;
-}
-
-.search-box span {
-    display: flex;
-    align-items: center;
-    color: #102653;
-}
-
-.search-box svg {
-    width: 21px;
-    height: 21px;
-}
-
-.search-box input {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-
-    font-size: 13px;
-    color: #102653;
-}
-
-.search-box input::placeholder {
-    color: #7485A4;
-}
-
-.search-category {
-    height: 45px;
-    width: 125px;
-    padding: 0 10px;
-
-    border: 1px solid #DCE6F5;
-    border-left: none;
-
-    background-color: #FFFFFF;
-    color: #102653;
-
-    font-size: 12px;
-}
-
-
-/* Search Button */
-
-.search-button {
-    height: 45px;
-    padding: 0 25px;
-    margin-left: 9px;
-
-    border: none;
-    border-radius: 8px;
-
-    background-color: #0866E9;
-    color: #FFFFFF;
-
-    font-size: 13px;
-    font-weight: 800;
-
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.search-button:hover {
-    background-color: #0756C5;
-}
-
-
-/* =========================================
-   5. TOPBAR PROFILE
-========================================= */
-
-.topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-
-/* Notification */
-
-.notification-button {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-    background: transparent;
-
-    font-size: 25px;
-    color: #102653;
-    cursor: pointer;
-}
-
-.notification-button svg {
-    width: 23px;
-    height: 23px;
-}
-
-.notification-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-
-    width: 17px;
-    height: 17px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #F04444;
-    color: #FFFFFF;
-
-    border-radius: 50%;
-
-    font-size: 10px;
-    font-weight: 800;
-}
-
-
-/* Profile */
-
-.profile-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    padding-left: 16px;
-    border-left: 1px solid #E1E9F5;
-}
-
-.profile-avatar {
-    width: 43px;
-    height: 43px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #DCEAFF;
-    color: #0866E9;
-
-    border-radius: 50%;
-
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.profile-info h4 {
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.profile-info p {
-    font-size: 11px;
-    color: #64799F;
-    margin-top: 3px;
-}
-
-.profile-arrow {
-    width: 17px;
-    height: 17px;
-    margin-left: 5px;
-}
-
-
-/* =========================================
-   6. BROWSE RESOURCES PAGE
+   BROWSE RESOURCES PAGE
 ========================================= */
 
 .browse-page {
-    padding: 16px 34px;
+    padding: 20px 30px 35px;
+    background: var(--color-page-bg);
 }
 
-
-/* Page Heading */
+/* PAGE HEADING */
 
 .browse-page .page-heading h1 {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 800;
-    color: #07194F;
-    margin-bottom: 5px;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    line-height: 1.25;
 }
 
 .browse-page .page-heading p {
     font-size: 14px;
     font-weight: 400;
-    color: #24345F;
+    color: var(--color-text-muted);
     line-height: 1.6;
 }
 
-
 /* =========================================
-   7. SEARCH AND FILTERS
+   SEARCH AND FILTER PANEL
 ========================================= */
 
 .browse-filters {
     margin-top: 20px;
-    padding: 12px;
-
-    background: #FFFFFF;
-    border: 1px solid #E0E8F6;
-    border-radius: 9px;
+    padding: 18px;
+    background: var(--color-primary-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
 }
 
-
-/* Browse Search */
+/* BROWSE SEARCH */
 
 .browse-search {
     display: flex;
     align-items: center;
     gap: 12px;
-
     height: 40px;
     padding: 0 10px;
-
-    border-bottom: 1px solid #EDF1F7;
+    border-bottom: 1px solid var(--color-border-soft);
 }
 
 .browse-search span {
     display: flex;
     align-items: center;
-    color: #07194F;
+    color: var(--color-text);
 }
 
 .browse-search svg {
@@ -448,29 +81,24 @@ button {
 .browse-search input {
     width: 100%;
     height: 100%;
-
     border: none;
     outline: none;
-
     font-size: 13px;
-    color: #102653;
+    color: var(--color-text);
     background: transparent;
 }
 
 .browse-search input::placeholder {
-    color: #7485A4;
+    color: var(--color-placeholder);
 }
 
-
-/* Filter Row */
+/* FILTER ROW */
 
 .filter-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
-
-    gap: 18px;
+    gap: 14px;
     align-items: end;
-
     margin-top: 15px;
 }
 
@@ -483,31 +111,30 @@ button {
 .filter-item label {
     font-size: 12px;
     font-weight: 700;
-    color: #07194F;
+    color: var(--color-text);
 }
 
 .filter-item select {
     width: 100%;
     height: 41px;
     padding: 0 10px;
-
-    border: 1px solid #DCE5F5;
+    border: 1px solid var(--color-border);
     border-radius: 6px;
-
-    background: #FFFFFF;
-    color: #07194F;
-
+    background: var(--color-white);
+    color: var(--color-text);
     font-size: 12px;
     cursor: pointer;
     outline: none;
 }
 
 .filter-item select:focus {
-    border-color: #0866E9;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-focus);
 }
 
-
-/* Grid and List View Buttons */
+/* =========================================
+   GRID AND LIST VIEW BUTTONS
+========================================= */
 
 .view-buttons {
     display: flex;
@@ -517,17 +144,13 @@ button {
 .view-buttons button {
     height: 41px;
     width: 43px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    border: 1px solid #E0E8F6;
+    border: 1px solid var(--color-border);
     border-radius: 6px;
-
-    background: #FFFFFF;
-    color: #07194F;
-
+    background: var(--color-white);
+    color: var(--color-text);
     cursor: pointer;
     transition: 0.2s;
 }
@@ -538,51 +161,44 @@ button {
 }
 
 .view-buttons button:hover {
-    background: #F0F5FD;
+    background: var(--color-primary-soft);
 }
 
 .view-buttons .grid-view {
-    background: #0866E9;
-    color: #FFFFFF;
-    border-color: #0866E9;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
 }
 
-
 /* =========================================
-   8. RESULTS COUNT
+   RESULTS COUNT
 ========================================= */
 
 .browse-results {
     margin: 17px 0;
-
-    color: #07194F;
+    color: var(--color-text);
     font-size: 13px;
     font-weight: 600;
 }
 
-
 /* =========================================
-   9. RESOURCES GRID
+   RESOURCES GRID
 ========================================= */
 
 .resources-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
-
-/* Resource Card */
+/* RESOURCE CARD */
 
 .resource-card {
     min-width: 0;
-
-    background: #FFFFFF;
-    border: 1px solid #E0E8F6;
-    border-radius: 9px;
-
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
     overflow: hidden;
-
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -591,27 +207,22 @@ button {
     box-shadow: 0 5px 18px rgba(16, 38, 83, 0.09);
 }
 
-
 /* =========================================
-   10. RESOURCE COVERS
+   RESOURCE COVERS
 ========================================= */
 
 .resource-cover {
     height: 155px;
-
     position: relative;
     padding: 18px 13px;
-
     overflow: hidden;
-
-    color: #FFFFFF;
+    color: var(--color-white);
 }
 
 .resource-cover h2 {
     font-size: 20px;
     line-height: 1.2;
     font-weight: 800;
-
     position: relative;
     z-index: 1;
 }
@@ -622,20 +233,17 @@ button {
     font-weight: 500;
 }
 
-
-/* Cover Decorative Symbols */
+/* COVER DECORATIVE SYMBOLS */
 
 .cover-design {
     position: absolute;
     right: 15px;
     bottom: 5px;
-
     font-size: 65px;
     opacity: 0.7;
 }
 
-
-/* Cover Backgrounds */
+/* RESOURCE COVER COLORS */
 
 .cover-one {
     background: linear-gradient(130deg, #06183F, #00549B);
@@ -643,7 +251,7 @@ button {
 
 .cover-two {
     background: linear-gradient(130deg, #EAF1F8, #9CBDD8);
-    color: #07194F;
+    color: var(--color-text);
 }
 
 .cover-three {
@@ -667,32 +275,30 @@ button {
 }
 
 .cover-eight {
-    background: linear-gradient(130deg, #FFFFFF, #A9CDE5);
-    color: #07194F;
+    background: linear-gradient(
+        130deg,
+        var(--color-white),
+        #A9CDE5
+    );
+    color: var(--color-text);
 }
 
-
 /* =========================================
-   11. BOOKMARK
+   BOOKMARK BUTTON
 ========================================= */
 
 .bookmark {
     position: absolute;
     top: 9px;
     right: 9px;
-
     width: 32px;
     height: 34px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: #FFFFFF;
-    color: #07194F;
-
+    background: var(--color-white);
+    color: var(--color-text);
     border-radius: 6px;
-
     z-index: 2;
     cursor: pointer;
 }
@@ -703,43 +309,38 @@ button {
 }
 
 .bookmark:hover {
-    color: #0866E9;
+    color: var(--color-primary);
 }
 
-
 /* =========================================
-   12. FILE LABELS
+   FILE LABELS
 ========================================= */
 
 .file-label {
     position: absolute;
     bottom: 0;
     left: 0;
-
     padding: 6px 11px;
-
-    color: #FFFFFF;
+    color: var(--color-white);
     font-size: 11px;
     font-weight: 800;
-
     border-radius: 5px 5px 0 0;
 }
 
 .pdf {
-    background: #F04444;
+    background: var(--color-danger);
 }
 
 .ppt {
-    background: #0875F5;
+    background: var(--color-info);
 }
 
 .doc {
-    background: #009B79;
+    background: var(--color-success);
 }
 
-
 /* =========================================
-   13. RESOURCE INFORMATION
+   RESOURCE INFORMATION
 ========================================= */
 
 .resource-info {
@@ -750,48 +351,39 @@ button {
     font-size: 13px;
     line-height: 1.5;
     font-weight: 800;
-
-    color: #07194F;
-
+    color: var(--color-text);
     min-height: 39px;
     margin-bottom: 8px;
 }
 
-
-/* Resource Tags */
+/* RESOURCE TAGS */
 
 .resource-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-
     min-height: 27px;
 }
 
 .resource-tags span {
     padding: 5px 9px;
-
-    background: #F1F5FC;
+    background: var(--color-primary-light);
     border-radius: 15px;
-
-    color: #40527C;
+    color: var(--color-text-muted);
     font-size: 10px;
     font-weight: 500;
 }
 
-
-/* Resource Metadata */
+/* RESOURCE METADATA */
 
 .resource-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 7px;
     margin-top: 12px;
-
-    color: #40527C;
+    color: var(--color-text-muted);
     font-size: 10px;
 }
 
@@ -807,20 +399,16 @@ button {
     flex-shrink: 0;
 }
 
-
-/* Download Information */
+/* DOWNLOAD INFORMATION */
 
 .download-info {
     display: flex;
     align-items: center;
     gap: 6px;
-
     margin-top: 12px;
     padding-top: 9px;
-
-    border-top: 1px solid #EDF1F8;
-
-    color: #40527C;
+    border-top: 1px solid var(--color-border-soft);
+    color: var(--color-text-muted);
     font-size: 11px;
     font-weight: 600;
 }
@@ -828,19 +416,17 @@ button {
 .download-info svg {
     width: 15px;
     height: 15px;
-    color: #0866E9;
+    color: var(--color-primary);
 }
 
-
 /* =========================================
-   14. PAGINATION
+   PAGINATION
 ========================================= */
 
 .browse-pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 7px;
     margin: 25px 0;
 }
@@ -848,28 +434,23 @@ button {
 .browse-pagination a {
     width: 36px;
     height: 36px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: #FFFFFF;
-    border: 1px solid #E0E8F6;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
-
     text-decoration: none;
-    color: #07194F;
-
+    color: var(--color-text);
     font-size: 13px;
     font-weight: 600;
-
     transition: 0.2s;
 }
 
 .browse-pagination a:hover {
-    background: #E4F0FF;
-    color: #0866E9;
-    border-color: #0866E9;
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .browse-pagination a svg {
@@ -878,23 +459,16 @@ button {
 }
 
 .browse-pagination .selected {
-    background: #0866E9;
-    color: #FFFFFF;
-    border-color: #0866E9;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
 }
 
-
 /* =========================================
-   15. RESPONSIVE - 1200px
+   RESPONSIVE - TABLETS
 ========================================= */
 
 @media (max-width: 1200px) {
-
-    .sidebar {
-        width: 225px;
-        min-width: 225px;
-    }
-
     .resources-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -906,30 +480,19 @@ button {
     .view-buttons {
         grid-column: 1 / -1;
     }
-
 }
 
-
 /* =========================================
-   16. RESPONSIVE - 850px
+   RESPONSIVE - SMALL TABLETS
 ========================================= */
 
 @media (max-width: 850px) {
-
-    .sidebar {
-        width: 190px;
-        min-width: 190px;
-        padding: 15px 10px;
+    .browse-page {
+        padding: 16px 20px;
     }
 
-    .logo h2 {
-        font-size: 16px;
-    }
-
-    .menu-item {
-        gap: 9px;
-        padding: 12px 8px;
-        font-size: 12px;
+    .resources-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .topbar {
@@ -944,40 +507,29 @@ button {
     .topbar-right {
         margin-left: auto;
     }
-
-    .browse-page {
-        padding: 16px 20px;
-    }
-
-    .resources-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
 }
 
-
 /* =========================================
-   17. RESPONSIVE - 600px
+   RESPONSIVE - MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
-
     .dashboard-layout {
         display: block;
     }
 
     .sidebar {
+        position: relative;
         width: 100%;
-        min-height: auto;
-        padding: 12px;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
     }
 
-    .sidebar-logo {
-        padding-bottom: 10px;
-    }
-
-    .logo {
-        margin-bottom: 10px;
+    .main-content {
+        margin-left: 0;
+        width: 100%;
     }
 
     .sidebar-menu,
@@ -987,32 +539,9 @@ button {
         gap: 5px;
     }
 
-    .sidebar-bottom {
-        margin-top: 8px;
-        padding-top: 8px;
-    }
-
-    .menu-item {
-        margin: 0;
-        font-size: 11px;
-        gap: 6px;
-    }
-
-    .menu-icon {
-        width: 20px;
-    }
-
-    .menu-icon svg {
-        width: 18px;
-        height: 18px;
-    }
-
     .university-info {
         display: none;
     }
-
-
-    /* Topbar */
 
     .topbar {
         padding: 12px;
@@ -1031,21 +560,13 @@ button {
     .search-category {
         flex: 1;
         width: auto;
-        border: 1px solid #DCE6F5;
+        border: 1px solid var(--color-border);
         border-radius: 8px;
     }
 
     .search-button {
         margin: 0;
-        padding: 0 18px;
     }
-
-    .topbar-right {
-        gap: 12px;
-    }
-
-
-    /* Browse Page */
 
     .browse-page {
         padding: 15px 12px;
@@ -1060,7 +581,7 @@ button {
     }
 
     .browse-filters {
-        padding: 10px;
+        padding: 12px;
     }
 
     .filter-row {
@@ -1071,9 +592,6 @@ button {
     .view-buttons {
         grid-column: auto;
     }
-
-
-    /* Resources */
 
     .resources-grid {
         grid-template-columns: 1fr;
@@ -1088,10 +606,6 @@ button {
         min-height: auto;
     }
 
-    .resource-meta {
-        justify-content: flex-start;
-    }
-
     .browse-pagination {
         gap: 5px;
     }
@@ -1100,43 +614,30 @@ button {
         width: 32px;
         height: 32px;
     }
-
 }
 
 
-/* =========================================
-   18. RESPONSIVE - SMALL MOBILE
-========================================= */
+/* =====================================
+   SIDEBAR LOGO & MENU SPACING FIX
+===================================== */
 
-@media (max-width: 380px) {
+@media (min-width: 601px) {
 
-    .profile-info {
-        gap: 7px;
-        padding-left: 9px;
+    .sidebar .sidebar-logo {
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
     }
 
-    .profile-info h4 {
-        font-size: 11px;
+    .sidebar .sidebar-logo .logo {
+        margin: 0;
+        padding: 0;
     }
 
-    .profile-info p {
-        font-size: 9px;
-    }
-
-    .profile-avatar {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-    }
-
-    .browse-page .page-heading h1 {
-        font-size: 23px;
-    }
-
-    .browse-pagination a {
-        width: 29px;
-        height: 29px;
-        font-size: 11px;
+    .sidebar .sidebar-menu {
+        margin-top: 45px;
+        padding-top: 0;
+        flex-shrink: 0;
     }
 
 }
