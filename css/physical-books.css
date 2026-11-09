@@ -1,105 +1,93 @@
 
-/* =====================================================
+/* ==========================================
    CAMPUS RESOURCE HUB
    PHYSICAL BOOKS PAGE
-   Complete CSS with Horizontal Overflow Fix
-===================================================== */
+========================================== */
 
-/* ============================= */
-/* GLOBAL OVERFLOW FIX */
-/* ============================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-* {
-    box-sizing: border-box;
-}
+/* MAIN LAYOUT */
 
 .dashboard-layout {
     display: flex;
+    min-height: 100vh;
     width: 100%;
-    max-width: 100%;
     min-width: 0;
-    overflow-x: clip;
 }
 
 .main-content {
     flex: 1;
-    width: 0;
+    margin-left: var(--sidebar-width);
     min-width: 0;
-    max-width: 100%;
-    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
 }
 
-/* ============================= */
-/* Physical Books Page */
-/* ============================= */
+/* PAGE CONTENT */
 
 .physical-content {
+    flex: 1;
     width: 100%;
-    max-width: 100%;
     min-width: 0;
-    padding: 18px 24px 25px;
+    padding: 28px 30px 36px;
+    background: var(--color-page-bg);
+    box-sizing: border-box;
 }
 
-/* ============================= */
-/* Page Heading */
-/* ============================= */
+.physical-content *,
+.physical-content *::before,
+.physical-content *::after {
+    box-sizing: border-box;
+}
+
+/* PAGE HEADING */
 
 .physical-heading {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .physical-heading h1 {
-    font-size: 34px;
+    margin: 0 0 8px;
+    font-size: 30px;
     font-weight: 800;
-    color: #102653;
-    margin-bottom: 5px;
+    color: var(--color-text);
 }
 
 .physical-heading p {
+    margin: 0;
     font-size: 14px;
-    color: #334C75;
     line-height: 1.6;
+    color: var(--color-text-muted);
 }
 
-/* ============================= */
-/* Search and Filters */
-/* ============================= */
+/* SEARCH AND FILTERS */
 
 .physical-filter-section {
     width: 100%;
     min-width: 0;
-    padding: 10px;
-    background-color: #FFFFFF;
-    border: 1px solid #DCE6F5;
-    border-radius: 9px;
+    padding: 16px;
+    background: var(--color-primary-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
 }
 
 .physical-search-box {
-    width: 100%;
-    min-width: 0;
-    height: 45px;
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 0 12px;
-    border: 1px solid #DCE6F5;
-    border-radius: 7px;
-    margin-bottom: 12px;
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    margin-bottom: 14px;
+    padding: 0 14px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
 }
 
-.physical-search-box svg {
-    width: 21px;
-    height: 21px;
-    color: #102653;
+.physical-search-box .search-icon {
     flex-shrink: 0;
+    font-size: 23px;
+    color: var(--color-primary);
 }
 
 .physical-search-box input {
@@ -109,13 +97,13 @@ body {
     border: none;
     outline: none;
     background: transparent;
+    color: var(--color-text);
     font-family: inherit;
     font-size: 13px;
-    color: #102653;
 }
 
 .physical-search-box input::placeholder {
-    color: #7485A4;
+    color: var(--color-placeholder);
 }
 
 .physical-filter-row {
@@ -129,130 +117,125 @@ body {
 .physical-filter-row select {
     width: 100%;
     min-width: 0;
-    height: 42px;
+    height: 44px;
     padding: 0 12px;
-    background-color: #FFFFFF;
-    border: 1px solid #DCE6F5;
-    border-radius: 7px;
-    color: #102653;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
     font-family: inherit;
     font-size: 12px;
     outline: none;
     cursor: pointer;
 }
 
-.physical-filter-row select:focus {
-    border-color: #0866E9;
-    box-shadow: 0 0 0 3px rgba(8, 102, 233, 0.08);
+.physical-filter-row select:focus,
+.physical-search-box:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-focus);
 }
 
-/* ============================= */
-/* Results Heading */
-/* ============================= */
+/* RESULTS HEADING */
 
 .physical-results {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    margin: 16px 0;
+    margin: 22px 0 18px;
     min-width: 0;
 }
 
 .physical-results p {
+    margin: 0;
     font-size: 14px;
-    color: #102653;
+    color: var(--color-text-muted);
     font-weight: 600;
 }
 
+/* GRID AND LIST BUTTONS */
+
 .physical-view-buttons {
     display: flex;
-    gap: 5px;
+    gap: 8px;
     flex-shrink: 0;
 }
 
 .physical-view-buttons button {
-    width: 43px;
-    height: 41px;
+    width: 42px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
-    border: 1px solid #DCE6F5;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
     border-radius: 7px;
-    color: #102653;
+    color: var(--color-text);
+    font-size: 20px;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
-.physical-view-buttons button svg {
-    width: 20px;
-    height: 20px;
-}
-
 .physical-view-buttons button:hover {
-    border-color: #0866E9;
-    color: #0866E9;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .physical-view-buttons .active-view {
-    background-color: #0866E9;
-    color: #FFFFFF;
-    border-color: #0866E9;
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
 }
 
-/* ============================= */
-/* Physical Books Grid */
-/* ============================= */
+/* BOOKS GRID */
 
 .physical-books-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
+    gap: 18px;
     width: 100%;
     min-width: 0;
 }
 
+/* BOOK CARD */
+
 .physical-book-card {
-    min-width: 0;
-    max-width: 100%;
-    padding: 10px;
-    background-color: #FFFFFF;
-    border: 1px solid #E1E9F5;
-    border-radius: 9px;
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    padding: 13px;
+    background: var(--color-primary-soft);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-card);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .physical-book-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 16px rgba(16, 38, 83, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .physical-book-main {
     display: flex;
+    align-items: flex-start;
     gap: 12px;
-    min-height: 185px;
     min-width: 0;
-    max-width: 100%;
 }
 
-/* ============================= */
-/* Book Covers */
-/* ============================= */
+/* BOOK COVERS */
 
 .physical-cover {
-    width: 116px;
-    min-width: 116px;
-    height: 185px;
-    padding: 13px 10px;
-    border-radius: 5px;
     position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    width: 105px;
+    min-width: 105px;
+    height: 175px;
+    padding: 12px 9px;
+    border-radius: 7px;
+    overflow: hidden;
     color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
@@ -260,9 +243,10 @@ body {
 .physical-cover h2 {
     position: relative;
     z-index: 1;
-    font-size: 15px;
+    margin: 0;
+    font-size: 13px;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 .physical-cover p {
@@ -280,9 +264,7 @@ body {
     opacity: 0.8;
 }
 
-/* ============================= */
-/* Book Cover Colors */
-/* ============================= */
+/* INDIVIDUAL COVER COLORS */
 
 .cover-one {
     background: linear-gradient(140deg, #06183F, #00549B);
@@ -318,537 +300,6 @@ body {
     background: linear-gradient(140deg, #11152E, #392D82);
 }
 
-/* ============================= */
-/* Book Details */
-/* ============================= */
-
-.physical-book-details {
-    flex: 1;
-    min-width: 0;
-    padding-top: 14px;
-    overflow-wrap: anywhere;
-}
-
-.physical-book-details h3 {
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 1.5;
-    color: #102653;
-    margin-bottom: 12px;
-    overflow-wrap: anywhere;
-}
-
-.physical-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 12px;
-    min-width: 0;
-}
-
-.physical-tags span {
-    padding: 5px 8px;
-    border-radius: 20px;
-    background-color: #EFF4FC;
-    color: #334C75;
-    font-size: 10px;
-    overflow-wrap: anywhere;
-}
-
-.physical-book-details p {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    margin: 10px 0;
-    color: #64799F;
-    font-size: 10px;
-    line-height: 1.4;
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-.physical-book-details p svg {
-    width: 15px;
-    height: 15px;
-    min-width: 15px;
-    color: #102653;
-}
-
-/* ============================= */
-/* Book Condition */
-/* ============================= */
-
-.book-condition {
-    display: inline-block;
-    align-self: flex-start;
-    padding: 6px 11px;
-    margin: 7px 0 10px;
-    border-radius: 7px;
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.good {
-    background-color: #D9F5E2;
-    color: #087338;
-}
-
-.like-new {
-    background-color: #E1EFFF;
-    color: #0866B8;
-}
-
-.used {
-    background-color: #FFF3D9;
-    color: #A86B00;
-}
-
-/* ============================= */
-/* Book Action Buttons */
-/* ============================= */
-
-.physical-book-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 10px;
-    margin-top: auto;
-    border-top: 1px solid #EDF1F7;
-    min-width: 0;
-}
-
-.physical-book-actions a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    text-decoration: none;
-    color: #102653;
-    font-size: 11px;
-    font-weight: 600;
-    white-space: normal;
-    min-width: 0;
-    text-align: center;
-    transition: 0.2s ease;
-}
-
-.physical-book-actions a svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-}
-
-.physical-book-actions a:not(.borrow-button):hover {
-    color: #0866E9;
-}
-
-.physical-book-actions .borrow-button {
-    padding: 11px 10px;
-    background-color: #0866E9;
-    color: #FFFFFF;
-    border-radius: 7px;
-}
-
-.physical-book-actions .borrow-button:hover {
-    background-color: #0756C5;
-}
-
-/* ============================= */
-/* Pagination */
-/* ============================= */
-
-.physical-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin: 28px 0 10px;
-}
-
-.physical-pagination a {
-    width: 37px;
-    height: 37px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFFFFF;
-    border: 1px solid #E1E9F5;
-    border-radius: 7px;
-    color: #102653;
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.2s ease;
-}
-
-.physical-pagination a svg {
-    width: 18px;
-    height: 18px;
-}
-
-.physical-pagination a:hover {
-    border-color: #0866E9;
-    color: #0866E9;
-}
-
-.physical-pagination a.current {
-    background-color: #0866E9;
-    border-color: #0866E9;
-    color: #FFFFFF;
-}
-
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
-
-/* Medium desktop and smaller laptops */
-
-@media (max-width: 1450px) {
-
-    .physical-books-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-}
-
-/* Tablets and smaller laptops */
-
-@media (max-width: 1100px) {
-
-    .physical-books-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .physical-filter-row {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-/* Tablet */
-
-@media (max-width: 850px) {
-
-    .dashboard-layout {
-        flex-direction: column;
-    }
-
-    .main-content {
-        width: 100%;
-    }
-
-    .physical-content {
-        padding: 15px;
-    }
-
-    .physical-book-main {
-        gap: 9px;
-    }
-
-    .physical-cover {
-        width: 105px;
-        min-width: 105px;
-    }
-
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .physical-heading h1 {
-        font-size: 27px;
-    }
-
-    .physical-heading p {
-        font-size: 12px;
-    }
-
-    .physical-books-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .physical-filter-row {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .physical-book-main {
-        gap: 12px;
-    }
-
-    .physical-cover {
-        width: 116px;
-        min-width: 116px;
-    }
-
-    .physical-book-actions {
-        justify-content: space-between;
-    }
-
-}
-
-/* Small mobile */
-
-@media (max-width: 380px) {
-
-    .physical-content {
-        padding: 12px 10px;
-    }
-
-    .physical-book-card {
-        padding: 8px;
-    }
-
-    .physical-book-main {
-        gap: 8px;
-    }
-
-    .physical-cover {
-        width: 100px;
-        min-width: 100px;
-        height: 165px;
-    }
-
-    .physical-cover h2 {
-        font-size: 13px;
-    }
-
-    .physical-book-details h3 {
-        font-size: 12px;
-    }
-
-    .physical-book-actions {
-        flex-wrap: wrap;
-    }
-
-    .physical-book-actions a {
-        font-size: 10px;
-    }
-
-}
-
-/* ==========================================
-   PHYSICAL BOOKS - DASHBOARD THEME UPDATE
-   Add this at the END of physical-books.css
-========================================== */
-
-/* MAIN PAGE LAYOUT */
-
-.dashboard-layout {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    overflow-x: clip;
-}
-
-.main-content {
-    flex: 1;
-    margin-left: var(--sidebar-width);
-    width: calc(100% - var(--sidebar-width));
-    min-width: 0;
-    max-width: none;
-    overflow-x: clip;
-}
-
-.physical-content {
-    padding: 28px 30px 36px;
-    background: var(--color-page-bg);
-    min-height: calc(100vh - 80px);
-}
-
-/* SIDEBAR LOGO SPACING */
-
-@media (min-width: 601px) {
-    .sidebar .sidebar-logo {
-        margin: 0;
-        padding: 0;
-        flex-shrink: 0;
-    }
-
-    .sidebar .sidebar-logo .logo {
-        margin: 0;
-        padding: 0;
-    }
-
-    .sidebar .sidebar-menu {
-        margin-top: 45px;
-        padding-top: 0;
-        flex-shrink: 0;
-    }
-}
-
-/* PAGE HEADING */
-
-.physical-heading {
-    margin-bottom: 22px;
-}
-
-.physical-heading h1 {
-    margin: 0 0 8px;
-    font-size: 30px;
-    font-weight: 800;
-    color: var(--color-text);
-}
-
-.physical-heading p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--color-text-muted);
-}
-
-/* SEARCH AND FILTERS */
-
-.physical-filter-section {
-    padding: 16px;
-    background: var(--color-primary-soft);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-large);
-    box-shadow: var(--shadow-card);
-}
-
-.physical-search-box {
-    height: 46px;
-    margin-bottom: 14px;
-    padding: 0 14px;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-}
-
-.physical-search-box svg {
-    width: 19px;
-    height: 19px;
-    color: var(--color-primary);
-}
-
-.physical-search-box input {
-    color: var(--color-text);
-    font-size: 13px;
-}
-
-.physical-search-box input::placeholder {
-    color: var(--color-placeholder);
-}
-
-.physical-filter-row {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-}
-
-.physical-filter-row select {
-    height: 44px;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    color: var(--color-text);
-    font-size: 12px;
-}
-
-.physical-filter-row select:focus,
-.physical-search-box:focus-within {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-focus);
-}
-
-/* RESULTS HEADING */
-
-.physical-results {
-    margin: 22px 0 18px;
-}
-
-.physical-results p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--color-text-muted);
-    font-weight: 600;
-}
-
-/* GRID / LIST BUTTONS */
-
-.physical-view-buttons {
-    gap: 8px;
-}
-
-.physical-view-buttons button {
-    width: 42px;
-    height: 40px;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 7px;
-    color: var(--color-text);
-}
-
-.physical-view-buttons button:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-}
-
-.physical-view-buttons .active-view {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-/* BOOKS GRID */
-
-.physical-books-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-}
-
-/* BOOK CARDS */
-
-.physical-book-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    padding: 13px;
-    background: var(--color-primary-soft);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-large);
-    box-shadow: var(--shadow-card);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.physical-book-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.physical-book-main {
-    display: flex;
-    gap: 12px;
-    min-width: 0;
-}
-
-/* BOOK COVER */
-
-.physical-cover {
-    width: 105px;
-    min-width: 105px;
-    height: 175px;
-    padding: 12px 9px;
-    border-radius: 7px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
-}
-
-.physical-cover h2 {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0;
-}
-
-.physical-cover p {
-    font-size: 10px;
-}
-
-/* Keep original individual book-cover colors */
-
 /* BOOK DETAILS */
 
 .physical-book-details {
@@ -864,13 +315,17 @@ body {
     font-weight: 800;
     line-height: 1.4;
     color: var(--color-text);
+    overflow-wrap: anywhere;
 }
+
+/* BOOK TAGS */
 
 .physical-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 12px;
+    min-width: 0;
 }
 
 .physical-tags span {
@@ -880,26 +335,34 @@ body {
     color: var(--color-primary);
     font-size: 10px;
     font-weight: 600;
+    overflow-wrap: anywhere;
 }
+
+/* BOOK INFORMATION */
 
 .physical-book-details p {
     display: flex;
     align-items: center;
     gap: 6px;
+    min-width: 0;
     margin: 9px 0;
     font-size: 10px;
     line-height: 1.5;
     color: var(--color-text-muted);
+    overflow-wrap: anywhere;
 }
 
-.physical-book-details p svg {
+.detail-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 14px;
-    height: 14px;
     min-width: 14px;
     color: var(--color-primary);
+    font-size: 14px;
 }
 
-/* BOOK CONDITIONS */
+/* BOOK CONDITION */
 
 .book-condition {
     display: inline-block;
@@ -926,7 +389,7 @@ body {
     color: #A35B00;
 }
 
-/* BOOK ACTION BUTTONS */
+/* BOOK ACTIONS */
 
 .physical-book-actions {
     display: flex;
@@ -944,15 +407,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    min-width: 0;
     color: var(--color-primary);
     font-size: 11px;
     font-weight: 600;
     text-decoration: none;
-}
-
-.physical-book-actions a svg {
-    width: 15px;
-    height: 15px;
+    text-align: center;
 }
 
 .physical-book-actions a:not(.borrow-button):hover {
@@ -965,6 +425,7 @@ body {
     background: var(--color-primary);
     border-radius: 7px;
     color: var(--color-white);
+    transition: background 0.2s;
 }
 
 .physical-book-actions .borrow-button:hover {
@@ -993,6 +454,7 @@ body {
     color: var(--color-text);
     font-size: 13px;
     text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .physical-pagination a:hover {
@@ -1025,17 +487,8 @@ body {
 }
 
 @media (max-width: 850px) {
-    .dashboard-layout {
-        flex-direction: row;
-    }
-
-    .main-content {
-        margin-left: var(--sidebar-width);
-        width: calc(100% - var(--sidebar-width));
-    }
-
     .physical-content {
-        padding: 18px 15px;
+        padding: 20px 15px;
     }
 
     .physical-books-grid {
@@ -1044,10 +497,6 @@ body {
 }
 
 @media (max-width: 600px) {
-    .dashboard-layout {
-        display: block;
-    }
-
     .main-content {
         margin-left: 0;
         width: 100%;
@@ -1073,6 +522,10 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .physical-book-main {
+        gap: 12px;
+    }
+
     .physical-cover {
         width: 105px;
         min-width: 105px;
@@ -1092,6 +545,22 @@ body {
     .physical-cover {
         width: 95px;
         min-width: 95px;
+        height: 165px;
+    }
+
+    .physical-cover h2 {
+        font-size: 12px;
+    }
+
+    .physical-book-details h3 {
+        font-size: 12px;
+    }
+
+    .physical-book-actions {
+        flex-wrap: wrap;
+    }
+
+    .physical-book-actions a {
+        font-size: 10px;
     }
 }
-

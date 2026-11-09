@@ -1,11 +1,8 @@
 
-/* =========================================
+/* =========================================================
    CAMPUS RESOURCE HUB
    BROWSE RESOURCES PAGE CSS
-   Dashboard Global Theme
-========================================= */
-
-/* PAGE LAYOUT */
+   ========================================================= */
 
 .dashboard-layout {
     display: flex;
@@ -13,36 +10,37 @@
 }
 
 .main-content {
-    margin-left: var(--sidebar-width);
-    width: calc(100% - var(--sidebar-width));
+    flex: 1;
     min-width: 0;
+    margin-left: var(--sidebar-width);
 }
-
-/* =========================================
-   BROWSE RESOURCES PAGE
-========================================= */
 
 .browse-page {
     padding: 20px 30px 35px;
     background: var(--color-page-bg);
 }
 
-/* PAGE HEADING */
+
+/* =========================================
+   PAGE HEADING
+========================================= */
 
 .browse-page .page-heading h1 {
+    margin: 0 0 8px;
+    color: var(--color-text);
     font-size: 30px;
     font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 8px;
     line-height: 1.25;
 }
 
 .browse-page .page-heading p {
+    margin: 0;
+    color: var(--color-text-muted);
     font-size: 14px;
     font-weight: 400;
-    color: var(--color-text-muted);
     line-height: 1.6;
 }
+
 
 /* =========================================
    SEARCH AND FILTER PANEL
@@ -56,7 +54,8 @@
     border-radius: var(--radius-large);
 }
 
-/* BROWSE SEARCH */
+
+/* Browse Search */
 
 .browse-search {
     display: flex;
@@ -81,24 +80,32 @@
 .browse-search input {
     width: 100%;
     height: 100%;
-    border: none;
-    outline: none;
-    font-size: 13px;
-    color: var(--color-text);
+    border: 0;
+    outline: 0;
     background: transparent;
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: 13px;
 }
 
 .browse-search input::placeholder {
     color: var(--color-placeholder);
 }
 
-/* FILTER ROW */
+.browse-search input:focus-visible {
+    outline: none;
+}
+
+
+/* =========================================
+   FILTER ROW
+========================================= */
 
 .filter-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
-    gap: 14px;
     align-items: end;
+    gap: 14px;
     margin-top: 15px;
 }
 
@@ -106,12 +113,13 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+    min-width: 0;
 }
 
 .filter-item label {
+    color: var(--color-text);
     font-size: 12px;
     font-weight: 700;
-    color: var(--color-text);
 }
 
 .filter-item select {
@@ -119,18 +127,18 @@
     height: 41px;
     padding: 0 10px;
     border: 1px solid var(--color-border);
-    border-radius: 6px;
-    background: var(--color-white);
+    border-radius: var(--radius-small);
+    background: var(--color-surface);
     color: var(--color-text);
+    font-family: var(--font-family);
     font-size: 12px;
     cursor: pointer;
-    outline: none;
 }
 
-.filter-item select:focus {
+.filter-item select:focus-visible {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px var(--color-focus);
 }
+
 
 /* =========================================
    GRID AND LIST VIEW BUTTONS
@@ -142,26 +150,26 @@
 }
 
 .view-buttons button {
-    height: 41px;
     width: 43px;
+    height: 41px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--color-border);
-    border-radius: 6px;
-    background: var(--color-white);
+    border-radius: var(--radius-small);
+    background: var(--color-surface);
     color: var(--color-text);
-    cursor: pointer;
     transition: 0.2s;
-}
-
-.view-buttons svg {
-    width: 20px;
-    height: 20px;
 }
 
 .view-buttons button:hover {
     background: var(--color-primary-soft);
+    border-color: var(--color-primary);
+}
+
+.view-buttons button svg {
+    width: 20px;
+    height: 20px;
 }
 
 .view-buttons .grid-view {
@@ -169,6 +177,7 @@
     color: var(--color-white);
     border-color: var(--color-primary);
 }
+
 
 /* =========================================
    RESULTS COUNT
@@ -181,6 +190,7 @@
     font-weight: 600;
 }
 
+
 /* =========================================
    RESOURCES GRID
 ========================================= */
@@ -191,21 +201,23 @@
     gap: 20px;
 }
 
-/* RESOURCE CARD */
+
+/* Resource Card */
 
 .resource-card {
     min-width: 0;
-    background: var(--color-white);
+    overflow: hidden;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-large);
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background: var(--color-surface);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .resource-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 18px rgba(16, 38, 83, 0.09);
 }
+
 
 /* =========================================
    RESOURCE COVERS
@@ -214,26 +226,28 @@
 .resource-cover {
     height: 155px;
     position: relative;
-    padding: 18px 13px;
     overflow: hidden;
+    padding: 18px 13px;
     color: var(--color-white);
 }
 
 .resource-cover h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
     font-size: 20px;
     line-height: 1.2;
     font-weight: 800;
-    position: relative;
-    z-index: 1;
 }
 
 .resource-cover p {
+    margin: 5px 0 0;
     font-size: 10px;
-    margin-top: 5px;
     font-weight: 500;
 }
 
-/* COVER DECORATIVE SYMBOLS */
+
+/* Cover Decorative Symbols */
 
 .cover-design {
     position: absolute;
@@ -243,7 +257,8 @@
     opacity: 0.7;
 }
 
-/* RESOURCE COVER COLORS */
+
+/* Individual Cover Colors */
 
 .cover-one {
     background: linear-gradient(130deg, #06183F, #00549B);
@@ -283,24 +298,24 @@
     color: var(--color-text);
 }
 
+
 /* =========================================
-   BOOKMARK BUTTON
+   BOOKMARK
 ========================================= */
 
 .bookmark {
     position: absolute;
     top: 9px;
     right: 9px;
+    z-index: 2;
     width: 32px;
     height: 34px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: var(--color-white);
-    color: var(--color-text);
+    justify-content: center;
     border-radius: 6px;
-    z-index: 2;
-    cursor: pointer;
+    background: var(--color-surface);
+    color: var(--color-text);
 }
 
 .bookmark svg {
@@ -312,8 +327,9 @@
     color: var(--color-primary);
 }
 
+
 /* =========================================
-   FILE LABELS
+   FILE TYPE LABELS
 ========================================= */
 
 .file-label {
@@ -321,23 +337,24 @@
     bottom: 0;
     left: 0;
     padding: 6px 11px;
+    border-radius: 5px 5px 0 0;
     color: var(--color-white);
     font-size: 11px;
     font-weight: 800;
-    border-radius: 5px 5px 0 0;
 }
 
-.pdf {
+.file-label.pdf {
     background: var(--color-danger);
 }
 
-.ppt {
+.file-label.ppt {
     background: var(--color-info);
 }
 
-.doc {
+.file-label.doc {
     background: var(--color-success);
 }
+
 
 /* =========================================
    RESOURCE INFORMATION
@@ -348,15 +365,16 @@
 }
 
 .resource-info h3 {
+    min-height: 39px;
+    margin: 0 0 8px;
+    color: var(--color-text);
     font-size: 13px;
     line-height: 1.5;
     font-weight: 800;
-    color: var(--color-text);
-    min-height: 39px;
-    margin-bottom: 8px;
 }
 
-/* RESOURCE TAGS */
+
+/* Resource Tags */
 
 .resource-tags {
     display: flex;
@@ -367,19 +385,20 @@
 
 .resource-tags span {
     padding: 5px 9px;
-    background: var(--color-primary-light);
     border-radius: 15px;
-    color: var(--color-text-muted);
+    background: var(--color-tag-bg);
+    color: var(--color-tag-text);
     font-size: 10px;
     font-weight: 500;
 }
 
-/* RESOURCE METADATA */
+
+/* Resource Metadata */
 
 .resource-meta {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 7px;
     margin-top: 12px;
@@ -399,7 +418,8 @@
     flex-shrink: 0;
 }
 
-/* DOWNLOAD INFORMATION */
+
+/* Download Information */
 
 .download-info {
     display: flex;
@@ -419,14 +439,15 @@
     color: var(--color-primary);
 }
 
+
 /* =========================================
    PAGINATION
 ========================================= */
 
 .browse-pagination {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 7px;
     margin: 25px 0;
 }
@@ -435,22 +456,22 @@
     width: 36px;
     height: 36px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: var(--color-white);
+    justify-content: center;
     border: 1px solid var(--color-border);
     border-radius: 6px;
-    text-decoration: none;
+    background: var(--color-surface);
     color: var(--color-text);
+    text-decoration: none;
     font-size: 13px;
     font-weight: 600;
     transition: 0.2s;
 }
 
 .browse-pagination a:hover {
+    border-color: var(--color-primary);
     background: var(--color-primary-light);
     color: var(--color-primary);
-    border-color: var(--color-primary);
 }
 
 .browse-pagination a svg {
@@ -459,16 +480,25 @@
 }
 
 .browse-pagination .selected {
+    border-color: var(--color-primary);
     background: var(--color-primary);
     color: var(--color-white);
-    border-color: var(--color-primary);
 }
 
+
 /* =========================================
-   RESPONSIVE - TABLETS
+   RESPONSIVE DESIGN
 ========================================= */
 
+
+/* Tablets */
+
 @media (max-width: 1200px) {
+
+    .main-content {
+        margin-left: 225px;
+    }
+
     .resources-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -480,13 +510,18 @@
     .view-buttons {
         grid-column: 1 / -1;
     }
+
 }
 
-/* =========================================
-   RESPONSIVE - SMALL TABLETS
-========================================= */
+
+/* Small Tablets */
 
 @media (max-width: 850px) {
+
+    .main-content {
+        margin-left: 190px;
+    }
+
     .browse-page {
         padding: 16px 20px;
     }
@@ -495,77 +530,20 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .topbar {
-        flex-wrap: wrap;
-    }
-
-    .search-area {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .topbar-right {
-        margin-left: auto;
-    }
 }
 
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
+
+/* Mobile */
 
 @media (max-width: 600px) {
+
     .dashboard-layout {
         display: block;
     }
 
-    .sidebar {
-        position: relative;
-        width: 100%;
-        min-width: 0;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-    }
-
     .main-content {
-        margin-left: 0;
         width: 100%;
-    }
-
-    .sidebar-menu,
-    .sidebar-bottom {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    .university-info {
-        display: none;
-    }
-
-    .topbar {
-        padding: 12px;
-    }
-
-    .search-area {
-        flex-wrap: wrap;
-        gap: 7px;
-    }
-
-    .search-box {
-        min-width: 100%;
-        border-radius: 8px;
-    }
-
-    .search-category {
-        flex: 1;
-        width: auto;
-        border: 1px solid var(--color-border);
-        border-radius: 8px;
-    }
-
-    .search-button {
-        margin: 0;
+        margin-left: 0;
     }
 
     .browse-page {
@@ -603,7 +581,7 @@
     }
 
     .resource-info h3 {
-        min-height: auto;
+        min-height: 0;
     }
 
     .browse-pagination {
@@ -613,31 +591,6 @@
     .browse-pagination a {
         width: 32px;
         height: 32px;
-    }
-}
-
-
-/* =====================================
-   SIDEBAR LOGO & MENU SPACING FIX
-===================================== */
-
-@media (min-width: 601px) {
-
-    .sidebar .sidebar-logo {
-        flex-shrink: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .sidebar .sidebar-logo .logo {
-        margin: 0;
-        padding: 0;
-    }
-
-    .sidebar .sidebar-menu {
-        margin-top: 45px;
-        padding-top: 0;
-        flex-shrink: 0;
     }
 
 }

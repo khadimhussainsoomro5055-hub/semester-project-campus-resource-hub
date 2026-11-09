@@ -10,14 +10,11 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/settings.css">
-
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -27,7 +24,6 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
-        <!-- University Logo -->
         <div class="sidebar-logo">
             <div class="logo">
                 <div id="logo-icon"></div>
@@ -35,7 +31,7 @@
             </div>
         </div>
 
-        <!-- Main Navigation -->
+        <!-- MAIN NAVIGATION -->
         <nav class="sidebar-menu">
 
             <a href="index.html" class="menu-item">
@@ -89,15 +85,8 @@
 
         </nav>
 
-        <!-- Bottom Navigation -->
+        <!-- BOTTOM NAVIGATION -->
         <div class="sidebar-bottom">
-
-            <a href="profile.html" class="menu-item">
-                <span class="menu-icon">
-                    <i data-lucide="user-round"></i>
-                </span>
-                Profile
-            </a>
 
             <a href="settings.html" class="menu-item active">
                 <span class="menu-icon">
@@ -110,21 +99,19 @@
                 <span class="menu-icon">
                     <i data-lucide="circle-help"></i>
                 </span>
-                Help &amp; Support
+                Help & Support
             </a>
 
         </div>
 
-        <!-- University Information -->
+        <!-- UNIVERSITY INFORMATION -->
         <div class="university-info">
-            <div class="university-icon">
-                <i data-lucide="building-2"></i>
-            </div>
             <h3>Sukkur IBA University</h3>
             <p>Knowledge • Sharing • Community</p>
         </div>
 
     </aside>
+
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
@@ -133,68 +120,85 @@
         <header class="topbar">
 
             <div class="search-area">
+
                 <div class="search-box">
                     <span>
                         <i data-lucide="search"></i>
                     </span>
-                    <input type="text"
-                           placeholder="Search for books, notes, past papers...">
+
+                    <input
+                        type="text"
+                        placeholder="Search for books, notes, past papers, assignments..."
+                        aria-label="Search resources"
+                    >
                 </div>
 
-                <select class="search-category">
-                    <option>All Categories</option>
+                <select class="search-category" aria-label="Search category">
+                    <option>All</option>
                     <option>Books</option>
                     <option>Notes</option>
                     <option>Past Papers</option>
+                    <option>Assignments</option>
                 </select>
 
                 <button class="search-button" type="button">
                     Search
                 </button>
+
             </div>
 
             <div class="topbar-right">
 
-                <button class="notification-button" type="button">
+                <button class="notification-button" type="button" aria-label="Notifications">
                     <i data-lucide="bell"></i>
                     <span class="notification-count">3</span>
                 </button>
 
                 <div class="profile-info">
-                    <div class="profile-avatar">AR</div>
+
+                    <div class="profile-avatar">K</div>
 
                     <div>
-                        <h4>Ali Raza</h4>
-                        <p>Student</p>
+                        <h4>Khadim Hussain</h4>
+                        <p>BS Software Engineering</p>
                     </div>
 
-                    <span class="profile-arrow">
-                        <i data-lucide="chevron-down"></i>
-                    </span>
+                    <i data-lucide="chevron-down" class="profile-arrow"></i>
+
                 </div>
 
             </div>
+
         </header>
+
 
         <!-- SETTINGS CONTENT -->
         <div class="dashboard-content settings-content">
 
+            <!-- PAGE HEADING -->
             <section class="settings-heading">
-                <h1>Settings</h1>
-                <p>Manage your account preferences and settings.</p>
+
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage your account preferences and settings.</p>
+                </div>
+
             </section>
 
+
+            <!-- SETTINGS LAYOUT -->
             <div class="settings-layout">
 
                 <!-- LEFT COLUMN -->
                 <div class="settings-left">
 
-                    <!-- Account Information -->
+                    <!-- ACCOUNT INFORMATION -->
                     <section class="settings-card account-card">
 
                         <div class="settings-card-heading">
+
                             <div class="settings-icon">
-                                <i data-lucide="user"></i>
+                                <i data-lucide="user-round"></i>
                             </div>
 
                             <div class="settings-title">
@@ -206,62 +210,102 @@
                                 <i data-lucide="edit-3"></i>
                                 Edit Profile
                             </button>
+
                         </div>
 
                         <div class="settings-divider"></div>
 
                         <form>
+
                             <div class="account-form-grid">
 
                                 <div class="form-group">
-                                    <label>Full Name</label>
-                                    <input type="text" value="Ali Raza">
+                                    <label for="full-name">Full Name</label>
+                                    <input
+                                        type="text"
+                                        id="full-name"
+                                        value="Khadim Hussain"
+                                    >
                                 </div>
 
                                 <div class="form-group">
-                                    <label>University Email</label>
-                                    <input type="email"
-                                           value="ali.raza@iba.edu.pk"
-                                           disabled>
+                                    <label for="email">University Email</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        value="khadim.hussain@iba.edu.pk"
+                                        disabled
+                                    >
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Department</label>
-                                    <input type="text"
-                                           value="Computer Science"
-                                           disabled>
+                                    <label for="department">Department</label>
+                                    <input
+                                        type="text"
+                                        id="department"
+                                        value="Software Engineering"
+                                        disabled
+                                    >
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Semester</label>
-                                    <input type="number" value="5">
+                                    <label for="semester">Semester</label>
+                                    <input
+                                        type="number"
+                                        id="semester"
+                                        value="5"
+                                    >
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <input type="tel"
-                                           value="+92 333 1234567">
+                                    <label for="phone">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        placeholder="Enter phone number"
+                                    >
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Campus</label>
-                                    <input type="text"
-                                           value="Main Campus, Sukkur IBA">
+                                    <label for="campus">Campus</label>
+                                    <input
+                                        type="text"
+                                        id="campus"
+                                        value="Main Campus, Sukkur IBA"
+                                    >
                                 </div>
 
                                 <div class="form-group full-width">
-                                    <label>Bio</label>
-                                    <textarea rows="2">Computer Science student at Sukkur IBA. Interested in web development and AI.</textarea>
+                                    <label for="bio">Bio</label>
+                                    <textarea
+                                        id="bio"
+                                        rows="3"
+                                        placeholder="Write something about yourself..."
+                                    ></textarea>
                                 </div>
 
                             </div>
+
+                            <div class="account-actions">
+                                <button
+                                    type="button"
+                                    class="save-changes-button"
+                                >
+                                    <i data-lucide="save"></i>
+                                    Save Changes
+                                </button>
+                            </div>
+
                         </form>
+
                     </section>
 
-                    <!-- Change Password -->
+
+                    <!-- CHANGE PASSWORD -->
                     <section class="settings-card password-card">
 
                         <div class="settings-card-heading">
+
                             <div class="settings-icon">
                                 <i data-lucide="lock"></i>
                             </div>
@@ -270,64 +314,106 @@
                                 <h2>Change Password</h2>
                                 <p>Update your account password.</p>
                             </div>
+
                         </div>
 
                         <div class="settings-divider"></div>
 
                         <form>
+
                             <div class="password-form-grid">
 
                                 <div class="form-group full-width">
-                                    <label>Current Password</label>
+                                    <label for="current-password">
+                                        Current Password
+                                    </label>
+
                                     <div class="password-input">
-                                        <input type="password"
-                                               placeholder="Enter current password">
-                                        <span>
+                                        <input
+                                            type="password"
+                                            id="current-password"
+                                            placeholder="Enter current password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            aria-label="Show current password"
+                                        >
                                             <i data-lucide="eye"></i>
-                                        </span>
+                                        </button>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>New Password</label>
+                                    <label for="new-password">
+                                        New Password
+                                    </label>
+
                                     <div class="password-input">
-                                        <input type="password"
-                                               placeholder="Enter new password">
-                                        <span>
+                                        <input
+                                            type="password"
+                                            id="new-password"
+                                            placeholder="Enter new password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            aria-label="Show new password"
+                                        >
                                             <i data-lucide="eye"></i>
-                                        </span>
+                                        </button>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Confirm New Password</label>
+                                    <label for="confirm-password">
+                                        Confirm New Password
+                                    </label>
+
                                     <div class="password-input">
-                                        <input type="password"
-                                               placeholder="Confirm new password">
-                                        <span>
+                                        <input
+                                            type="password"
+                                            id="confirm-password"
+                                            placeholder="Confirm new password"
+                                        >
+
+                                        <button
+                                            type="button"
+                                            class="password-toggle"
+                                            aria-label="Show confirm password"
+                                        >
                                             <i data-lucide="eye"></i>
-                                        </span>
+                                        </button>
                                     </div>
                                 </div>
 
                             </div>
 
-                            <button type="button"
-                                    class="update-password-button">
+                            <button
+                                type="button"
+                                class="update-password-button"
+                            >
+                                <i data-lucide="shield-check"></i>
                                 Update Password
                             </button>
+
                         </form>
+
                     </section>
 
                 </div>
 
+
                 <!-- RIGHT COLUMN -->
                 <div class="settings-right">
 
-                    <!-- Profile Picture -->
+                    <!-- PROFILE PICTURE -->
                     <section class="settings-card picture-card">
 
                         <div class="settings-card-heading">
+
                             <div class="settings-icon">
                                 <i data-lucide="image"></i>
                             </div>
@@ -336,31 +422,41 @@
                                 <h2>Profile Picture</h2>
                                 <p>Update your profile photo.</p>
                             </div>
+
                         </div>
 
                         <div class="profile-picture-area">
 
-                            <div class="large-profile-avatar">AR</div>
+                            <div class="large-profile-avatar">
+                                K
+                            </div>
 
-                            <label for="profile-photo"
-                                   class="upload-photo-button">
+                            <label
+                                for="profile-photo"
+                                class="upload-photo-button"
+                            >
                                 <i data-lucide="upload"></i>
                                 Upload New Photo
                             </label>
 
-                            <input type="file"
-                                   id="profile-photo"
-                                   accept=".jpg,.jpeg,.png,.gif">
+                            <input
+                                type="file"
+                                id="profile-photo"
+                                accept=".jpg,.jpeg,.png,.gif"
+                            >
 
                             <p>JPG, PNG or GIF (Max 2MB)</p>
 
                         </div>
+
                     </section>
 
-                    <!-- Notification Settings -->
+
+                    <!-- NOTIFICATION SETTINGS -->
                     <section class="settings-card notification-card">
 
                         <div class="settings-card-heading">
+
                             <div class="settings-icon">
                                 <i data-lucide="bell"></i>
                             </div>
@@ -369,47 +465,63 @@
                                 <h2>Notification Settings</h2>
                                 <p>Choose what notifications you want to receive.</p>
                             </div>
+
                         </div>
+
+                        <div class="settings-divider"></div>
 
                         <div class="settings-options">
 
                             <label class="setting-option">
                                 <input type="checkbox" checked>
                                 <span class="toggle-switch"></span>
-                                <span>Email notification for resource approval/rejection</span>
+                                <span class="option-text">
+                                    Email notification for resource approval/rejection
+                                </span>
                             </label>
 
                             <label class="setting-option">
                                 <input type="checkbox" checked>
                                 <span class="toggle-switch"></span>
-                                <span>Email notification for request status updates</span>
+                                <span class="option-text">
+                                    Email notification for request status updates
+                                </span>
                             </label>
 
                             <label class="setting-option">
                                 <input type="checkbox" checked>
                                 <span class="toggle-switch"></span>
-                                <span>Email notification for replies to your reports</span>
+                                <span class="option-text">
+                                    Email notification for replies to your reports
+                                </span>
                             </label>
 
                             <label class="setting-option">
                                 <input type="checkbox">
                                 <span class="toggle-switch"></span>
-                                <span>Weekly summary of new resources</span>
+                                <span class="option-text">
+                                    Weekly summary of new resources
+                                </span>
                             </label>
 
                             <label class="setting-option">
                                 <input type="checkbox" checked>
                                 <span class="toggle-switch"></span>
-                                <span>Important announcements</span>
+                                <span class="option-text">
+                                    Important announcements
+                                </span>
                             </label>
 
                         </div>
+
                     </section>
 
-                    <!-- Privacy Settings -->
+
+                    <!-- PRIVACY SETTINGS -->
                     <section class="settings-card privacy-card">
 
                         <div class="settings-card-heading">
+
                             <div class="settings-icon">
                                 <i data-lucide="shield-check"></i>
                             </div>
@@ -418,33 +530,46 @@
                                 <h2>Privacy Settings</h2>
                                 <p>Control your profile visibility.</p>
                             </div>
+
                         </div>
+
+                        <div class="settings-divider"></div>
 
                         <div class="settings-options">
 
                             <label class="setting-option">
                                 <input type="checkbox" checked>
                                 <span class="toggle-switch"></span>
-                                <span>Show my profile to other students</span>
+                                <span class="option-text">
+                                    Show my profile to other students
+                                </span>
                             </label>
 
                             <label class="setting-option">
                                 <input type="checkbox">
                                 <span class="toggle-switch"></span>
-                                <span>Hide my email address from other students</span>
+                                <span class="option-text">
+                                    Hide my email address from other students
+                                </span>
                             </label>
 
                         </div>
+
                     </section>
 
                 </div>
+
             </div>
+
         </div>
 
     </main>
+
 </div>
 
-<!-- Initialize Icons -->
+
+<!-- LUCIDE ICONS ONLY -->
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
     lucide.createIcons();
 </script>

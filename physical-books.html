@@ -35,74 +35,82 @@
         <nav class="sidebar-menu">
 
             <a href="index.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="layout-dashboard"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="layout-dashboard"></i>
+                </span>
                 Dashboard
             </a>
 
             <a href="browse-resources.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="library-big"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="library-big"></i>
+                </span>
                 Browse Resources
             </a>
 
             <a href="upload-resource.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="cloud-upload"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="cloud-upload"></i>
+                </span>
                 Upload Resource
             </a>
 
             <a href="my-uploads.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="folder"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="folder"></i>
+                </span>
                 My Uploads
             </a>
 
             <a href="physical-books.html" class="menu-item active">
-                <span class="menu-icon"><i data-lucide="book"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="book"></i>
+                </span>
                 Physical Books
             </a>
 
             <a href="my-requests.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="clipboard-list"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="clipboard-list"></i>
+                </span>
                 My Requests
             </a>
 
             <a href="report-resource.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="flag"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="flag"></i>
+                </span>
                 Report Content
             </a>
 
         </nav>
 
-
         <!-- Bottom Navigation -->
         <div class="sidebar-bottom">
-            <a href="profile.html" class="menu-item">
-    <span class="menu-icon">
-        <i data-lucide="user-round"></i>
-    </span>
-    Profile
-</a>
 
             <a href="settings.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="settings"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="settings"></i>
+                </span>
                 Settings
             </a>
 
             <a href="help.html" class="menu-item">
-                <span class="menu-icon"><i data-lucide="circle-question-mark"></i></span>
+                <span class="menu-icon">
+                    <i data-lucide="circle-help"></i>
+                </span>
                 Help & Support
             </a>
 
         </div>
 
-
         <!-- University Information -->
         <div class="university-info">
-            <div class="university-icon">🏛</div>
             <h3>Sukkur IBA University</h3>
             <p>Knowledge • Sharing • Community</p>
         </div>
 
     </aside>
-
 
     <!-- Main Content -->
     <main class="main-content">
@@ -113,8 +121,14 @@
             <div class="search-area">
 
                 <div class="search-box">
-                    <span><i data-lucide="search"></i></span>
-                    <input type="text" placeholder="Search for books, notes, past papers, assignments...">
+                    <span>
+                        <i data-lucide="search"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        placeholder="Search for books, notes, past papers, assignments..."
+                    >
                 </div>
 
                 <select class="search-category">
@@ -125,14 +139,15 @@
                     <option>Assignments</option>
                 </select>
 
-                <button class="search-button">Search</button>
+                <button class="search-button">
+                    Search
+                </button>
 
             </div>
 
-
             <div class="topbar-right">
 
-                <button class="notification-button">
+                <button class="notification-button" aria-label="Notifications">
                     <i data-lucide="bell"></i>
                     <span class="notification-count">3</span>
                 </button>
@@ -146,7 +161,7 @@
                         <p>BS Software Engineering</p>
                     </div>
 
-                  <i data-lucide="chevron-down" class="profile-arrow"></i>
+                    <i data-lucide="chevron-down" class="profile-arrow"></i>
 
                 </div>
 
@@ -154,28 +169,33 @@
 
         </header>
 
-
         <!-- Physical Books Content -->
         <div class="dashboard-content physical-content">
 
             <!-- Page Heading -->
             <section class="physical-heading">
                 <h1>Physical Books</h1>
-                <p>Find physical copies of books shared by your fellow students. You can request to borrow and arrange pickup.</p>
+                <p>
+                    Find physical copies of books shared by your fellow students.
+                    You can request to borrow and arrange pickup.
+                </p>
             </section>
-
 
             <!-- Search and Filters -->
             <section class="physical-filter-section">
 
                 <div class="physical-search-box">
                     <i data-lucide="search"></i>
-                    <input type="text" placeholder="Search by book title, author, or keyword...">
+
+                    <input
+                        type="text"
+                        placeholder="Search by book title, author, or keyword..."
+                    >
                 </div>
 
                 <div class="physical-filter-row">
 
-                    <select>
+                    <select aria-label="Filter by department">
                         <option>All Departments</option>
                         <option>Computer Science</option>
                         <option>Software Engineering</option>
@@ -185,7 +205,7 @@
                         <option>Physics</option>
                     </select>
 
-                    <select>
+                    <select aria-label="Filter by semester">
                         <option>All Semesters</option>
                         <option>Semester 1</option>
                         <option>Semester 2</option>
@@ -197,14 +217,14 @@
                         <option>Semester 8</option>
                     </select>
 
-                    <select>
+                    <select aria-label="Filter by book condition">
                         <option>All Conditions</option>
                         <option>Like New</option>
                         <option>Good Condition</option>
                         <option>Used</option>
                     </select>
 
-                    <select>
+                    <select aria-label="Sort books">
                         <option>Newest First</option>
                         <option>Oldest First</option>
                         <option>Title A-Z</option>
@@ -214,31 +234,30 @@
 
             </section>
 
-
             <!-- Results Heading -->
             <div class="physical-results">
 
-                <p>Showing 12 results</p>
+                <p>Showing 8 results</p>
 
                 <div class="physical-view-buttons">
-                    <button class="active-view">
+
+                    <button class="active-view" aria-label="Grid view">
                         <i data-lucide="grid-2x2"></i>
                     </button>
 
-                    <button>
+                    <button aria-label="List view">
                         <i data-lucide="list"></i>
                     </button>
+
                 </div>
 
             </div>
 
-
             <!-- Books Grid -->
             <section class="physical-books-grid">
 
-
                 <!-- Book 1 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -248,6 +267,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Data Structures and Algorithms</h3>
 
                             <div class="physical-tags">
@@ -255,25 +275,45 @@
                                 <span>Semester 3</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Ali Raza</p>
-                            <p><i data-lucide="calendar-days"></i> Oct 18, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (Main Library)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Ali Raza
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 18, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (Main Library)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition good">Good Condition</span>
+                    <span class="book-condition good">
+                        Good Condition
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 2 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -284,6 +324,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Operating System Concepts</h3>
 
                             <div class="physical-tags">
@@ -291,24 +332,40 @@
                                 <span>Semester 4</span>
                             </div>
 
-                            <p><i data-lucide="calendar-days"></i> Oct 15, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (Hostel A)</p>
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 15, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (Hostel A)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition like-new">Like New</span>
+                    <span class="book-condition like-new">
+                        Like New
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 3 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -318,6 +375,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Computer Networks</h3>
 
                             <div class="physical-tags">
@@ -325,25 +383,45 @@
                                 <span>Semester 5</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Imran Ali</p>
-                            <p><i data-lucide="calendar-days"></i> Oct 15, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (CS Block)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Imran Ali
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 15, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (CS Block)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition good">Good Condition</span>
+                    <span class="book-condition good">
+                        Good Condition
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 4 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -353,6 +431,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Linear Algebra</h3>
 
                             <div class="physical-tags">
@@ -360,25 +439,45 @@
                                 <span>Semester 1</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Fatima Ali</p>
-                            <p><i data-lucide="calendar-days"></i> Oct 8, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (Hostel B)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Fatima Ali
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 8, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (Hostel B)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition used">Used</span>
+                    <span class="book-condition used">
+                        Used
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 5 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -389,6 +488,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>University Physics with Modern Physics</h3>
 
                             <div class="physical-tags">
@@ -396,25 +496,45 @@
                                 <span>Semester 2</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Imran Ali</p>
-                            <p><i data-lucide="calendar-days"></i> Oct 5, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (Science Block)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Imran Ali
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 5, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (Science Block)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition good">Good Condition</span>
+                    <span class="book-condition good">
+                        Good Condition
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 6 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -424,6 +544,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Organic Chemistry</h3>
 
                             <div class="physical-tags">
@@ -431,25 +552,45 @@
                                 <span>Semester 4</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Sara Memon</p>
-                            <p><i data-lucide="calendar-days"></i> Oct 3, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (Hostel A)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Sara Memon
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 3, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (Hostel A)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition like-new">Like New</span>
+                    <span class="book-condition like-new">
+                        Like New
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 7 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -459,6 +600,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Database System Concepts</h3>
 
                             <div class="physical-tags">
@@ -466,25 +608,45 @@
                                 <span>Semester 3</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Hira Memon</p>
-                            <p><i data-lucide="calendar-days"></i> Oct 1, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (CS Block)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Hira Memon
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Oct 1, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (CS Block)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition used">Used</span>
+                    <span class="book-condition used">
+                        Used
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
-
+                </article>
 
                 <!-- Book 8 -->
-                <div class="physical-book-card">
+                <article class="physical-book-card">
 
                     <div class="physical-book-main">
 
@@ -494,6 +656,7 @@
                         </div>
 
                         <div class="physical-book-details">
+
                             <h3>Discrete Mathematics</h3>
 
                             <div class="physical-tags">
@@ -501,32 +664,60 @@
                                 <span>Semester 2</span>
                             </div>
 
-                            <p><i data-lucide="user"></i> Zainab Shah</p>
-                            <p><i data-lucide="calendar-days"></i> Sep 25, 2026</p>
-                            <p><i data-lucide="map-pin"></i> On-campus (Main Library)</p>
+                            <p>
+                                <i data-lucide="user"></i>
+                                Zainab Shah
+                            </p>
+
+                            <p>
+                                <i data-lucide="calendar-days"></i>
+                                Sep 25, 2026
+                            </p>
+
+                            <p>
+                                <i data-lucide="map-pin"></i>
+                                On-campus (Main Library)
+                            </p>
+
                         </div>
 
                     </div>
 
-                    <span class="book-condition good">Good Condition</span>
+                    <span class="book-condition good">
+                        Good Condition
+                    </span>
 
                     <div class="physical-book-actions">
-                        <a href="#"><i data-lucide="eye"></i> View Details</a>
-                        <a href="#" class="borrow-button"><i data-lucide="book-open"></i> Request to Borrow</a>
+                        <a href="#">
+                            <i data-lucide="eye"></i>
+                            View Details
+                        </a>
+
+                        <a href="#" class="borrow-button">
+                            <i data-lucide="book-open"></i>
+                            Request to Borrow
+                        </a>
                     </div>
 
-                </div>
+                </article>
 
             </section>
 
-
             <!-- Pagination -->
             <div class="physical-pagination">
-                <a href="#"><i data-lucide="chevron-left"></i></a>
+
+                <a href="#" aria-label="Previous page">
+                    <i data-lucide="chevron-left"></i>
+                </a>
+
                 <a href="#" class="current">1</a>
                 <a href="#">2</a>
                 <a href="#">3</a>
-                <a href="#"><i data-lucide="chevron-right"></i></a>
+
+                <a href="#" aria-label="Next page">
+                    <i data-lucide="chevron-right"></i>
+                </a>
+
             </div>
 
         </div>

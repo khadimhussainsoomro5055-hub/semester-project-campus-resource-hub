@@ -1,16 +1,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- Inter Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Global CSS -->
-<link rel="stylesheet" href="css/global.css">
+    <meta name="description" content="Browse and discover academic resources shared by the Campus Resource Hub community.">
 
-<!-- Browse Resources CSS -->
-<link rel="stylesheet" href="css/browsw-resources.css">
+    <title>Browse Resources | Campus Resource Hub</title>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="css/browsw-resources.css">
+</head>
 
 <body>
 
@@ -21,11 +30,11 @@
 
         <!-- Logo -->
         <div class="sidebar-logo">
-    <div class="logo">
-        <div id="logo-icon"></div>
-        <h2>Campus<br>Resource Hub</h2>
-    </div>
-</div>
+            <div class="logo">
+                <div id="logo-icon"></div>
+                <h2>Campus<br>Resource Hub</h2>
+            </div>
+        </div>
 
         <!-- Main Navigation -->
         <nav class="sidebar-menu">
@@ -84,13 +93,6 @@
         <!-- Bottom Navigation -->
         <div class="sidebar-bottom">
 
-            <a href="profile.html" class="menu-item">
-                <span class="menu-icon">
-                    <i data-lucide="user-round"></i>
-                </span>
-                Profile
-            </a>
-
             <a href="settings.html" class="menu-item">
                 <span class="menu-icon">
                     <i data-lucide="settings"></i>
@@ -109,13 +111,8 @@
 
         <!-- University Information -->
         <div class="university-info">
-
-            <div class="university-icon">🏛</div>
-
             <h3>Sukkur IBA University</h3>
-
             <p>Knowledge • Sharing • Community</p>
-
         </div>
 
     </aside>
@@ -135,26 +132,29 @@
                     </span>
 
                     <input
-                        type="text"
+                        type="search"
+                        aria-label="Search academic resources"
                         placeholder="Search for books, notes, past papers, assignments..."
                     >
                 </div>
 
-                <select class="search-category">
-                    <option>All Categories</option>
+                <select class="search-category" aria-label="Filter resource category">
+                    <option>All</option>
                     <option>Books</option>
                     <option>Notes</option>
-                    <option>Assignments</option>
                     <option>Past Papers</option>
+                    <option>Assignments</option>
                 </select>
 
-                <button class="search-button">Search</button>
+                <button class="search-button" type="button">
+                    Search
+                </button>
 
             </div>
 
             <div class="topbar-right">
 
-                <button class="notification-button">
+                <button class="notification-button" type="button" aria-label="Notifications">
                     <i data-lucide="bell"></i>
                     <span class="notification-count">3</span>
                 </button>
@@ -167,8 +167,6 @@
                         <h4>Khadim Hussain</h4>
                         <p>BS Software Engineering</p>
                     </div>
-
-                    <i data-lucide="chevron-down" class="profile-arrow"></i>
 
                 </div>
 
@@ -196,6 +194,7 @@
             <!-- Search and Filters -->
             <div class="browse-filters">
 
+                <!-- Resource Search -->
                 <div class="browse-search">
 
                     <span>
@@ -203,55 +202,49 @@
                     </span>
 
                     <input
-                        type="text"
+                        type="search"
+                        aria-label="Search resources by title, author, or keyword"
                         placeholder="Search by title, author, or keyword..."
                     >
 
                 </div>
 
 
+                <!-- Filters -->
                 <div class="filter-row">
 
-                    <!-- Category -->
                     <div class="filter-item">
+                        <label for="category-filter">Category</label>
 
-                        <label>Category</label>
-
-                        <select>
-                            <option>All Categories</option>
+                        <select id="category-filter">
+                            <option value="">All Categories</option>
                             <option>Books</option>
                             <option>Lecture Notes</option>
                             <option>Slides</option>
                             <option>Assignments</option>
                             <option>Past Papers</option>
                         </select>
-
                     </div>
 
 
-                    <!-- Department -->
                     <div class="filter-item">
+                        <label for="department-filter">Department</label>
 
-                        <label>Department</label>
-
-                        <select>
-                            <option>All Departments</option>
+                        <select id="department-filter">
+                            <option value="">All Departments</option>
                             <option>Software Engineering</option>
                             <option>Computer Science</option>
                             <option>Mathematics</option>
                             <option>General Science</option>
                         </select>
-
                     </div>
 
 
-                    <!-- Semester -->
                     <div class="filter-item">
+                        <label for="semester-filter">Semester</label>
 
-                        <label>Semester</label>
-
-                        <select>
-                            <option>All Semesters</option>
+                        <select id="semester-filter">
+                            <option value="">All Semesters</option>
                             <option>Semester 1</option>
                             <option>Semester 2</option>
                             <option>Semester 3</option>
@@ -261,33 +254,38 @@
                             <option>Semester 7</option>
                             <option>Semester 8</option>
                         </select>
-
                     </div>
 
 
-                    <!-- Sorting -->
                     <div class="filter-item">
+                        <label for="sort-filter">Sort By</label>
 
-                        <label>Sort By</label>
-
-                        <select>
-                            <option>Newest First</option>
-                            <option>Oldest First</option>
-                            <option>Most Downloaded</option>
-                            <option>Title A-Z</option>
+                        <select id="sort-filter">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="downloads">Most Downloaded</option>
+                            <option value="title">Title A-Z</option>
                         </select>
-
                     </div>
 
 
                     <!-- View Buttons -->
                     <div class="view-buttons">
 
-                        <button class="grid-view" title="Grid View">
+                        <button
+                            class="grid-view"
+                            type="button"
+                            aria-label="Grid View"
+                            title="Grid View"
+                        >
                             <i data-lucide="layout-grid"></i>
                         </button>
 
-                        <button title="List View">
+                        <button
+                            type="button"
+                            aria-label="List View"
+                            title="List View"
+                        >
                             <i data-lucide="list"></i>
                         </button>
 
@@ -300,7 +298,7 @@
 
             <!-- Results Count -->
             <p class="browse-results">
-                Showing 24 results
+                Showing 8 results
             </p>
 
 
@@ -309,7 +307,7 @@
 
 
                 <!-- Resource 1 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-one">
 
@@ -358,11 +356,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 2 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-two">
 
@@ -384,8 +382,8 @@
 
                         <div class="resource-tags">
                             <span>Software Engineering</span>
+                            <span>Semester 5</span>
                             <span>Slides</span>
-                            <span>Past Papers</span>
                         </div>
 
                         <div class="resource-meta">
@@ -409,11 +407,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 3 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-three">
 
@@ -462,11 +460,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 4 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-four">
 
@@ -515,11 +513,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 5 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-five">
 
@@ -566,11 +564,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 6 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-six">
 
@@ -617,11 +615,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 7 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-seven">
 
@@ -668,11 +666,11 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
                 <!-- Resource 8 -->
-                <div class="resource-card">
+                <article class="resource-card">
 
                     <div class="resource-cover cover-eight">
 
@@ -719,7 +717,7 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
             </div>
