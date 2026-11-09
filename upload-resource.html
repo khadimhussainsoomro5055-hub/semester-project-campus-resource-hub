@@ -1,432 +1,487 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Upload Resource - Campus Resource Hub</title>
 
-    <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS File -->
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/upload-resource.css">
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
+<div class="dashboard-layout">
 
-    <div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-
+        <div class="sidebar-logo">
             <div class="logo">
+                <div id="logo-icon"></div>
                 <h2>Campus<br>Resource Hub</h2>
             </div>
+        </div>
 
-            <div class="sidebar-menu">
+        <nav class="sidebar-menu">
 
-                <a href="index.html" class="menu-item">
-                    <i data-lucide="home"></i> Dashboard
-                </a>
+            <a href="index.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="layout-dashboard"></i>
+                </span>
+                Dashboard
+            </a>
 
-                <a href="browse-resources.html" class="menu-item">
-                    <i data-lucide="library-big"></i> Browse Resources
-                </a>
+            <a href="browse-resources.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="library-big"></i>
+                </span>
+                Browse Resources
+            </a>
 
-                <a href="upload-resource.html" class="menu-item active">
-                    <i data-lucide="cloud-upload"></i> Upload Resource
-                </a>
+            <a href="upload-resource.html" class="menu-item active">
+                <span class="menu-icon">
+                    <i data-lucide="cloud-upload"></i>
+                </span>
+                Upload Resource
+            </a>
 
-                <a href="my-uploads.html" class="menu-item">
-                    <i data-lucide="folder"></i> My Uploads
-                </a>
+            <a href="my-uploads.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="folder"></i>
+                </span>
+                My Uploads
+            </a>
 
-                <a href="physical-books.html" class="menu-item">
-                    <i data-lucide="book-open"></i> Physical Books
-                </a>
+            <a href="physical-books.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="book"></i>
+                </span>
+                Physical Books
+            </a>
 
-                <a href="my-requests.html" class="menu-item">
-                    <i data-lucide="clipboard-list"></i> My Requests
-                </a>
+            <a href="my-requests.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="clipboard-list"></i>
+                </span>
+                My Requests
+            </a>
 
-                <a href="report-resource.html" class="menu-item">
-                    <i data-lucide="flag"></i> Report Content
-                </a>
+            <a href="report-resource.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="flag"></i>
+                </span>
+                Report Content
+            </a>
 
-            </div>
+        </nav>
 
-            <div class="sidebar-bottom">
+        <div class="sidebar-bottom">
 
-                <a href="settings.html" class="menu-item">
-                    <i data-lucide="settings"></i> Settings
-                </a>
+            <a href="profile.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="user-round"></i>
+                </span>
+                Profile
+            </a>
 
-                <a href="help.html" class="menu-item">
-                    <i data-lucide="circle-help"></i> Help & Support
-                </a>
+            <a href="settings.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="settings"></i>
+                </span>
+                Settings
+            </a>
 
-            </div>
+            <a href="help.html" class="menu-item">
+                <span class="menu-icon">
+                    <i data-lucide="circle-question-mark"></i>
+                </span>
+                Help & Support
+            </a>
 
-            <div class="university-info">
-                <div class="university-icon">
-                    <img src="images/iba-logo.png" alt="Sukkur IBA Logo">
-                </div>
-                <h3>Sukkur IBA University</h3>
-                <p>Knowledge • Sharing • Community</p>
-            </div>
+        </div>
 
-        </aside>
+        <div class="university-info">
+            <div class="university-icon">🏛</div>
+            <h3>Sukkur IBA University</h3>
+            <p>Knowledge • Sharing • Community</p>
+        </div>
 
-        <!-- Main Content -->
-        <main class="main-content">
+    </aside>
 
-            <!-- Fixed Topbar -->
-            <header class="topbar">
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
 
-                <div class="search-area">
-                    <i data-lucide="search" class="search-icon"></i>
+        <!-- TOPBAR -->
+        <header class="topbar">
 
+            <div class="search-area">
+
+                <div class="search-box">
+                    <span>
+                        <i data-lucide="search"></i>
+                    </span>
                     <input type="text"
                         placeholder="Search for books, notes, past papers, assignments...">
-
-                    <select>
-                        <option>All Categories</option>
-                        <option>Books</option>
-                        <option>Notes</option>
-                        <option>Past Papers</option>
-                        <option>Assignments</option>
-                    </select>
-
-                    <button type="button">Search</button>
                 </div>
 
-                <div class="profile">
-                    <span class="notification">
-                        <i data-lucide="bell"></i>
-                    </span>
+                <select class="search-category">
+                    <option>All Categories</option>
+                    <option>Books</option>
+                    <option>Notes</option>
+                    <option>Assignments</option>
+                    <option>Past Papers</option>
+                </select>
 
+                <button type="button" class="search-button">Search</button>
+            </div>
+
+            <div class="topbar-right">
+
+                <button type="button" class="notification-button">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+
+                <div class="profile-info">
                     <div class="profile-avatar">K</div>
-
                     <div>
                         <h4>Khadim Hussain</h4>
                         <p>BS Software Engineering</p>
                     </div>
+                    <i data-lucide="chevron-down" class="profile-arrow"></i>
                 </div>
 
-            </header>
+            </div>
+        </header>
 
-            <!-- Scrollable Page Content -->
-            <div class="page-content">
+        <!-- UPLOAD PAGE -->
+        <div class="page-content">
 
-                <div class="page-heading">
-                    <h1>Upload Resource</h1>
-                    <p>
-                        Share academic resources with your fellow students.
-                        Your upload will be reviewed by the admin before
-                        it becomes available to others.
-                    </p>
-                </div>
+            <div class="page-heading">
+                <h1>Upload Resource</h1>
+                <p>
+                    Share academic resources with your fellow students.
+                    Your upload will be reviewed by the admin before
+                    it becomes available to others.
+                </p>
+            </div>
 
-                <div class="upload-layout">
+            <div class="upload-layout">
 
-                    <!-- Left Side -->
-                    <div class="upload-left">
+                <!-- LEFT SIDE -->
+                <div class="upload-left">
 
-                        <form action="#" method="post"
-                            enctype="multipart/form-data">
+                    <form action="#" method="post"
+                          enctype="multipart/form-data">
 
-                            <!-- Resource Details -->
-                            <div class="form-card">
+                        <!-- RESOURCE DETAILS -->
+                        <div class="form-card">
 
-                                <h2>
-                                    <i data-lucide="file-text"></i>
-                                    Resource Details
-                                </h2>
+                            <h2>
+                                <i data-lucide="file-text"></i>
+                                Resource Details
+                            </h2>
 
-                                <div class="form-row">
+                            <div class="form-row">
 
-                                    <div class="form-group">
-                                        <label>Title <span>*</span></label>
-                                        <input type="text" name="title"
-                                            placeholder="Enter resource title"
-                                            required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Category <span>*</span></label>
-                                        <select name="category" required>
-                                            <option value="">Select category</option>
-                                            <option>Books</option>
-                                            <option>Lecture Notes</option>
-                                            <option>Past Papers</option>
-                                            <option>Assignments</option>
-                                            <option>Presentations</option>
-                                            <option>Lab Manuals</option>
-                                            <option>Research Papers</option>
-                                            <option>Other</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-row">
-
-                                    <div class="form-group">
-                                        <label>Department <span>*</span></label>
-                                        <select name="department" required>
-                                            <option value="">Select department</option>
-                                            <option>Computer Science</option>
-                                            <option>Software Engineering</option>
-                                            <option>Electrical Engineering</option>
-                                            <option>Business Administration</option>
-                                            <option>Mathematics</option>
-                                            <option>Education</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Course <small>(Optional)</small></label>
-                                        <select name="course">
-                                            <option value="">Select course</option>
-                                            <option>Web Engineering</option>
-                                            <option>Data Structures and Algorithms</option>
-                                            <option>Database Systems</option>
-                                            <option>Operating Systems</option>
-                                            <option>Software Engineering</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Semester <span>*</span></label>
-                                        <select name="semester" required>
-                                            <option value="">Select semester</option>
-                                            <option>1st Semester</option>
-                                            <option>2nd Semester</option>
-                                            <option>3rd Semester</option>
-                                            <option>4th Semester</option>
-                                            <option>5th Semester</option>
-                                            <option>6th Semester</option>
-                                            <option>7th Semester</option>
-                                            <option>8th Semester</option>
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-row">
-
-                                    <div class="form-group">
-                                        <label>Resource Type <span>*</span></label>
-                                        <select name="resource_type" required>
-                                            <option value="">Select resource type</option>
-                                            <option>PDF Document</option>
-                                            <option>Word Document</option>
-                                            <option>PowerPoint Presentation</option>
-                                            <option>Excel File</option>
-                                            <option>Image</option>
-                                            <option>Compressed File</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Description <small>(Optional)</small></label>
-                                        <textarea name="description"
-                                            placeholder="Write a short description about this resource..."
-                                            maxlength="500"></textarea>
-                                        <small class="character-limit">
-                                            Maximum 500 characters
-                                        </small>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Upload File -->
-                            <div class="form-card">
-
-                                <h2>
-                                    <i data-lucide="paperclip"></i>
-                                    Upload File <span>*</span>
-                                </h2>
-
-                                <div class="upload-area">
-
-                                    <div class="upload-icon">
-                                        <i data-lucide="cloud-upload"></i>
-                                    </div>
-
-                                    <h3>Select your resource file</h3>
-                                    <p>Choose a file from your computer</p>
-
-                                    <label for="resourceFile" class="browse-button">
-                                        Browse Files
+                                <div class="form-group">
+                                    <label for="title">
+                                        Title <span>*</span>
                                     </label>
-
-                                    <input type="file"
-                                        id="resourceFile"
-                                        name="resource_file"
-                                        accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.jpg,.jpeg,.png"
-                                        required>
-
-                                    <small>
-                                        Supported formats: PDF, DOC, DOCX, PPT, PPTX,
-                                        XLS, XLSX, ZIP, JPG, JPEG, PNG
-                                    </small>
-
-                                    <small>Maximum file size: 20MB</small>
-
+                                    <input type="text"
+                                           id="title"
+                                           name="title"
+                                           placeholder="Enter resource title"
+                                           required>
                                 </div>
 
-                                <div class="form-buttons">
-
-                                    <button type="reset" class="reset-button">
-                                        Reset
-                                    </button>
-
-                                    <button type="submit" class="upload-button">
-                                        <i data-lucide="upload"></i>
-                                        Upload Resource
-                                    </button>
-
+                                <div class="form-group">
+                                    <label for="category">
+                                        Category <span>*</span>
+                                    </label>
+                                    <select id="category" name="category" required>
+                                        <option value="">Select category</option>
+                                        <option>Books</option>
+                                        <option>Lecture Notes</option>
+                                        <option>Past Papers</option>
+                                        <option>Assignments</option>
+                                        <option>Presentations</option>
+                                        <option>Lab Manuals</option>
+                                        <option>Research Papers</option>
+                                        <option>Other</option>
+                                    </select>
                                 </div>
 
                             </div>
 
-                        </form>
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label for="department">
+                                        Department <span>*</span>
+                                    </label>
+                                    <select id="department" name="department" required>
+                                        <option value="">Select department</option>
+                                        <option>Computer Science</option>
+                                        <option>Software Engineering</option>
+                                        <option>Electrical Engineering</option>
+                                        <option>Business Administration</option>
+                                        <option>Mathematics</option>
+                                        <option>Education</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="course">
+                                        Course <small>(Optional)</small>
+                                    </label>
+                                    <select id="course" name="course">
+                                        <option value="">Select course</option>
+                                        <option>Web Engineering</option>
+                                        <option>Data Structures and Algorithms</option>
+                                        <option>Database Systems</option>
+                                        <option>Operating Systems</option>
+                                        <option>Software Engineering</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="semester">
+                                        Semester <span>*</span>
+                                    </label>
+                                    <select id="semester" name="semester" required>
+                                        <option value="">Select semester</option>
+                                        <option>1st Semester</option>
+                                        <option>2nd Semester</option>
+                                        <option>3rd Semester</option>
+                                        <option>4th Semester</option>
+                                        <option>5th Semester</option>
+                                        <option>6th Semester</option>
+                                        <option>7th Semester</option>
+                                        <option>8th Semester</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label for="resourceType">
+                                        Resource Type <span>*</span>
+                                    </label>
+                                    <select id="resourceType"
+                                            name="resource_type"
+                                            required>
+                                        <option value="">Select resource type</option>
+                                        <option>PDF Document</option>
+                                        <option>Word Document</option>
+                                        <option>PowerPoint Presentation</option>
+                                        <option>Excel File</option>
+                                        <option>Image</option>
+                                        <option>Compressed File</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description">
+                                        Description <small>(Optional)</small>
+                                    </label>
+                                    <textarea id="description"
+                                              name="description"
+                                              placeholder="Write a short description about this resource..."
+                                              maxlength="500"></textarea>
+                                    <small class="character-limit">
+                                        Maximum 500 characters
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- UPLOAD FILE -->
+                        <div class="form-card">
+
+                            <h2>
+                                <i data-lucide="paperclip"></i>
+                                Upload File <span>*</span>
+                            </h2>
+
+                            <div class="upload-area">
+
+                                <div class="upload-icon">
+                                    <i data-lucide="cloud-upload"></i>
+                                </div>
+
+                                <h3>Select your resource file</h3>
+                                <p>Choose a file from your computer</p>
+
+                                <label for="resourceFile"
+                                       class="browse-button">
+                                    Browse Files
+                                </label>
+
+                                <input type="file"
+                                       id="resourceFile"
+                                       name="resource_file"
+                                       accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.jpg,.jpeg,.png"
+                                       required>
+
+                                <small>
+                                    Supported formats: PDF, DOC, DOCX,
+                                    PPT, PPTX, XLS, XLSX, ZIP,
+                                    JPG, JPEG, PNG
+                                </small>
+
+                                <small>Maximum file size: 20MB</small>
+
+                            </div>
+
+                            <div class="form-buttons">
+
+                                <button type="reset" class="reset-button">
+                                    Reset
+                                </button>
+
+                                <button type="submit" class="upload-button">
+                                    <i data-lucide="upload"></i>
+                                    Upload Resource
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="upload-right">
+
+                    <!-- COVER PREVIEW -->
+                    <div class="side-card">
+
+                        <h2>
+                            <i data-lucide="image"></i>
+                            Cover Image Preview
+                        </h2>
+
+                        <div class="cover-preview">
+                            <div class="cover-icon">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <p>Resource Cover</p>
+                        </div>
+
+                        <p class="side-description">
+                            This image will be used as the cover
+                            for your resource card.
+                        </p>
 
                     </div>
 
-                    <!-- Right Side -->
-                    <div class="upload-right">
+                    <!-- SUPPORTED FILE TYPES -->
+                    <div class="side-card">
 
-                        <!-- Cover Image Preview -->
-                        <div class="side-card">
+                        <h2>
+                            <i data-lucide="files"></i>
+                            Supported File Types
+                        </h2>
 
-                            <h2>
+                        <div class="file-type">
+                            <span class="file-icon pdf">PDF</span>
+                            <p>PDF Documents</p>
+                        </div>
+
+                        <div class="file-type">
+                            <span class="file-icon word">W</span>
+                            <p>Word Documents (DOC, DOCX)</p>
+                        </div>
+
+                        <div class="file-type">
+                            <span class="file-icon ppt">P</span>
+                            <p>PowerPoint Files (PPT, PPTX)</p>
+                        </div>
+
+                        <div class="file-type">
+                            <span class="file-icon excel">X</span>
+                            <p>Excel Files (XLS, XLSX)</p>
+                        </div>
+
+                        <div class="file-type">
+                            <span class="file-icon zip">ZIP</span>
+                            <p>Compressed Files (ZIP)</p>
+                        </div>
+
+                        <div class="file-type">
+                            <span class="file-icon image">
                                 <i data-lucide="image"></i>
-                                Cover Image Preview
-                            </h2>
-
-                            <div class="cover-preview">
-                                <div class="cover-icon">
-                                    <i data-lucide="image"></i>
-                                </div>
-                                <p>Resource Cover</p>
-                            </div>
-
-                            <p class="side-description">
-                                This image will be used as the cover
-                                for your resource card.
-                            </p>
-
+                            </span>
+                            <p>Images (JPG, JPEG, PNG)</p>
                         </div>
 
-                        <!-- Supported File Types -->
-                        <div class="side-card">
+                        <p class="maximum-size">
+                            Maximum file size: 20MB
+                        </p>
 
-                            <h2>
-                                <i data-lucide="files"></i>
-                                Supported File Types
-                            </h2>
+                    </div>
 
-                            <div class="file-type">
-                                <span class="file-icon pdf">PDF</span>
-                                <p>PDF Documents</p>
-                            </div>
+                    <!-- UPLOAD GUIDELINES -->
+                    <div class="side-card">
 
-                            <div class="file-type">
-                                <span class="file-icon word">W</span>
-                                <p>Word Documents (DOC, DOCX)</p>
-                            </div>
+                        <h2>
+                            <i data-lucide="info"></i>
+                            Upload Guidelines
+                        </h2>
 
-                            <div class="file-type">
-                                <span class="file-icon ppt">P</span>
-                                <p>PowerPoint Files (PPT, PPTX)</p>
-                            </div>
-
-                            <div class="file-type">
-                                <span class="file-icon excel">X</span>
-                                <p>Excel Files (XLS, XLSX)</p>
-                            </div>
-
-                            <div class="file-type">
-                                <span class="file-icon zip">ZIP</span>
-                                <p>Compressed Files (ZIP)</p>
-                            </div>
-
-                            <div class="file-type">
-                                <span class="file-icon image">
-                                    <i data-lucide="image"></i>
-                                </span>
-                                <p>Images (JPG, JPEG, PNG)</p>
-                            </div>
-
-                            <p class="maximum-size">
-                                Maximum file size: 20MB
-                            </p>
-
-                        </div>
-
-                        <!-- Upload Guidelines -->
-                        <div class="side-card">
-
-                            <h2>
-                                <i data-lucide="info"></i>
-                                Upload Guidelines
-                            </h2>
-
-                            <ul class="guidelines">
-                                <li>
-                                    <i data-lucide="check"></i>
-                                    Only upload academic content.
-                                </li>
-                                <li>
-                                    <i data-lucide="check"></i>
-                                    Ensure the content is relevant and appropriate.
-                                </li>
-                                <li>
-                                    <i data-lucide="check"></i>
-                                    Do not upload copyrighted material.
-                                </li>
-                                <li>
-                                    <i data-lucide="check"></i>
-                                    Your resource will be reviewed by an admin.
-                                </li>
-                                <li>
-                                    <i data-lucide="check"></i>
-                                    Make sure the file is clear and readable.
-                                </li>
-                                <li>
-                                    <i data-lucide="check"></i>
-                                    Follow the university code of conduct.
-                                </li>
-                            </ul>
-
-                        </div>
+                        <ul class="guidelines">
+                            <li>
+                                <i data-lucide="check"></i>
+                                Only upload academic content.
+                            </li>
+                            <li>
+                                <i data-lucide="check"></i>
+                                Ensure the content is relevant and appropriate.
+                            </li>
+                            <li>
+                                <i data-lucide="check"></i>
+                                Do not upload copyrighted material.
+                            </li>
+                            <li>
+                                <i data-lucide="check"></i>
+                                Your resource will be reviewed by an admin.
+                            </li>
+                            <li>
+                                <i data-lucide="check"></i>
+                                Make sure the file is clear and readable.
+                            </li>
+                            <li>
+                                <i data-lucide="check"></i>
+                                Follow the university code of conduct.
+                            </li>
+                        </ul>
 
                     </div>
 
                 </div>
 
             </div>
+        </div>
 
-        </main>
+    </main>
+</div>
 
-    </div>
-
-    <!-- Initialize Lucide Icons -->
-    <script>
-        lucide.createIcons();
-    </script>
+<script>
+    lucide.createIcons();
+</script>
 
 </body>
 </html>
