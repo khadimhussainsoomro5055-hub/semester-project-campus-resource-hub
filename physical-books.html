@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/physical-books.css">
 </head>
 
@@ -26,9 +26,7 @@
 
         <div class="sidebar-logo">
             <div class="logo">
-                <span class="logo-icon">
-                    <i data-lucide="graduation-cap"></i>
-                </span>
+                <div id="logo-icon"></div>
                 <h2>Campus<br>Resource Hub</h2>
             </div>
         </div>
@@ -76,6 +74,12 @@
 
         <!-- Bottom Navigation -->
         <div class="sidebar-bottom">
+            <a href="profile.html" class="menu-item">
+    <span class="menu-icon">
+        <i data-lucide="user-round"></i>
+    </span>
+    Profile
+</a>
 
             <a href="settings.html" class="menu-item">
                 <span class="menu-icon"><i data-lucide="settings"></i></span>
@@ -142,7 +146,7 @@
                         <p>BS Software Engineering</p>
                     </div>
 
-                    <span class="profile-arrow">⌄</span>
+                  <i data-lucide="chevron-down" class="profile-arrow"></i>
 
                 </div>
 
