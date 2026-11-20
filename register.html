@@ -1,63 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Campus Resource Hub | Registration</title>
 
-    <!-- Manrope Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/register.css">
-    
-    <!-- Lucide Icons Script -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-
 <div class="register-container">
 
-    <!-- Logo and Website Name -->
     <header class="register-header">
+        <div class="brand-mark">
+            <img src="images/register-page-logo.png" alt="IBA Logo">
+        </div>
 
-        <!-- Replaced ◆ with Graduation Cap Icon -->
-       <div class="brand-mark">
-    <img src="images/register-page-logo.png" alt="IBA Logo">
-</div>
         <h1>Campus <span>Resource Hub</span></h1>
-
         <h3>Sukkur IBA University</h3>
-
         <p>Share <span>•</span> Access <span>•</span> Learn <span>•</span> Grow</p>
-
     </header>
 
-
-    <!-- Registration Form -->
     <main class="register-box">
 
         <div class="register-heading">
             <h2>Create Your Account</h2>
-            <p>Join Campus Resource Hub to access and share academic<br>
-                resources with Sukkur IBA University students.</p>
+            <p>
+                Join Campus Resource Hub to access and share academic<br>
+                resources with Sukkur IBA University students.
+            </p>
         </div>
 
-
-        <form action="#" method="post">
+        <form id="registerForm" novalidate>
 
             <!-- Full Name -->
             <div class="form-group full-width">
-
                 <label for="fullname">Full Name</label>
 
                 <div class="input-box">
-                    <!-- Replaced ♙ -->
-                    <span class="input-icon"><i data-lucide="user" style="width: 18px; height: 18px;"></i></span>
+                    <span class="input-icon">
+                        <i data-lucide="user" style="width:18px;height:18px;"></i>
+                    </span>
 
                     <input
                         type="text"
@@ -67,20 +56,18 @@
                         required
                     >
                 </div>
-
             </div>
 
-
-            <!-- University Email -->
+            <!-- Email -->
             <div class="form-row">
 
                 <div class="form-group">
-
                     <label for="email">University Email (IBA)</label>
 
                     <div class="input-box">
-                        <!-- Replaced ✉ -->
-                        <span class="input-icon"><i data-lucide="mail" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="mail" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <input
                             type="email"
@@ -89,21 +76,16 @@
                             placeholder="Enter your IBA email"
                             required
                         >
-
-                        <span class="email-domain">@iba.edu.pk</span>
                     </div>
-
                 </div>
 
-
-                <!-- Confirm Email -->
                 <div class="form-group">
-
                     <label for="confirm-email">Confirm University Email</label>
 
                     <div class="input-box">
-                        <!-- Replaced ✉ -->
-                        <span class="input-icon"><i data-lucide="mail" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="mail" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <input
                             type="email"
@@ -113,22 +95,20 @@
                             required
                         >
                     </div>
-
                 </div>
 
             </div>
 
-
-            <!-- Password Fields -->
+            <!-- Password -->
             <div class="form-row">
 
                 <div class="form-group">
-
                     <label for="password">Password</label>
 
                     <div class="input-box">
-                        <!-- Replaced ▣ -->
-                        <span class="input-icon"><i data-lucide="lock" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="lock" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <input
                             type="password"
@@ -138,17 +118,15 @@
                             required
                         >
                     </div>
-
                 </div>
 
-
                 <div class="form-group">
-
                     <label for="confirm-password">Confirm Password</label>
 
                     <div class="input-box">
-                        <!-- Replaced ▣ -->
-                        <span class="input-icon"><i data-lucide="lock" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="lock" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <input
                             type="password"
@@ -158,22 +136,20 @@
                             required
                         >
                     </div>
-
                 </div>
 
             </div>
 
-
-            <!-- Department and Academic Program -->
+            <!-- Department and Program -->
             <div class="form-row">
 
                 <div class="form-group">
-
                     <label for="department">Department</label>
 
                     <div class="input-box">
-                        <!-- Replaced ▤ -->
-                        <span class="input-icon"><i data-lucide="building" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="building" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <select id="department" name="department" required>
                             <option value="" selected disabled>Select your department</option>
@@ -184,19 +160,16 @@
                             <option>Mathematics</option>
                             <option>Education</option>
                         </select>
-
                     </div>
-
                 </div>
 
-
                 <div class="form-group">
-
                     <label for="program">Academic Program</label>
 
                     <div class="input-box">
-                        <!-- Replaced ▤ -->
-                        <span class="input-icon"><i data-lucide="book-open" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="book-open" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <select id="program" name="program" required>
                             <option value="" selected disabled>Select your program</option>
@@ -206,24 +179,21 @@
                             <option>BBA</option>
                             <option>PhD</option>
                         </select>
-
                     </div>
-
                 </div>
 
             </div>
 
-
-            <!-- Semester and Phone Number -->
+            <!-- Semester and Phone -->
             <div class="form-row">
 
                 <div class="form-group">
-
                     <label for="semester">Semester</label>
 
                     <div class="input-box">
-                        <!-- Replaced ▦ -->
-                        <span class="input-icon"><i data-lucide="calendar" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <select id="semester" name="semester" required>
                             <option value="" selected disabled>Select your semester</option>
@@ -236,19 +206,18 @@
                             <option>7th Semester</option>
                             <option>8th Semester</option>
                         </select>
-
                     </div>
-
                 </div>
 
-
                 <div class="form-group">
-
-                    <label for="phone">Phone Number <span class="optional">(Optional)</span></label>
+                    <label for="phone">
+                        Phone Number <span class="optional">(Optional)</span>
+                    </label>
 
                     <div class="input-box">
-                        <!-- Replaced ☎ -->
-                        <span class="input-icon"><i data-lucide="phone" style="width: 18px; height: 18px;"></i></span>
+                        <span class="input-icon">
+                            <i data-lucide="phone" style="width:18px;height:18px;"></i>
+                        </span>
 
                         <input
                             type="tel"
@@ -257,15 +226,12 @@
                             placeholder="Enter your phone number"
                         >
                     </div>
-
                 </div>
 
             </div>
 
-
-            <!-- Terms and Conditions -->
+            <!-- Terms -->
             <div class="terms-row">
-
                 <input type="checkbox" id="terms" name="terms" required>
 
                 <label for="terms">
@@ -274,19 +240,17 @@
                     and
                     <a href="privacy.html">Privacy Policy</a>
                 </label>
-
             </div>
 
-
-            <!-- Create Account Button -->
+            <!-- Submit Button -->
             <button type="submit" class="register-button">
-                Create Account <i data-lucide="arrow-right" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-left: 4px;"></i>
+                Create Account
+                <i data-lucide="arrow-right"
+                   style="width:16px;height:16px;display:inline-block;vertical-align:middle;margin-left:4px;"></i>
             </button>
 
         </form>
 
-
-        <!-- Sign In Link -->
         <div class="signin-link">
             Already have an account?
             <a href="login.html">Sign In</a>
@@ -294,18 +258,17 @@
 
     </main>
 
-
-    <!-- Footer -->
     <footer class="register-footer">
         © 2026 Campus Resource Hub | Sukkur IBA University
     </footer>
 
 </div>
 
-<!-- Initialize Lucide Icons -->
+<script src="js/register.js"></script>
+
 <script>
     lucide.createIcons();
 </script>
 
 </body>
-</html>an
+</html>
