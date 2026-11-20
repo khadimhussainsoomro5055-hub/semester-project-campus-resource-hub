@@ -1,14 +1,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login - Campus Resource Hub</title>
 
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 
@@ -19,14 +24,15 @@
         <!-- Logo and Website Name -->
         <div class="login-header">
 
-          <div class="logo"><img src="images/cap-icon.png" alt="Campus Resource Hub logo"></div>
+            <div class="logo">
+                <img src="images/cap-icon.png" alt="Campus Resource Hub logo">
+            </div>
 
             <h1>Campus <span>Resource Hub</span></h1>
 
             <h3>Sukkur IBA University</h3>
 
         </div>
-
 
         <!-- Login Form -->
         <div class="login-box">
@@ -36,7 +42,6 @@
                 <p>Sign in to your Campus Resource Hub account</p>
                 <div class="title-line"></div>
             </div>
-
 
             <form action="#" method="post">
 
@@ -53,20 +58,18 @@
                             placeholder="Enter your IBA email address"
                             required
                         >
-
                     </div>
 
                     <small class="email-note">@iba.edu.pk</small>
 
                 </div>
 
-
                 <!-- Password -->
                 <div class="form-group">
 
                     <label for="password">Password</label>
 
-                    <div class="input-box">
+                    <div class="input-box password-box">
 
                         <input
                             type="password"
@@ -76,10 +79,19 @@
                             required
                         >
 
+                        <!-- Show / Hide Password -->
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            aria-label="Show password"
+                            aria-pressed="false"
+                        >
+                            Show
+                        </button>
+
                     </div>
 
                 </div>
-
 
                 <!-- Remember Me and Forgot Password -->
                 <div class="form-options">
@@ -89,18 +101,18 @@
                         Remember me
                     </label>
 
-                    <a href="forgot-password.html">Forgot password?</a>
+                    <a href="forgot-password.html">
+                        Forgot password?
+                    </a>
 
                 </div>
 
-
-                <!-- Login Button -->
+                <!-- Sign In -->
                 <button type="submit" class="login-button">
                     Sign In <span>→</span>
                 </button>
 
             </form>
-
 
             <!-- University Information -->
             <div class="login-info">
@@ -109,7 +121,6 @@
 
                 <div>
                     <h4>University email accounts only</h4>
-
                     <p>
                         Only Sukkur IBA University email accounts are allowed.
                     </p>
@@ -119,13 +130,15 @@
 
         </div>
 
-
         <!-- Footer -->
         <div class="login-footer">
             © 2026 Campus Resource Hub | Sukkur IBA University
         </div>
 
     </div>
+
+    <!-- JavaScript -->
+    <script src="js/login.js"></script>
 
 </body>
 </html>
