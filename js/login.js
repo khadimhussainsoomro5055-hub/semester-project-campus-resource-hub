@@ -1,42 +1,46 @@
 
-let password = document.getElementById("password");
-let button = document.getElementById("togglePassword");
-let email = document.getElementById("email");
-let form = document.querySelector("form");
+// Get the login form
+let loginForm = document.querySelector("#loginForm");
 
-// Show / Hide Password
-button.onclick = function() {
-    if (password.type == "password") {
-        password.type = "text";
-        button.innerText = "Hide";
-    } else {
-        password.type = "password";
-        button.innerText = "Show";
-    }
-};
+// Check if the form exists
+if (loginForm) {
 
-// Login Validation
-form.onsubmit = function(e) {
-    e.preventDefault();
+    loginForm.addEventListener("submit", function (event) {
 
-    let pass = password.value;
+        // Stop page from refreshing
+        event.preventDefault();
 
-    if (!email.value.endsWith("@iba.edu.pk")) {
-        alert("Enter a valid IBA email");
-    }
-    else if (pass.length < 8) {
-        alert("Password must have at least 8 characters");
-    }
-    else if (!/[A-Z]/.test(pass)) {
-        alert("Add a capital letter");
-    }
-    else if (!/[0-9]/.test(pass)) {
-        alert("Add a number");
-    }
-    else if (!/[^a-zA-Z0-9]/.test(pass)) {
-        alert("Add a special character");
-    }
-    else {
-        alert("Validation successful!");
-    }
-};
+        // Get email and password
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+
+        // Check empty fields
+        if (email === "" || password === "") {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Get registered users
+        let users = getData("users");
+
+        // Check whether user exists
+        let foundUser = users.find(function (user) {
+            return user.email === email && user.password === password;
+        });
+
+        if (foundUser) {
+
+            // Save logged-in user
+            localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+
+            alert("Login successful!");
+
+            // Open dashboard
+            window.location.href = "index.html";
+
+        } else {
+            alert("Invalid email or password.");
+        }
+
+    });
+}
